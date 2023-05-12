@@ -1,15 +1,15 @@
 [
     {
-      "name": "Restaurant A",
-      "address": "123 Main St",
-      "phone": "555-1234",
+      "name": "Archers on the Pier",
+      "address": "58 Ocean St, Rockland ME 04841",
+      "phone": "207-594-2435",
       "hours": {
-        "Monday": "9am-5pm",
-        "Tuesday": "9am-5pm",
-        "Wednesday": "9am-5pm",
-        "Thursday": "9am-5pm",
-        "Friday": "9am-5pm",
-        "Saturday": "closed",
+        "Monday": "11-8:30",
+        "Tuesday": "11-8:30",
+        "Wednesday": "11-8:30",
+        "Thursday": "11-8:30",
+        "Friday": "11-9",
+        "Saturday": "11-9",
         "Sunday": "closed"
       }
     },
