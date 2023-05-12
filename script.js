@@ -4,22 +4,25 @@ fetch('data.json')
   .then(data => {
     const tbody = document.getElementById('restaurant-table-body');
     data.forEach((restaurant, index) => {
+        const restaurantAddressEncoded = encodeURIComponent(restaurant.address).replace(/%20/g, '+');
+        const googleMapsLink = `https://www.google.com/maps/dir/190+New+County+Rd,+Thomaston,+ME+04861/${restaurantAddressEncoded}`;
 
         const restaurantDetails = document.createElement('tr');
         restaurantDetails.innerHTML = `
-            <td colspan="3">${restaurant.name}</td>
+            <td colspan="3" class="rest-title">${restaurant.name}</td>
             <td colspan="2">${restaurant.phone}</td>
-            <td colspan="2">${restaurant.address}</td>
+            <td colspan="2">
+                <a href="${googleMapsLink}">${restaurant.address}</a>
+            </td>
         `;
-
         tbody.appendChild(restaurantDetails);
 
         const restaurantHours = document.createElement('tr');
         restaurantHours.innerHTML = `
-           ${formatHours(restaurant.hours)}
+            ${formatHours(restaurant.hours)}
         `;
-
         tbody.appendChild(restaurantHours);
+
         tbody.appendChild(document.createElement('p'));
     });
   })
@@ -30,10 +33,5 @@ function formatHours(hours) {
   for (const day in hours) {
     html += `<td>${day}<br>${hours[day]}</td>`;
   }
-//   html += `</tr>`;
-//   html += `<tr>`;
-//   for (const day in hours) {
-//     html += `<td> ${hours[day]}</td>`;
-//   }
   return html;
 }
