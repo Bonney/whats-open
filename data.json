@@ -1,0 +1,45 @@
+[
+    {
+      "name": "Restaurant A",
+      "address": "123 Main St",
+      "phone": "555-1234",
+      "hours": {
+        "Monday": "9am-5pm",
+        "Tuesday": "9am-5pm",
+        "Wednesday": "9am-5pm",
+        "Thursday": "9am-5pm",
+        "Friday": "9am-5pm",
+        "Saturday": "closed",
+        "Sunday": "closed"
+      }
+    },
+    {
+      "name": "Restaurant B",
+      "address": "456 Elm St",
+      "phone": "555-5678",
+      "hours": {
+        "Monday": "11am-9pm",
+        "Tuesday": "11am-9pm",
+        "Wednesday": "11am-9pm",
+        "Thursday": "11am-9pm",
+        "Friday": "11am-10pm",
+        "Saturday": "12pm-10pm",
+        "Sunday": "12pm-9pm"
+      }
+    },
+    {
+      "name": "Restaurant C",
+      "address": "789 Oak St",
+      "phone": "555-9012",
+      "hours": {
+        "Monday": "closed",
+        "Tuesday": "5pm-10pm",
+        "Wednesday": "5pm-10pm",
+        "Thursday": "5pm-10pm",
+        "Friday": "5pm-11pm",
+        "Saturday": "12pm-11pm",
+        "Sunday": "12pm-9pm"
+      }
+    }
+  ]
+  
