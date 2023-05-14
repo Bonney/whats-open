@@ -14,9 +14,9 @@
       }
     },
     {
-      "name": "Restaurant B",
-      "address": "456 Elm St",
-      "phone": "555-5678",
+      "name": "The Zack Shack",
+      "address": "212 New County Rd, Thomaston ME 04863",
+      "phone": "207-555-5678",
       "hours": {
         "Monday": "11am-9pm",
         "Tuesday": "11am-9pm",
@@ -28,9 +28,9 @@
       }
     },
     {
-      "name": "Restaurant C",
-      "address": "789 Oak St",
-      "phone": "555-9012",
+      "name": "Claws",
+      "address": "743 Main St, Rockland ME 04841",
+      "phone": "207-555-9012",
       "hours": {
         "Monday": "closed",
         "Tuesday": "5pm-10pm",
