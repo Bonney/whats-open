@@ -4,41 +4,34 @@
       "address": "58 Ocean St, Rockland ME 04841",
       "phone": "207-594-2435",
       "hours": {
-        "Monday": "11-8:30",
-        "Tuesday": "11-8:30",
-        "Wednesday": "11-8:30",
-        "Thursday": "11-8:30",
-        "Friday": "11-9",
-        "Saturday": "11-9",
-        "Sunday": "closed"
-      }
-    },
-    {
-      "name": "The Zack Shack",
-      "address": "212 New County Rd, Thomaston ME 04863",
-      "phone": "207-555-5678",
-      "hours": {
-        "Monday": "11am-9pm",
-        "Tuesday": "11am-9pm",
-        "Wednesday": "11am-9pm",
-        "Thursday": "11am-9pm",
-        "Friday": "11am-10pm",
-        "Saturday": "12pm-10pm",
-        "Sunday": "12pm-9pm"
-      }
-    },
-    {
-      "name": "Claws",
-      "address": "743 Main St, Rockland ME 04841",
-      "phone": "207-555-9012",
-      "hours": {
-        "Monday": "closed",
-        "Tuesday": "5pm-10pm",
-        "Wednesday": "5pm-10pm",
-        "Thursday": "5pm-10pm",
-        "Friday": "5pm-11pm",
-        "Saturday": "12pm-11pm",
-        "Sunday": "12pm-9pm"
+        "monday": {
+            "opens": "11 AM",
+            "closes": "8-30 PM"
+        },
+        "tuesday": {
+            "opens": "11 AM",
+            "closes": "8-30 PM"
+        },
+        "wednesday": {
+            "opens": "11 AM",
+            "closes": "8-30 PM"
+        },
+        "thursday": {
+            "opens": "11 AM",
+            "closes": "8-30 PM"
+        },
+        "friday": {
+            "opens": "11 AM",
+            "closes": "9 PM"
+        },
+        "saturday": {
+            "opens": "11 AM",
+            "closes": "0 PM"
+        },
+        "sunday": {
+            "opens": "Closed",
+            "closes": "Closed"
+        }
       }
     }
   ]
