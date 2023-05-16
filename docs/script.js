@@ -31,7 +31,14 @@ fetch('data.json')
 function formatHours(hours) {
     let html = ``;
   for (const day in hours) {
-    html += `<td>${day}<br>${hours[day]}</td>`;
+    html += `<td>`;
+    html += `<tr>`;
+    html += `${day}`;
+    html += `</tr>`;
+    html += `<tr>`;
+    html += `${hours[day]}`;
+    html += `</tr>`;
+    html += `</td>`;
   }
   return html;
 }
