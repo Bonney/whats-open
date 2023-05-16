@@ -2,6 +2,7 @@
     {
         "id": 0,
         "name": "Archers on the Pier",
+        "description": "Seafood-centric cafe with a waterfront deck providing comfort eats & a robust beer & wine list.",
         "address": "58 Ocean St, Rockland ME 04841",
         "phone": "207-594-2435",
         "url": "https://archersonthepier.com/",
@@ -21,6 +22,7 @@
     {
         "id": 1,
         "name": "Athens Pizzeria",
+        "description": "",
         "address": "179 Main St, Thomaston ME 04861",
         "phone": "207-354-0040",
         "url": "https://athenspizza.hrpos.heartland.us/menu",
@@ -40,6 +42,7 @@
     {
         "id": 2,
         "name": "McLoons Lobster Shack",
+        "description": "",
         "address": "315 Island Rd, Spruce Head ME 04858",
         "phone": "207-593-1382",
         "url": "https://www.mcloonslobster.com/",
@@ -59,6 +62,7 @@
     {
         "id": 3,
         "name": "Station 118 BBQ",
+        "description": "",
         "address": "118 Main St, Thomaston ME 04861",
         "phone": "207-593-8208",
         "url": "https://www.station118.com/",
@@ -78,6 +82,7 @@
     {
         "id": 4,
         "name": "The Zack Shack",
+        "description": "",
         "address": "210 New County Rd, Thomaston ME 04861",
         "phone": "207-542-6837",
         "url": "https://www.facebook.com/ZackShackTruck/",
@@ -97,6 +102,7 @@
     {
         "id": 5,
         "name": "Thomaston Cafe",
+        "description": "",
         "address": "154 Main St, Thomaston ME 04861",
         "phone": "207-354-8589",
         "url": "https://www.thomastoncafeme.com/",
@@ -115,6 +121,7 @@
     {
         "id": 6,
         "name": "Ada's Kitchen",
+        "description": "",
         "address": "449 Main St, Rockland ME 04841",
         "phone": "207-593-7735",
         "url": "https://www.adaskitchen.com/",
@@ -134,6 +141,7 @@
     {
         "id": 7,
         "name": "Claws",
+        "description": "",
         "address": "743 Main St, Rockland ME 04841",
         "phone": "207-596-5600",
         "url": "https://clawsrocklandmaine.com/",
@@ -153,6 +161,7 @@
     {
         "id": 8,
         "name": "Eclipse of the Pearl",
+        "description": "",
         "address": "273 Main St, Rockland ME 04841",
         "phone": "207-593-8847",
         "url": "https://www.facebook.com/eclipseofthepearl",
@@ -172,6 +181,7 @@
     {
         "id": 9,
         "name": "Hill's Seafood Co.",
+        "description": "",
         "address": "226 Main St, Rockland ME 04841",
         "phone": "207-593-8400",
         "url": "https://www.hillsseafoodco.com/",
@@ -191,6 +201,7 @@
     {
         "id": 10,
         "name": "Home Kitchen Cafe",
+        "description": "",
         "address": "650 Main St, Rockland ME 04841",
         "phone": "207-596-2449",
         "url": "https://www.homekitchencafe.com/",
@@ -210,6 +221,7 @@
     {
         "id": 11,
         "name": "In Good Company",
+        "description": "",
         "address": "415 Main St, Rockland ME 04841",
         "phone": "207-593-9110",
         "url": "https://ingoodcompanymaine.com/",
@@ -229,6 +241,7 @@
     {
         "id": 12,
         "name": "North Beacon Oyster",
+        "description": "",
         "address": "421 Main St, Rockland ME 04841",
         "phone": "207-446-9120",
         "url": "https://www.northbeaconoyster.com/",
@@ -248,6 +261,7 @@
     {
         "id": 13,
         "name": "Park Street Grille",
+        "description": "",
         "address": ", Rockland ME 04841",
         "phone": "207-594-4944",
         "url": "https://www.facebook.com/pages/Park-Street-Grill-Bar/205107222955593",
@@ -267,6 +281,7 @@
     {
         "id": 14,
         "name": "Primo",
+        "description": "",
         "address": ", Rockland ME 04841",
         "phone": "207-596-0770",
         "url": "https://www.primorestaurant.com/daily-menu",
@@ -286,6 +301,7 @@
     {
         "id": 15,
         "name": "Rock City Cafe",
+        "description": "",
         "address": "316 Main St, Rockland ME 04841",
         "phone": "207-594-4123",
         "url": "https://rockcitycoffee.com/",
@@ -305,6 +321,7 @@
     {
         "id": 16,
         "name": "Rock Harbor Pub and Brewery",
+        "description": "",
         "address": "416 Main St, Rockland ME 04841",
         "phone": "207-593-7488",
         "url": "https://rockharborbrewing.com/",
@@ -324,6 +341,7 @@
     {
         "id": 17,
         "name": "Rockland Cafe",
+        "description": "",
         "address": "441 Main St, Rockland ME 04841",
         "phone": "207-596-7556",
         "url": "https://rocklandcafe.com/",
@@ -343,6 +361,7 @@
     {
         "id": 18,
         "name": "Roselyn Thai Fine Cuisine",
+        "description": "",
         "address": "80 Camden St, Rockland ME 04841",
         "phone": "207-596-7348",
         "url": "https://roselynthai.com/",
@@ -362,6 +381,7 @@
     {
         "id": 19,
         "name": "Rustica Cucina Italiana",
+        "description": "",
         "address": "315 Main St, Rockland ME 04841",
         "phone": "207-594-0015",
         "url": "http://rusticamaine.com/",
@@ -381,6 +401,7 @@
     {
         "id": 20,
         "name": "Suzuki's Sushi Bar",
+        "description": "",
         "address": "419 Main, Rockland ME 04841",
         "phone": "207-596-7447",
         "url": "http://www.suzukisushi.com/",
@@ -400,6 +421,7 @@
     {
         "id": 21,
         "name": "Trackside Station",
+        "description": "",
         "address": "4 Union St, Rockland ME 04841",
         "phone": "207-594-7500",
         "url": "https://tracksideme.com/",
@@ -419,6 +441,7 @@
     {
         "id": 22,
         "name": "Landings Restaurant",
+        "description": "",
         "address": "1 Commercial St, Rockland ME 04841",
         "phone": "207-594-3011",
         "url": "http://www.thelandingsrestaurant.com/",
@@ -438,6 +461,7 @@
     {
         "id": 23,
         "name": "Waterworks Restaurant",
+        "description": "",
         "address": "7 Lindsey St, Rockland ME 04841",
         "phone": "207-596-2753",
         "url": "http://waterworksrockland.com/",
