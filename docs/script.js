@@ -9,7 +9,9 @@ fetch('data.json')
 
         const restaurantDetails = document.createElement('tr');
         restaurantDetails.innerHTML = `
-            <td colspan="3" class="rest-title">${restaurant.name}</td>
+            <td colspan="3" class="rest-title">
+                <a href="${restaurant.url}">${restaurant.name}</a>
+            </td>
             <td colspan="2">${restaurant.phone}</td>
             <td colspan="2">
                 <a href="${googleMapsLink}">${restaurant.address}</a>
