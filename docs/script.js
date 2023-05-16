@@ -32,12 +32,9 @@ function formatHours(hours) {
     let html = ``;
   for (const day in hours) {
     html += `<td>`;
-    html += `<tr>`;
     html += `${day}`;
-    html += `</tr>`;
-    html += `<tr>`;
+    html += `<hr>`;
     html += `${hours[day]}`;
-    html += `</tr>`;
     html += `</td>`;
   }
   return html;
