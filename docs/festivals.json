@@ -1,0 +1,30 @@
+[
+    {
+        "id": 0,
+        "name": "North Atlantic Blues Festival",
+        "description": "An annual two-day blues music festival featuring national blues performers and considered one of the most prestigious on the East Coast. The festival is held at the Public Landing in Rockland, Maine, overlooking the picturesque Rockland Harbor. Some of the top names in blues music have been featured at this prestigious East Coast festival. In addition to all day live entertainment, the festival has vendors selling a wide array of food, drinks and crafts.  Saturday evening Main Street is closed to traffic for the NABF Club Crawl.",
+        "address": "Rockland Public Landing, 275 Main St, Rockland ME 04841",
+        "phone": "207-691-2604",
+        "webUrl": "https://www.northatlanticbluesfestival.com/",
+        "tags": [
+            "music", "beer"
+        ],
+        "dates": [
+            "July 15", "July 16"
+        ]
+    },
+    {
+        "id": 1,
+        "name": "Maine Lobster Festival",
+        "description": "The Maine Lobster Festival is five days of fun and feasting on the fabulous coast of Maine! What started as an idea for a local marine festival to revive Midcoast Maine communities has turned into an internationally-recognized celebration of local seafood. The Maine Lobster Festival attracts visitors from as near as our local communities to those from countries around the globe.",
+        "address": "Rockland Harbor Park, 1 Pleasant St, Rockland ME 04841",
+        "phone": "207-596-7126",
+        "webUrl": "https://mainelobsterfestival.com/",
+        "tags": [
+            "beer", "seafood"
+        ],
+        "dates": [
+            "August 2", "August 3", "August 4", "August 5", "August 6"
+        ]
+    }
+]
