@@ -9,6 +9,8 @@
         "tags": [
             "music", "beer"
         ],
+        "startDate": "2023-07-15",
+        "endDate": "2023-07-16",
         "dates": [
             "July 15", "July 16"
         ]
@@ -23,6 +25,8 @@
         "tags": [
             "beer", "seafood"
         ],
+        "startDate": "2023-08-02",
+        "endDate": "2023-08-06",
         "dates": [
             "August 2", "August 3", "August 4", "August 5", "August 6"
         ]
