@@ -1,0 +1,60 @@
+//
+//  POIListView.swift
+//  rockland-me
+//
+//  Created by Matt Bonney on 5/17/23.
+//
+
+import SwiftUI
+
+struct POIListView: View {
+    @ObservedObject private var viewModel: PointOfInterestViewModel
+
+    init(viewModel: PointOfInterestViewModel) {
+        self.viewModel = viewModel
+    }
+
+    var body: some View {
+        NavigationStack {
+            List {
+                Section {
+                    HorizontalTagPicker(tags: viewModel.pointsOfInterest.allUniqueTags()) { tag in
+                        viewModel.toggleSearchToken(for: tag)
+                    }
+                    .listRowInsets(EdgeInsets())
+                    .padding(.top, -12)
+                }
+                .listSectionSeparator(.hidden, edges: .top)
+
+                Section {
+                    ForEach(viewModel.pointsOfInterestFilteredBySearch) { poi in
+                        NavigationLink(value: poi) {
+                            LabeledContent {
+                            } label: {
+                                poi.listCell()
+                            }
+                        }
+                    }
+                }
+            }
+            #if os(iOS)
+            .navigationBarTitleDisplayMode(.inline)
+            #endif
+            .searchable(text: $viewModel.searchInput, prompt: Text("Search by Name, Cuisine, and more"))
+            .listStyle(.plain)
+            .navigationTitle("Restaurants")
+            .navigationDestination(for: PointOfInterest.self) { poi in
+                POIDetailView(poi: poi)
+            }
+        }
+        .task {
+            await viewModel.load()
+        }
+    }
+}
+
+struct POIListView_Previews: PreviewProvider {
+    static var previews: some View {
+        POIListView(viewModel: PointOfInterestViewModel(endpoint: .pointsOfInterest))
+    }
+}
