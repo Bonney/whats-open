@@ -32,5 +32,22 @@
         "dates": [
             "August 2", "August 3", "August 4", "August 5", "August 6"
         ]
+    },
+    {
+        "id": 2,
+        "name": "Rockport Donut Festival",
+        "description": "The Maine Lobster Festival is five days of fun and feasting on the fabulous coast of Maine! What started as an idea for a local marine festival to revive Midcoast Maine communities has turned into an internationally-recognized celebration of local seafood. The Maine Lobster Festival attracts visitors from as near as our local communities to those from countries around the globe.",
+        "notes": "",
+        "address": "Rockport ME 04856",
+        "phone": "207.236.0989x2",
+        "webUrl": "https://rockportmaine.gov/index.asp?SEC=FB0A7754-0FD1-4A34-B107-00F718E0E03D&DE=DF653151-D4E8-44EF-AA0F-5989A15F67BE",
+        "tags": [
+            "festival"
+        ],
+        "startDate": "2023-06-02",
+        "endDate": "2023-06-03",
+        "dates": [
+            "June 2", "June 3"
+        ]
     }
 ]
