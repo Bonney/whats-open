@@ -4,16 +4,15 @@
         "name": "North Atlantic Blues Festival",
         "description": "An annual two-day blues music festival featuring national blues performers and considered one of the most prestigious on the East Coast. The festival is held at the Public Landing in Rockland, Maine, overlooking the picturesque Rockland Harbor. Some of the top names in blues music have been featured at this prestigious East Coast festival. In addition to all day live entertainment, the festival has vendors selling a wide array of food, drinks and crafts.  Saturday evening Main Street is closed to traffic for the NABF Club Crawl.",
         "notes": "",
+        "emoji": "🎸",
         "address": "Rockland Public Landing, 275 Main St, Rockland ME 04841",
         "phone": "207-691-2604",
         "webUrl": "https://www.northatlanticbluesfestival.com/",
         "tags": [
             "music", "festival"
         ],
-        "startDate": "2023-07-15",
-        "endDate": "2023-07-16",
         "dates": [
-            "July 15", "July 16"
+            "2023-07-15", "2023-07-16"
         ]
     },
     {
@@ -21,16 +20,15 @@
         "name": "Maine Lobster Festival",
         "description": "The Maine Lobster Festival is five days of fun and feasting on the fabulous coast of Maine! What started as an idea for a local marine festival to revive Midcoast Maine communities has turned into an internationally-recognized celebration of local seafood. The Maine Lobster Festival attracts visitors from as near as our local communities to those from countries around the globe.",
         "notes": "",
+        "emoji": "🦞",
         "address": "Rockland Harbor Park, 1 Pleasant St, Rockland ME 04841",
         "phone": "207-596-7126",
         "webUrl": "https://mainelobsterfestival.com/",
         "tags": [
             "seafood", "festival"
         ],
-        "startDate": "2023-08-02",
-        "endDate": "2023-08-06",
         "dates": [
-            "August 2", "August 3", "August 4", "August 5", "August 6"
+            "2023-08-02", "2023-08-03", "2023-08-04", "2023-08-05", "2023-08-06"
         ]
     },
     {
@@ -38,16 +36,15 @@
         "name": "Rockport Donut Festival",
         "description": "The Town of Rockport is excited to announce a weekend filled with donut themed festivities. The Inaugural Rockport Donut Festival will pay homage to the history of the doughnut here in Rockport and get the summer rolling with music, food, and fun for all ages. See the full schedule of events on this page.",
         "notes": "",
+        "emoji": "🍩",
         "address": "Rockport ME 04856",
         "phone": "207.236.0989x2",
         "webUrl": "https://rockportmaine.gov/index.asp?SEC=FB0A7754-0FD1-4A34-B107-00F718E0E03D&DE=DF653151-D4E8-44EF-AA0F-5989A15F67BE",
         "tags": [
             "festival"
         ],
-        "startDate": "2023-06-02",
-        "endDate": "2023-06-03",
         "dates": [
-            "June 2", "June 3"
+            "2023-06-02", "2023-06-03"
         ]
     }
 ]
