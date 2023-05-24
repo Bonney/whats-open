@@ -7,36 +7,56 @@
 
 import SwiftUI
 import MBUtilities
+import MapKit
 
 struct POIDetailView: View {
     let poi: PointOfInterest
+    @State private var poiCoordinate: CLLocationCoordinate2D? = nil
+
+    init(poi: PointOfInterest) {
+        self.poi = poi
+    }
 
     var body: some View {
         List {
-            Text(poi.name)
-                .font(.title)
-                .fontWeight(.bold)
-                .listRowSeparator(.hidden, edges: .bottom)
+            Section {
+                Text(poi.name)
+                    .font(.title)
+                    .fontWeight(.bold)
 
-            Text(poi.address)
-                .listRowSeparator(.hidden, edges: .bottom)
+                if poi.tags.isEmpty == false {
+                    HStack {
+                        ForEach(poi.tags) { tag in
+                            tag.button(action: {})
+                        }
+                    }
+                }
 
-            if poi.description.isEmpty == false {
-                Text(poi.description)
-                    .foregroundStyle(.secondary)
+                if poi.description.isEmpty == false {
+                    Text(poi.description)
+                        .foregroundStyle(.secondary)
+                }
+            }
+            .listRowSeparator(.hidden)
+
+            if let poiCoordinate {
+                Map(coordinateRegion: .constant(MKCoordinateRegion(center: poiCoordinate, span: .delta(0.003))), interactionModes: .zoom)
+                    .frame(height: 200)
+                    .listRowInsets(EdgeInsets())
             }
 
+
             Section {
+                Button { } label: {
+                    Label(poi.address, systemImage: "map.fill")
+                }
                 Button {
                     //
                 } label: {
                     Label(poi.phone, systemImage: "phone.fill")
                 }
                 Button { } label: {
-                    Label("Open in Maps", systemImage: "map.fill")
-                }
-                Button { } label: {
-                    Label("Visit Website", systemImage: "safari")
+                    Label(poi.url, systemImage: "safari")
                 }
             }
 
@@ -45,10 +65,16 @@ struct POIDetailView: View {
         .listStyle(.plain)
         .toolbar {
             ToolbarItem(placement: .primaryAction) {
-                Button(systemImage: "star") {
-                    // TODO
+                Button(action: {
+
+                }) {
+                    Label("Add to Favorites", systemImage: "heart")
                 }
             }
+        }
+        .task {
+            // Try to load the coordinate for a map preview
+            poiCoordinate = await poi.getCoordinate()
         }
     }
 

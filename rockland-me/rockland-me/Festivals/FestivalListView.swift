@@ -35,7 +35,7 @@ struct FestivalListView: View {
             .listStyle(.plain)
             .navigationTitle("Festivals & Events")
             .navigationDestination(for: Festival.self) { festival in
-                Text("FESTIVAL DETAIL FOR \(festival.name)")
+                FestivalDetailView(festival: festival)
             }
         }
         .task {

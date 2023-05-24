@@ -192,6 +192,10 @@ extension Array<PointOfInterest.Tag> {
     }
 }
 
+extension PointOfInterest.Tag: Identifiable {
+    public var id: String { self }
+}
+
 extension PointOfInterest.Tag {
     func labelWithEmojiAnnotation() -> String {
         switch self {
@@ -224,6 +228,20 @@ extension PointOfInterest.Tag {
             default:
                 return self.capitalized
         }
+    }
+}
+
+extension PointOfInterest.Tag {
+    @ViewBuilder func button(action: @escaping () -> Void) -> some View {
+        Button {
+            action()
+        } label: {
+            Text(self.labelWithEmojiAnnotation())
+                .fontWeight(.medium)
+        }
+        .buttonStyle(.bordered)
+        .buttonBorderShape(.capsule)
+        .controlSize(.small)
     }
 }
 

@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import MapKit
 
 struct POIListView: View {
     @ObservedObject private var viewModel: PointOfInterestViewModel
@@ -26,6 +27,7 @@ struct POIListView: View {
                 }
                 .listSectionSeparator(.hidden, edges: .top)
 
+
                 Section {
                     ForEach(viewModel.pointsOfInterestFilteredBySearch) { poi in
                         NavigationLink(value: poi) {
@@ -37,10 +39,12 @@ struct POIListView: View {
                     }
                 }
             }
-            #if os(iOS)
+#if os(iOS)
             .navigationBarTitleDisplayMode(.inline)
-            #endif
-            .searchable(text: $viewModel.searchInput, prompt: Text("Search by Name, Cuisine, and more"))
+#endif
+            .searchable(text: $viewModel.searchInput, tokens: $viewModel.searchTokens, prompt: Text("Search by Name, Cuisine, and more"), token: { (poiTag: PointOfInterest.Tag) in
+                Text(poiTag.labelWithEmojiAnnotation())
+            })
             .listStyle(.plain)
             .navigationTitle("Restaurants")
             .navigationDestination(for: PointOfInterest.self) { poi in

@@ -13,8 +13,7 @@ struct AppEntryView: View {
 
     var body: some View {
         TabView {
-            POIMapView()
-                .environmentObject(poiViewModel)
+            POIListView(viewModel: poiViewModel)
                 .tabItem {
                     Label("Restaurants", systemImage: "fork.knife")
                 }
@@ -24,11 +23,29 @@ struct AppEntryView: View {
                     Label("Festivals", systemImage: "ticket")
                 }
 
-            POIMapView().environmentObject(poiViewModel)
-                .tabItem {
-                    Label("Attractions", systemImage: "map")
+            NavigationStack {
+                List {
+                    Text("Locations")
                 }
+                .navigationTitle("Locations")
+            }
+            .tabItem {
+                Label("Locations", systemImage: "map")
+            }
+
+            // A favorites tab
+            NavigationStack {
+                List {
+                    Text("Favorites")
+                }
+                .navigationTitle("Favorites")
+            }
+            .tabItem {
+                Label("Favorites", systemImage: "heart")
+            }
+
         }
+        .listStyle(.plain)
     }
 }
 

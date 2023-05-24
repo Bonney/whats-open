@@ -15,15 +15,9 @@ struct HorizontalTagPicker: View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack(spacing: 8) {
                 ForEach(tags, id: \.self) { tag in
-                    Button {
+                    tag.button {
                         onSelect(tag)
-                    } label: {
-                        Text(tag.labelWithEmojiAnnotation())
-                            .fontWeight(.medium)
                     }
-                    .buttonStyle(.bordered)
-                    .buttonBorderShape(.capsule)
-                    .controlSize(.small)
                 }
             }
             .padding()

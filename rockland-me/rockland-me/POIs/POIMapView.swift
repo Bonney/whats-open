@@ -13,8 +13,11 @@ extension CLLocationCoordinate2D {
 }
 
 extension MKCoordinateSpan {
-    static let defaultZoomLevel = MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
+    static let defaultZoomLevel = MKCoordinateSpan(latitudeDelta: 0.07, longitudeDelta: 0.07)
     static let detailedZoomLevel = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
+    static func delta(_ delta: Double) -> MKCoordinateSpan {
+        MKCoordinateSpan(latitudeDelta: delta, longitudeDelta: delta)
+    }
 }
 
 struct POIMapView: View {
@@ -26,13 +29,18 @@ struct POIMapView: View {
     struct Annotation: Identifiable {
         var id: UUID
         var coordinate: CLLocationCoordinate2D
+
         init(id: UUID = UUID(), _ coordinate: CLLocationCoordinate2D) {
             self.id = id
             self.coordinate = coordinate
         }
     }
 
-    @State private var annotations: [Annotation] = []
+    func annotations() -> [Annotation] {
+        viewModel.pointsOfInterest
+            .compactMap({ $0.coordinate })
+            .map({ Annotation($0)} )
+    }
 
     func currentNavPathCoordinate() async -> MKCoordinateRegion {
         if let last = navigationPath.last, let coordinate = await last.getCoordinate() {
@@ -42,9 +50,9 @@ struct POIMapView: View {
     }
 
     @ViewBuilder func map() -> some View {
-        Map(coordinateRegion: $mapCoordinateRegion, annotationItems: annotations, annotationContent: { annotation in
+        Map(coordinateRegion: $mapCoordinateRegion, annotationItems: annotations()) { annotation in
             MapMarker(coordinate: annotation.coordinate)
-        })
+        }
         .ignoresSafeArea()
     }
 
@@ -97,7 +105,6 @@ struct POIMapView: View {
             }
         .task {
             await viewModel.load()
-
 //            for poi in viewModel.pointsOfInterest {
 //                if let coord = await poi.getCoordinate() {
 //                    annotations.append(Annotation(coord))
@@ -108,15 +115,8 @@ struct POIMapView: View {
             Task { @MainActor in
                 let new = await currentNavPathCoordinate()
 
-                var nextAnnotation: [Annotation] = []
-
-                if let coord = await navigationPath.last?.getCoordinate() {
-                    nextAnnotation = [Annotation(coord)]
-                }
-
                 withAnimation(.easeOut) {
                     mapCoordinateRegion = new
-                    annotations = nextAnnotation
                 }
 
             }

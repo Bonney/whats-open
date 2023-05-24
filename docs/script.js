@@ -11,24 +11,12 @@ fetch('data.json')
         const details = document.createElement('div');
         details.innerHTML = `
             <hr>
-            <h2>${restaurant.name}</h2>
-            <p>${restaurant.address} | ${restaurant.phone}</p>
-            <p>${restaurant.description}</p>
+            ${name(restaurant)}
+            ${description(restaurant)}
+            ${address(restaurant)}
         `;
 
         tbody.appendChild(details);
-
-        // const restaurantDetails = document.createElement('tr');
-        // restaurantDetails.innerHTML = `
-        //     <td colspan="3" class="rest-title">
-        //         <a href="${restaurant.url}">${restaurant.name}</a>
-        //     </td>
-        //     <td colspan="2">${restaurant.phone}</td>
-        //     <td colspan="2">
-        //         <a href="${googleMapsLink}">${restaurant.address}</a>
-        //     </td>
-        // `;
-        // tbody.appendChild(restaurantDetails);
 
         const restaurantHours = document.createElement('div');
         restaurantHours.innerHTML = `
@@ -39,6 +27,21 @@ fetch('data.json')
     });
   })
   .catch(error => console.error('Error fetching data: ', error));
+
+function name(restaurant) {
+    let html = `<h3>${restaurant.name}</h3>`
+    return html
+}
+
+function description(restaurant) {
+    let html = `<p>${restaurant.description}</p>`
+    return html
+}
+
+function address(restaurant) {
+    let html = `<p>${restaurant.address}</p>`
+    return html
+}
 
 function formatHours(hours) {
     let html = `<small>`;

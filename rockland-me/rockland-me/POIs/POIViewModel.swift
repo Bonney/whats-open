@@ -12,20 +12,27 @@ class PointOfInterestViewModel: ObservableObject {
     @Published var pointsOfInterest: [PointOfInterest] = []
 
     var pointsOfInterestFilteredBySearch: [PointOfInterest] {
-        pointsOfInterest.containing(searchTerm: searchInput)
+        pointsOfInterest.containing(searchTerm: searchInput + searchTokens.joined(separator: " "))
     }
 
     @Published var urlSessionError: Error? = nil
     @Published var jsonDecodeError: Error? = nil
     private let endpoint: Endpoint
 
+    @Published var searchTokens: [PointOfInterest.Tag] = []
     @Published var searchInput: String = ""
+
     func toggleSearchToken(for tag: PointOfInterest.Tag) {
-        if searchInput.localizedCaseInsensitiveContains(tag) {
-            searchInput = searchInput.replacingOccurrences(of: tag, with: "")
+        if searchTokens.contains(tag) {
+            searchTokens.removeAll(where: { $0 == tag })
         } else {
-            searchInput.append(tag)
+            searchTokens.append(tag)
         }
+//        if searchInput.localizedCaseInsensitiveContains(tag) {
+//            searchInput = searchInput.replacingOccurrences(of: tag, with: "")
+//        } else {
+//            searchInput.append(tag)
+//        }
     }
 
     init(endpoint: Endpoint = .pointsOfInterest) {

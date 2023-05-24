@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		0203BEB72A151AE600C2921B /* POIMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0203BEB62A151AE600C2921B /* POIMapView.swift */; };
+		0218796E2A1D75AA000D7B88 /* FestivalDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0218796D2A1D75AA000D7B88 /* FestivalDetailView.swift */; };
+		021879762A1D7B91000D7B88 /* Decoration+SwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021879742A1D7B91000D7B88 /* Decoration+SwiftUI.swift */; };
+		021879772A1D7B91000D7B88 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021879752A1D7B91000D7B88 /* CalendarView.swift */; };
 		026CA3B92A1054BC00659D36 /* rockland_meApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026CA3B82A1054BC00659D36 /* rockland_meApp.swift */; };
 		026CA3BB2A1054BC00659D36 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026CA3BA2A1054BC00659D36 /* ContentView.swift */; };
 		026CA3BD2A1054BD00659D36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 026CA3BC2A1054BD00659D36 /* Assets.xcassets */; };
@@ -27,6 +30,9 @@
 
 /* Begin PBXFileReference section */
 		0203BEB62A151AE600C2921B /* POIMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POIMapView.swift; sourceTree = "<group>"; };
+		0218796D2A1D75AA000D7B88 /* FestivalDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FestivalDetailView.swift; sourceTree = "<group>"; };
+		021879742A1D7B91000D7B88 /* Decoration+SwiftUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Decoration+SwiftUI.swift"; sourceTree = "<group>"; };
+		021879752A1D7B91000D7B88 /* CalendarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		026CA3B52A1054BC00659D36 /* rockland-me.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "rockland-me.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		026CA3B82A1054BC00659D36 /* rockland_meApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rockland_meApp.swift; sourceTree = "<group>"; };
 		026CA3BA2A1054BC00659D36 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -57,6 +63,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		021879732A1D7B91000D7B88 /* CalendarView */ = {
+			isa = PBXGroup;
+			children = (
+				021879742A1D7B91000D7B88 /* Decoration+SwiftUI.swift */,
+				021879752A1D7B91000D7B88 /* CalendarView.swift */,
+			);
+			path = CalendarView;
+			sourceTree = "<group>";
+		};
 		026CA3AC2A1054BC00659D36 = {
 			isa = PBXGroup;
 			children = (
@@ -110,6 +125,7 @@
 		02C38A4B2A13C8150019D796 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				021879732A1D7B91000D7B88 /* CalendarView */,
 				02C38A502A13D2AF0019D796 /* HorizontalTagPicker.swift */,
 			);
 			path = Views;
@@ -132,6 +148,7 @@
 			children = (
 				02D241942A1516BC003B4FC4 /* FestivalsViewModel.swift */,
 				02D241982A1517D2003B4FC4 /* FestivalListView.swift */,
+				0218796D2A1D75AA000D7B88 /* FestivalDetailView.swift */,
 				02D241962A1516DF003B4FC4 /* FestivalModel.swift */,
 			);
 			path = Festivals;
@@ -221,11 +238,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				02D241952A1516BC003B4FC4 /* FestivalsViewModel.swift in Sources */,
+				0218796E2A1D75AA000D7B88 /* FestivalDetailView.swift in Sources */,
+				021879772A1D7B91000D7B88 /* CalendarView.swift in Sources */,
 				02D241932A151611003B4FC4 /* AppEntryView.swift in Sources */,
 				026CA3BB2A1054BC00659D36 /* ContentView.swift in Sources */,
 				02C38A4F2A13C86B0019D796 /* POIModel.swift in Sources */,
 				02C38A512A13D2AF0019D796 /* HorizontalTagPicker.swift in Sources */,
 				02D241972A1516DF003B4FC4 /* FestivalModel.swift in Sources */,
+				021879762A1D7B91000D7B88 /* Decoration+SwiftUI.swift in Sources */,
 				02D241912A151409003B4FC4 /* POIListView.swift in Sources */,
 				02C38A4D2A13C8300019D796 /* Endpoint.swift in Sources */,
 				0203BEB72A151AE600C2921B /* POIMapView.swift in Sources */,
