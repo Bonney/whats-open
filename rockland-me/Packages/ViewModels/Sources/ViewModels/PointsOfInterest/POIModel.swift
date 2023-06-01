@@ -42,6 +42,25 @@ public struct PointOfInterest: Codable, Identifiable, Hashable {
         public let sat: String
         public let sun: String
 
+        public var today: String {
+            switch Calendar.current.component(.weekday, from: Date.now) {
+                case 1:
+                    return mon
+                case 2:
+                    return tue
+                case 3:
+                    return wed
+                case 4:
+                    return thr
+                case 5:
+                    return fri
+                case 6:
+                    return sat
+                default:
+                    return sun
+            }
+        }
+
         public func asArray() -> [(Day: String, BusinessHours: String)] {
             [
                 ("Monday", mon),

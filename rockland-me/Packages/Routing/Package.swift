@@ -4,20 +4,18 @@
 import PackageDescription
 
 let package = Package(
-    name: "MacUI",
+    name: "Routing",
     platforms: [
+        .iOS(.v16),
         .macOS(.v13)
     ],
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
-            name: "MacUI",
-            targets: ["MacUI"]),
+            name: "Routing",
+            targets: ["Routing"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/Bonney/MBUtilities", branch: "master"),
-        .package(name: "ViewModels", path: "./ViewModels"),
-        .package(name: "Routing", path: "./Routing")
         // Dependencies declare other packages that this package depends on.
         // .package(url: /* package url */, from: "1.0.0"),
     ],
@@ -25,14 +23,10 @@ let package = Package(
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
-            name: "MacUI",
-            dependencies: [
-                .product(name: "MBUtilities", package: "MBUtilities"),
-                .product(name: "ViewModels", package: "ViewModels"),
-                .product(name: "Routing", package: "Routing")
-            ]),
+            name: "Routing",
+            dependencies: []),
         .testTarget(
-            name: "MacUITests",
-            dependencies: ["MacUI"]),
+            name: "RoutingTests",
+            dependencies: ["Routing"]),
     ]
 )

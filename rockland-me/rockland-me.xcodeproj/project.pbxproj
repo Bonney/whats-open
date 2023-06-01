@@ -9,9 +9,9 @@
 /* Begin PBXBuildFile section */
 		0203BEB72A151AE600C2921B /* POIMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0203BEB62A151AE600C2921B /* POIMapView.swift */; };
 		0218796E2A1D75AA000D7B88 /* FestivalDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0218796D2A1D75AA000D7B88 /* FestivalDetailView.swift */; };
-		021D57CA2A282154009892BE /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021D57C92A282154009892BE /* Categories.swift */; };
 		021D57CE2A282C8B009892BE /* MacUI in Frameworks */ = {isa = PBXBuildFile; productRef = 021D57CD2A282C8B009892BE /* MacUI */; };
 		021D57D12A282ECF009892BE /* ViewModels in Frameworks */ = {isa = PBXBuildFile; productRef = 021D57D02A282ECF009892BE /* ViewModels */; };
+		021D57D42A28D535009892BE /* Routing in Frameworks */ = {isa = PBXBuildFile; productRef = 021D57D32A28D535009892BE /* Routing */; };
 		026CA3B92A1054BC00659D36 /* rockland_meApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026CA3B82A1054BC00659D36 /* rockland_meApp.swift */; };
 		026CA3BB2A1054BC00659D36 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026CA3BA2A1054BC00659D36 /* ContentView.swift */; };
 		026CA3BD2A1054BD00659D36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 026CA3BC2A1054BD00659D36 /* Assets.xcassets */; };
@@ -29,9 +29,9 @@
 /* Begin PBXFileReference section */
 		0203BEB62A151AE600C2921B /* POIMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POIMapView.swift; sourceTree = "<group>"; };
 		0218796D2A1D75AA000D7B88 /* FestivalDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FestivalDetailView.swift; sourceTree = "<group>"; };
-		021D57C92A282154009892BE /* Categories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
 		021D57CB2A282557009892BE /* MacUI */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = MacUI; sourceTree = "<group>"; };
 		021D57CF2A282E1B009892BE /* ViewModels */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = ViewModels; sourceTree = "<group>"; };
+		021D57D22A28D48F009892BE /* Routing */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Routing; sourceTree = "<group>"; };
 		026CA3B52A1054BC00659D36 /* rockland-me.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "rockland-me.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		026CA3B82A1054BC00659D36 /* rockland_meApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rockland_meApp.swift; sourceTree = "<group>"; };
 		026CA3BA2A1054BC00659D36 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -55,20 +55,13 @@
 				021D57CE2A282C8B009892BE /* MacUI in Frameworks */,
 				02C38A562A13DAE20019D796 /* MBUtilities in Frameworks */,
 				021D57D12A282ECF009892BE /* ViewModels in Frameworks */,
+				021D57D42A28D535009892BE /* Routing in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		021D57C82A282140009892BE /* Routing */ = {
-			isa = PBXGroup;
-			children = (
-				021D57C92A282154009892BE /* Categories.swift */,
-			);
-			path = Routing;
-			sourceTree = "<group>";
-		};
 		021D57CC2A282C8B009892BE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -97,7 +90,6 @@
 		026CA3B72A1054BC00659D36 /* rockland-me */ = {
 			isa = PBXGroup;
 			children = (
-				021D57C82A282140009892BE /* Routing */,
 				026CA3B82A1054BC00659D36 /* rockland_meApp.swift */,
 				02D241922A151611003B4FC4 /* AppEntryView.swift */,
 				026CA3BA2A1054BC00659D36 /* ContentView.swift */,
@@ -123,6 +115,7 @@
 		026CA3C72A1054E200659D36 /* Packages */ = {
 			isa = PBXGroup;
 			children = (
+				021D57D22A28D48F009892BE /* Routing */,
 				021D57CF2A282E1B009892BE /* ViewModels */,
 				021D57CB2A282557009892BE /* MacUI */,
 			);
@@ -185,6 +178,7 @@
 				02C38A552A13DAE20019D796 /* MBUtilities */,
 				021D57CD2A282C8B009892BE /* MacUI */,
 				021D57D02A282ECF009892BE /* ViewModels */,
+				021D57D32A28D535009892BE /* Routing */,
 			);
 			productName = "rockland-me";
 			productReference = 026CA3B52A1054BC00659D36 /* rockland-me.app */;
@@ -246,7 +240,6 @@
 				02D241952A1516BC003B4FC4 /* FestivalsViewModel.swift in Sources */,
 				0218796E2A1D75AA000D7B88 /* FestivalDetailView.swift in Sources */,
 				02D241932A151611003B4FC4 /* AppEntryView.swift in Sources */,
-				021D57CA2A282154009892BE /* Categories.swift in Sources */,
 				026CA3BB2A1054BC00659D36 /* ContentView.swift in Sources */,
 				02C38A512A13D2AF0019D796 /* HorizontalTagPicker.swift in Sources */,
 				02D241972A1516DF003B4FC4 /* FestivalModel.swift in Sources */,
@@ -488,6 +481,10 @@
 		021D57D02A282ECF009892BE /* ViewModels */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = ViewModels;
+		};
+		021D57D32A28D535009892BE /* Routing */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Routing;
 		};
 		02C38A552A13DAE20019D796 /* MBUtilities */ = {
 			isa = XCSwiftPackageProductDependency;

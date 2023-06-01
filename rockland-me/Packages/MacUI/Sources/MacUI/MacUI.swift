@@ -1,75 +1,134 @@
 import SwiftUI
+import ViewModels
+import MapKit
+import Routing
 
-struct TableItem: Identifiable {
-    let id: UUID = UUID()
-    let title: String
-    let description: String
-    let timestamp: Date
+public struct POITable: View {
+    @EnvironmentObject private var poiViewModel: PointOfInterestViewModel
 
-    init(title: String, description: String, timestamp: Date) {
-        self.title = title
-        self.description = description
-        self.timestamp = timestamp
+    @State private var searching = ""
+    @State private var selection = Set<PointOfInterest.ID>()
+    @State private var sortOrder = [KeyPathComparator(\PointOfInterest.name)]
+
+    private struct MapAnnotation: Identifiable {
+        let id = UUID()
+        let coordinate: CLLocationCoordinate2D
     }
-}
 
-fileprivate extension Date {
-    static var random: Date {
-        Date(timeIntervalSince1970: TimeInterval.random(in: 0...1_000_000_000))
+    @State private var annotations: [MapAnnotation] = []
+
+    public init() {
     }
-}
 
-extension Array<TableItem> {
-    // 10 examples of TableItems. Each has a random timestamp, it's title
-    // is the name of a famous novel, and the subtitle is the author's name.
-    static let exampleData: [TableItem] = [
-        TableItem(title: "The Great Gatsby", description: "F. Scott Fitzgerald", timestamp: Date.random),
-        TableItem(title: "The Adventures of Huckleberry Finn", description: "Mark Twain", timestamp: Date.random),
-        TableItem(title: "The Catcher in the Rye", description: "J. D. Salinger", timestamp: Date.random),
-        TableItem(title: "The Grapes of Wrath", description: "John Steinbeck", timestamp: Date.random),
-        TableItem(title: "To Kill a Mockingbird", description: "Harper Lee", timestamp: Date.random),
-        TableItem(title: "The Color Purple", description: "Alice Walker", timestamp: Date.random),
-        TableItem(title: "Ulysses", description: "James Joyce", timestamp: Date.random),
-        TableItem(title: "Beloved", description: "Toni Morrison", timestamp: Date.random),
-        TableItem(title: "The Lord of the Rings", description: "J. R. R. Tolkien", timestamp: Date.random),
-        TableItem(title: "1984", description: "George Orwell", timestamp: Date.random)
-    ]
-}
+    public var body: some View {
+        let _ = Self._printChanges()
+        NavigationSplitView {
+            sidebar
+        } content: {
+            table
+        } detail: {
+            map
+        }
+        .task {
+            await poiViewModel.load()
+        }
+        .onChange(of: selection) { newSelection in
+            withAnimation(.easeOut) {
+                updateAnnotations(with: newSelection)
+            }
+        }
+    }
 
-struct MacPOITable: View {
-    let data: [TableItem]
+    private func updateAnnotations(with selection: Set<PointOfInterest.ID>) {
+        Task { @MainActor in
+            var coordinates: [CLLocationCoordinate2D] = []
+            let selected = poiViewModel.pointsOfInterest.filter { selection.contains($0.id) }
+            for selection in selected {
+                if let coordinate = await selection.getCoordinate() {
+                    coordinates.append(coordinate)
+                }
+            }
+            annotations = coordinates.map { MapAnnotation(coordinate: $0) }
+        }
+    }
 
-    @State private var selection = Set<TableItem.ID>()
-    @State private var sortOrder = [KeyPathComparator(\TableItem.timestamp)]
+    @ViewBuilder private var favoriteButton: some View {
+        Button {
+            //
+        } label: {
+            Label("Favorite", systemImage: "heart")
+        }
+    }
 
-    var body: some View {
-        Table(of: TableItem.self,
+    private var mapRegion: Binding<MKCoordinateRegion> {
+        Binding(get: {
+            let region = MKCoordinateRegion(
+                center: annotations.first?.coordinate ?? CLLocationCoordinate2D(latitude: 44.103, longitude: -69.108),
+                span: MKCoordinateSpan(latitudeDelta: 0.07, longitudeDelta: 0.07)
+            )
+            return region
+        }, set: { _ in
+        })
+    }
+
+    @ViewBuilder var map: some View {
+        Map(coordinateRegion: mapRegion, annotationItems: annotations) { annotation in
+            MapMarker(coordinate: annotation.coordinate)
+        }
+    }
+
+    var sidebar: some View {
+        List {
+            ForEach(AppCategory.allCases) { category in
+                category.tabItem()
+            }
+
+        }
+    }
+
+    var table: some View {
+        Table(of: PointOfInterest.self,
               selection: $selection,
               sortOrder: $sortOrder
         ) {
-            // Define Columns
-            TableColumn("Date Created", value: \.timestamp) { tableItem in
-                Text(tableItem.timestamp, format: .dateTime.day().month(.wide).year())
-                    .monospacedDigit()
+            TableColumn("Restaurant", value: \.name) { tableItem in
+                Text(tableItem.name)
             }
-            TableColumn("Title", value: \.title) { tableItem in
-                Text(tableItem.title)
+
+            TableColumn("Phone", value: \.phone) { tableItem in
+                Text(tableItem.phone)
             }
-            TableColumn("Description", value: \.description) { tableItem in
-                Text(tableItem.description)
+
+            TableColumn(
+                Date.now.formatted(Date.FormatStyle().weekday(.wide)) + " (Today)"
+            ) { tableItem in
+                Text(tableItem.hours.today)
             }
         } rows: {
-            ForEach(data.sorted(using: sortOrder)) { tableItem in
+            ForEach(
+                poiViewModel.pointsOfInterest
+                    .sorted(using: sortOrder)
+                    .filter {
+                        searching.isEmpty || $0.name.localizedCaseInsensitiveContains(searching)
+                    }
+            ) { tableItem in
                 TableRow(tableItem)
+            }
+        }
+        .searchable(text: $searching)
+        .navigationTitle("Restaurants")
+        .navigationSubtitle(String(describing: poiViewModel.pointsOfInterest.count) + " items")
+        .toolbar {
+            ToolbarItem {
+                favoriteButton
             }
         }
     }
 }
 
-struct MacPOITable_Previews: PreviewProvider {
-    static var previews: some View {
-        MacPOITable(data: .exampleData)
+public struct POITable_Previews: PreviewProvider {
+    public static var previews: some View {
+        POITable()
+            .environmentObject(PointOfInterestViewModel(endpoint: .pointsOfInterest))
     }
 }
-
-

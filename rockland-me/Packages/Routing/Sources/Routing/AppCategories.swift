@@ -8,8 +8,8 @@
 import Foundation
 import SwiftUI
 
-enum Category: String, Identifiable, CaseIterable {
-    var id: String { self.rawValue }
+public enum AppCategory: String, Identifiable, CaseIterable {
+    public var id: String { self.rawValue }
 
     case restaurants
     case festivals
@@ -17,7 +17,7 @@ enum Category: String, Identifiable, CaseIterable {
     case favorites
 }
 
-extension Category {
+public extension AppCategory {
     var title: String {
         switch self {
             case .restaurants:
@@ -45,23 +45,7 @@ extension Category {
     }
 }
 
-extension Category: View {
-    // The main entry point for this given category's view hierarchy.
-    var body: some View {
-        switch self {
-            case .restaurants:
-                POIListView()
-            case .festivals:
-                FestivalListView()
-            case .locations:
-                Text("Locations View")
-            case .favorites:
-                Text("Favorites View")
-        }
-    }
-}
-
-extension Category {
+public extension AppCategory {
     // Returns a SwiftUI Label using the Category's `title` and `systemImage` computed properties.
     func tabItem() -> some View {
         switch self {

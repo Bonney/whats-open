@@ -7,6 +7,23 @@
 
 import SwiftUI
 import ViewModels
+import Routing
+
+extension AppCategory: View {
+    // The main entry point for this given category's view hierarchy.
+    public var body: some View {
+        switch self {
+            case .restaurants:
+                POIListView()
+            case .festivals:
+                FestivalListView()
+            case .locations:
+                Text("Locations View")
+            case .favorites:
+                Text("Favorites View")
+        }
+    }
+}
 
 struct AppEntryView: View {
     @StateObject private var poiViewModel = PointOfInterestViewModel()
@@ -14,41 +31,10 @@ struct AppEntryView: View {
 
     var body: some View {
         TabView {
-            ForEach(Category.allCases) { category in
+            ForEach(AppCategory.allCases) { category in
                 category.body
                     .tabItem(category.tabItem)
             }
-//            POIListView(viewModel: poiViewModel)
-//                .tabItem {
-//                    Label("Restaurants", systemImage: "fork.knife")
-//                }
-//
-//            FestivalListView(viewModel: festivalsViewModel)
-//                .tabItem {
-//                    Label("Festivals", systemImage: "ticket")
-//                }
-//
-//            NavigationStack {
-//                List {
-//                    Text("Locations")
-//                }
-//                .navigationTitle("Locations")
-//            }
-//            .tabItem {
-//                Label("Locations", systemImage: "map")
-//            }
-//
-//            // A favorites tab
-//            NavigationStack {
-//                List {
-//                    Text("Favorites")
-//                }
-//                .navigationTitle("Favorites")
-//            }
-//            .tabItem {
-//                Label("Favorites", systemImage: "heart")
-//            }
-
         }
         .listStyle(.plain)
         .environmentObject(poiViewModel)
