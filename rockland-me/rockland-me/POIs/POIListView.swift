@@ -7,13 +7,10 @@
 
 import SwiftUI
 import MapKit
+import ViewModels
 
 struct POIListView: View {
-    @ObservedObject private var viewModel: PointOfInterestViewModel
-
-    init(viewModel: PointOfInterestViewModel) {
-        self.viewModel = viewModel
-    }
+    @EnvironmentObject private var viewModel: PointOfInterestViewModel
 
     var body: some View {
         NavigationStack {
@@ -59,6 +56,7 @@ struct POIListView: View {
 
 struct POIListView_Previews: PreviewProvider {
     static var previews: some View {
-        POIListView(viewModel: PointOfInterestViewModel(endpoint: .pointsOfInterest))
+        POIListView()
+            .environmentObject(PointOfInterestViewModel(endpoint: .pointsOfInterest))
     }
 }

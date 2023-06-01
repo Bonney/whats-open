@@ -7,22 +7,23 @@
 
 import SwiftUI
 
-class PointOfInterestViewModel: ObservableObject {
-    @Published var selection: PointOfInterest? = nil
-    @Published var pointsOfInterest: [PointOfInterest] = []
+@MainActor
+public class PointOfInterestViewModel: ObservableObject {
+    @Published public var selection: PointOfInterest? = nil
+    @Published public var pointsOfInterest: [PointOfInterest] = []
 
-    var pointsOfInterestFilteredBySearch: [PointOfInterest] {
+    public var pointsOfInterestFilteredBySearch: [PointOfInterest] {
         pointsOfInterest.containing(searchTerm: searchInput + searchTokens.joined(separator: " "))
     }
 
-    @Published var urlSessionError: Error? = nil
-    @Published var jsonDecodeError: Error? = nil
-    private let endpoint: Endpoint
+    @Published public var urlSessionError: Error? = nil
+    @Published public var jsonDecodeError: Error? = nil
+    private let endpoint: JSONEndpoint
 
-    @Published var searchTokens: [PointOfInterest.Tag] = []
-    @Published var searchInput: String = ""
+    @Published public var searchTokens: [PointOfInterest.Tag] = []
+    @Published public var searchInput: String = ""
 
-    func toggleSearchToken(for tag: PointOfInterest.Tag) {
+    public func toggleSearchToken(for tag: PointOfInterest.Tag) {
         if searchTokens.contains(tag) {
             searchTokens.removeAll(where: { $0 == tag })
         } else {
@@ -35,11 +36,11 @@ class PointOfInterestViewModel: ObservableObject {
 //        }
     }
 
-    init(endpoint: Endpoint = .pointsOfInterest) {
+    public init(endpoint: JSONEndpoint = .pointsOfInterest) {
         self.endpoint = endpoint
     }
 
-    func load() async {
+    public func load() async {
         do {
             let (data, _) = try await URLSession.shared.data(from: endpoint.url())
             do {

@@ -7,6 +7,7 @@
 
 import SwiftUI
 import MapKit
+import ViewModels
 
 struct AnnotatedMap: View {
     @Binding var selection: PointOfInterest?

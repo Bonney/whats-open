@@ -8,6 +8,7 @@
 import SwiftUI
 import MBUtilities
 import MapKit
+import ViewModels
 
 struct POIDetailView: View {
     let poi: PointOfInterest

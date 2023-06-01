@@ -8,11 +8,7 @@
 import SwiftUI
 
 struct FestivalListView: View {
-    @ObservedObject private var viewModel: FestivalsViewModel
-
-    init(viewModel: FestivalsViewModel) {
-        self.viewModel = viewModel
-    }
+    @EnvironmentObject private var viewModel: FestivalsViewModel
 
     var body: some View {
         NavigationStack {
@@ -46,7 +42,8 @@ struct FestivalListView: View {
 
 struct FestivalView_Previews: PreviewProvider {
     static var previews: some View {
-        FestivalListView(viewModel: FestivalsViewModel())
+        FestivalListView()
+            .environmentObject(FestivalsViewModel())
     }
 }
 

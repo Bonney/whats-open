@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import ViewModels
 
 struct AppEntryView: View {
     @StateObject private var poiViewModel = PointOfInterestViewModel()
@@ -13,39 +14,45 @@ struct AppEntryView: View {
 
     var body: some View {
         TabView {
-            POIListView(viewModel: poiViewModel)
-                .tabItem {
-                    Label("Restaurants", systemImage: "fork.knife")
-                }
-
-            FestivalListView(viewModel: festivalsViewModel)
-                .tabItem {
-                    Label("Festivals", systemImage: "ticket")
-                }
-
-            NavigationStack {
-                List {
-                    Text("Locations")
-                }
-                .navigationTitle("Locations")
+            ForEach(Category.allCases) { category in
+                category.body
+                    .tabItem(category.tabItem)
             }
-            .tabItem {
-                Label("Locations", systemImage: "map")
-            }
-
-            // A favorites tab
-            NavigationStack {
-                List {
-                    Text("Favorites")
-                }
-                .navigationTitle("Favorites")
-            }
-            .tabItem {
-                Label("Favorites", systemImage: "heart")
-            }
+//            POIListView(viewModel: poiViewModel)
+//                .tabItem {
+//                    Label("Restaurants", systemImage: "fork.knife")
+//                }
+//
+//            FestivalListView(viewModel: festivalsViewModel)
+//                .tabItem {
+//                    Label("Festivals", systemImage: "ticket")
+//                }
+//
+//            NavigationStack {
+//                List {
+//                    Text("Locations")
+//                }
+//                .navigationTitle("Locations")
+//            }
+//            .tabItem {
+//                Label("Locations", systemImage: "map")
+//            }
+//
+//            // A favorites tab
+//            NavigationStack {
+//                List {
+//                    Text("Favorites")
+//                }
+//                .navigationTitle("Favorites")
+//            }
+//            .tabItem {
+//                Label("Favorites", systemImage: "heart")
+//            }
 
         }
         .listStyle(.plain)
+        .environmentObject(poiViewModel)
+        .environmentObject(festivalsViewModel)
     }
 }
 

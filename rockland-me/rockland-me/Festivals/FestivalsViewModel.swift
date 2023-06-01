@@ -6,8 +6,10 @@
 //
 
 import SwiftUI
+import ViewModels
 
-class FestivalsViewModel: ObservableObject {
+@MainActor
+public class FestivalsViewModel: ObservableObject {
     @Published var festivals: [Festival] = []
 
     var festivalsFilteredBySearch: [Festival] {
@@ -16,11 +18,11 @@ class FestivalsViewModel: ObservableObject {
 
     @Published var urlSessionError: Error? = nil
     @Published var jsonDecodeError: Error? = nil
-    private let endpoint: Endpoint
+    private let endpoint: JSONEndpoint
 
     @Published var searchInput: String = ""
 
-    init(endpoint: Endpoint = .festivals) {
+    public init(endpoint: JSONEndpoint = .festivals) {
         self.endpoint = endpoint
     }
 

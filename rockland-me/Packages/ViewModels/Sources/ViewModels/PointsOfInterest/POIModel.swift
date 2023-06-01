@@ -30,19 +30,19 @@ import MapKit
 //        }
 //    },
 
-struct PointOfInterest: Codable, Identifiable, Hashable {
-    typealias Tag = String
+public struct PointOfInterest: Codable, Identifiable, Hashable {
+    public typealias Tag = String
 
-    struct Hours: Codable, Hashable {
-        let mon: String
-        let tue: String
-        let wed: String
-        let thr: String
-        let fri: String
-        let sat: String
-        let sun: String
+    public struct Hours: Codable, Hashable {
+        public let mon: String
+        public let tue: String
+        public let wed: String
+        public let thr: String
+        public let fri: String
+        public let sat: String
+        public let sun: String
 
-        func asArray() -> [(Day: String, BusinessHours: String)] {
+        public func asArray() -> [(Day: String, BusinessHours: String)] {
             [
                 ("Monday", mon),
                 ("Tuesday", tue),
@@ -55,18 +55,17 @@ struct PointOfInterest: Codable, Identifiable, Hashable {
         }
     }
 
-    let id: Int
-    let name: String
-    let description: String
-    let address: String
-    let phone: String
-    let url: String
-    let tags: [PointOfInterest.Tag]
-    let hours: PointOfInterest.Hours
+    public let id: Int
+    public let name: String
+    public let description: String
+    public let address: String
+    public let phone: String
+    public let url: String
+    public let tags: [PointOfInterest.Tag]
+    public let hours: PointOfInterest.Hours
 }
 
-extension PointOfInterest {
-
+public extension PointOfInterest {
     func willBeOpenToday() -> Bool {
         let currentWeekday = Calendar.current.component(.weekday, from: Date())
         // @TODO: Logic for determining if business is open.
@@ -74,7 +73,7 @@ extension PointOfInterest {
     }
 }
 
-extension Array<PointOfInterest> {
+public extension Array<PointOfInterest> {
     func containing(searchTerm: String) -> Self {
         guard searchTerm.isEmpty == false else {
             return self
@@ -105,7 +104,7 @@ extension Array<PointOfInterest> {
 }
 
 // MARK: MapKit
-extension PointOfInterest {
+public extension PointOfInterest {
     var coordinate: CLLocationCoordinate2D? {
         let geocoder = CLGeocoder()
         var output: CLLocationCoordinate2D? = nil
@@ -154,7 +153,7 @@ extension PointOfInterest {
 }
 
 // MARK: SwiftUI
-extension PointOfInterest {
+public extension PointOfInterest {
     @ViewBuilder func listCell() -> some View {
         VStack(alignment: .leading) {
             Text(name)
@@ -184,7 +183,7 @@ extension PointOfInterest {
     }
 }
 
-extension Array<PointOfInterest.Tag> {
+public extension Array<PointOfInterest.Tag> {
     func containing(searchTerm: String) -> Self {
         self.filter { tag in
             tag.localizedCaseInsensitiveContains(searchTerm)
@@ -196,7 +195,7 @@ extension PointOfInterest.Tag: Identifiable {
     public var id: String { self }
 }
 
-extension PointOfInterest.Tag {
+public extension PointOfInterest.Tag {
     func labelWithEmojiAnnotation() -> String {
         switch self {
             case "seafood":
@@ -231,7 +230,7 @@ extension PointOfInterest.Tag {
     }
 }
 
-extension PointOfInterest.Tag {
+public extension PointOfInterest.Tag {
     @ViewBuilder func button(action: @escaping () -> Void) -> some View {
         Button {
             action()
@@ -240,12 +239,12 @@ extension PointOfInterest.Tag {
                 .fontWeight(.medium)
         }
         .buttonStyle(.bordered)
-        .buttonBorderShape(.capsule)
+        .buttonBorderShape(.roundedRectangle)
         .controlSize(.small)
     }
 }
 
-extension PointOfInterest {
+public extension PointOfInterest {
     static let preview: PointOfInterest = {
         let jsonString = """
 [{

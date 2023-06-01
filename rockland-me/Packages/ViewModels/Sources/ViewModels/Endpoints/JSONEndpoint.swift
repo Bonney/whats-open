@@ -1,13 +1,13 @@
 //
-//  Endpoint.swift
-//  rockland-me
+//  File.swift
+//  
 //
-//  Created by Matt Bonney on 5/16/23.
+//  Created by Matt Bonney on 5/31/23.
 //
 
 import Foundation
 
-public enum Endpoint: String {
+public enum JSONEndpoint: String {
     case pointsOfInterest = "https://bonney.github.io/rockland-me/data.json"
     case festivals = "https://bonney.github.io/rockland-me/festivals.json"
 

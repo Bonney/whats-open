@@ -7,6 +7,7 @@
 
 import SwiftUI
 import MapKit
+import ViewModels
 
 extension CLLocationCoordinate2D {
     static let centeredOverRocklandThomastonME = CLLocationCoordinate2D(latitude: 44.103, longitude: -69.108)
@@ -98,10 +99,12 @@ struct POIMapView: View {
         }
             .sheet(isPresented: .constant(true)) {
                 list()
+                #if os(iOS)
                     .presentationDetents([.fraction(0.5), .fraction(0.99)])
                     .presentationContentInteraction(.scrolls)
                     .presentationBackgroundInteraction(.enabled)
                     .interactiveDismissDisabled()
+                #endif
             }
         .task {
             await viewModel.load()

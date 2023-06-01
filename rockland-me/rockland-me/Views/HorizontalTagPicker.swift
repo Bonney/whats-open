@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import ViewModels
 
 struct HorizontalTagPicker: View {
     let tags: [PointOfInterest.Tag]
