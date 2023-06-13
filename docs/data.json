@@ -1,6 +1,6 @@
 [
     {
-        "id": 0,
+        "id": "archers-on-the-pier-rockland",
         "name": "Archer's on the Pier",
         "description": "Seafood-centric cafe with a waterfront deck providing comfort eats & a robust beer & wine list.",
         "address": "58 Ocean St, Rockland ME 04841",
@@ -20,7 +20,7 @@
         }
     },
     {
-        "id": 1,
+        "id": "athens-pizza-thomaston",
         "name": "Athens Pizzeria",
         "description": "",
         "address": "179 Main St, Thomaston ME 04861",
@@ -40,7 +40,7 @@
         }
     },
     {
-        "id": 2,
+        "id": "mcloons-lobster-shack-spruce-head",
         "name": "McLoons Lobster Shack",
         "description": "",
         "address": "315 Island Rd, Spruce Head ME 04858",
@@ -60,7 +60,7 @@
         }
     },
     {
-        "id": 3,
+        "id": "station-188-bbq-thomaston",
         "name": "Station 118 BBQ",
         "description": "",
         "address": "118 Main St, Thomaston ME 04861",
@@ -80,7 +80,7 @@
         }
     },
     {
-        "id": 4,
+        "id": "the-zack-shack-thomaston",
         "name": "The Zack Shack",
         "description": "",
         "address": "210 New County Rd, Thomaston ME 04861",
@@ -100,7 +100,7 @@
         }
     },
     {
-        "id": 5,
+        "id": "thomaston-cafe-thomaston",
         "name": "Thomaston Cafe",
         "description": "",
         "address": "154 Main St, Thomaston ME 04861",
