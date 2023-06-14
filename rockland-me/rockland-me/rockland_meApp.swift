@@ -6,8 +6,10 @@
 //
 
 import SwiftUI
-import MacUI
 import ViewModels
+#if os(macOS)
+import MacUI
+#endif
 
 @main
 struct rockland_meApp: App {

@@ -10,6 +10,8 @@ public struct POITable: View {
     @State private var selection = Set<PointOfInterest.ID>()
     @State private var sortOrder = [KeyPathComparator(\PointOfInterest.name)]
 
+    @AppStorage("ShowRightSidebar") var showRightSidebar: Bool = true
+
     private struct MapAnnotation: Identifiable {
         let id = UUID()
         let coordinate: CLLocationCoordinate2D
@@ -17,17 +19,76 @@ public struct POITable: View {
 
     @State private var annotations: [MapAnnotation] = []
 
+    private var columnVisibility: Binding<NavigationSplitViewVisibility> {
+        Binding {
+            if showRightSidebar {
+                return .doubleColumn
+            } else {
+                return .detailOnly
+            }
+        } set: { newValue in
+            switch newValue {
+                case .all, .doubleColumn:
+                    showRightSidebar = true
+                case .detailOnly:
+                    showRightSidebar = false
+                default:
+                    showRightSidebar = false
+            }
+        }
+    }
+
     public init() {
     }
 
     public var body: some View {
         let _ = Self._printChanges()
-        NavigationSplitView {
-            sidebar
-        } content: {
-            table
-        } detail: {
-            map
+
+        Group {
+            if showRightSidebar {
+                NavigationSplitView(columnVisibility: .constant(.doubleColumn)) {
+                    EmptyView()
+                } content: {
+                    table
+                } detail: {
+                    map
+                }
+            } else {
+                NavigationStack {
+                    table
+                }
+            }
+        }
+//
+//        NavigationSplitView() {
+//            EmptyView()
+//        } content: {
+//            table
+//        } detail: {
+//            if showRightSidebar {
+//                map
+//            } else {
+//                EmptyView()
+//            }
+//        }
+//        VSplitView {
+//            map
+//                .frame(maxHeight: showRightSidebar ? 300 : 0)
+//                .compositingGroup()
+//                .animation(.linear, value: showRightSidebar)
+//
+//            table
+//        }
+        .toolbar {
+            ToolbarItem {
+                favoriteButton
+            }
+            ToolbarItem {
+                Toggle(isOn: $showRightSidebar) {
+                    Label(showRightSidebar ? "Hide Map" : "Show Map", systemImage: "map")
+                }
+                .toggleStyle(.button)
+            }
         }
         .task {
             await poiViewModel.load()
@@ -99,11 +160,11 @@ public struct POITable: View {
                 Text(tableItem.phone)
             }
 
-            TableColumn(
-                Date.now.formatted(Date.FormatStyle().weekday(.wide)) + " (Today)"
-            ) { tableItem in
-                Text(tableItem.hours.today)
-            }
+//            TableColumn(
+//                Date.now.formatted(Date.FormatStyle().weekday(.wide)) + " (Today)"
+//            ) { tableItem in
+//                Text(tableItem.hours.today)
+//            }
         } rows: {
             ForEach(
                 poiViewModel.pointsOfInterest
@@ -117,12 +178,7 @@ public struct POITable: View {
         }
         .searchable(text: $searching)
         .navigationTitle("Restaurants")
-        .navigationSubtitle(String(describing: poiViewModel.pointsOfInterest.count) + " items")
-        .toolbar {
-            ToolbarItem {
-                favoriteButton
-            }
-        }
+//        .navigationSubtitle(String(describing: poiViewModel.pointsOfInterest.count) + " items")
     }
 }
 

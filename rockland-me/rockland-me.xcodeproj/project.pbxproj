@@ -9,16 +9,17 @@
 /* Begin PBXBuildFile section */
 		0203BEB72A151AE600C2921B /* POIMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0203BEB62A151AE600C2921B /* POIMapView.swift */; };
 		0218796E2A1D75AA000D7B88 /* FestivalDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0218796D2A1D75AA000D7B88 /* FestivalDetailView.swift */; };
-		021D57CE2A282C8B009892BE /* MacUI in Frameworks */ = {isa = PBXBuildFile; productRef = 021D57CD2A282C8B009892BE /* MacUI */; };
+		021D57CE2A282C8B009892BE /* MacUI in Frameworks */ = {isa = PBXBuildFile; platformFilters = (macos, ); productRef = 021D57CD2A282C8B009892BE /* MacUI */; };
 		021D57D12A282ECF009892BE /* ViewModels in Frameworks */ = {isa = PBXBuildFile; productRef = 021D57D02A282ECF009892BE /* ViewModels */; };
 		021D57D42A28D535009892BE /* Routing in Frameworks */ = {isa = PBXBuildFile; productRef = 021D57D32A28D535009892BE /* Routing */; };
 		026CA3B92A1054BC00659D36 /* rockland_meApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026CA3B82A1054BC00659D36 /* rockland_meApp.swift */; };
 		026CA3BB2A1054BC00659D36 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026CA3BA2A1054BC00659D36 /* ContentView.swift */; };
 		026CA3BD2A1054BD00659D36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 026CA3BC2A1054BD00659D36 /* Assets.xcassets */; };
 		026CA3C12A1054BD00659D36 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 026CA3C02A1054BD00659D36 /* Preview Assets.xcassets */; };
+		029C492E2A39E89A00A8C183 /* BusinessHourList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029C492D2A39E89A00A8C183 /* BusinessHourList.swift */; };
 		02C38A512A13D2AF0019D796 /* HorizontalTagPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C38A502A13D2AF0019D796 /* HorizontalTagPicker.swift */; };
 		02C38A532A13D7B40019D796 /* POIDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C38A522A13D7B40019D796 /* POIDetailView.swift */; };
-		02C38A562A13DAE20019D796 /* MBUtilities in Frameworks */ = {isa = PBXBuildFile; platformFilters = (macos, ); productRef = 02C38A552A13DAE20019D796 /* MBUtilities */; };
+		02C38A562A13DAE20019D796 /* MBUtilities in Frameworks */ = {isa = PBXBuildFile; productRef = 02C38A552A13DAE20019D796 /* MBUtilities */; };
 		02D241912A151409003B4FC4 /* POIListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D241902A151409003B4FC4 /* POIListView.swift */; };
 		02D241932A151611003B4FC4 /* AppEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D241922A151611003B4FC4 /* AppEntryView.swift */; };
 		02D241952A1516BC003B4FC4 /* FestivalsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D241942A1516BC003B4FC4 /* FestivalsViewModel.swift */; };
@@ -32,12 +33,14 @@
 		021D57CB2A282557009892BE /* MacUI */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = MacUI; sourceTree = "<group>"; };
 		021D57CF2A282E1B009892BE /* ViewModels */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = ViewModels; sourceTree = "<group>"; };
 		021D57D22A28D48F009892BE /* Routing */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Routing; sourceTree = "<group>"; };
+		024850B42A2A649F00189325 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		026CA3B52A1054BC00659D36 /* rockland-me.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "rockland-me.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		026CA3B82A1054BC00659D36 /* rockland_meApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rockland_meApp.swift; sourceTree = "<group>"; };
 		026CA3BA2A1054BC00659D36 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		026CA3BC2A1054BD00659D36 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		026CA3BE2A1054BD00659D36 /* rockland_me.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = rockland_me.entitlements; sourceTree = "<group>"; };
 		026CA3C02A1054BD00659D36 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		029C492D2A39E89A00A8C183 /* BusinessHourList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessHourList.swift; sourceTree = "<group>"; };
 		02C38A502A13D2AF0019D796 /* HorizontalTagPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalTagPicker.swift; sourceTree = "<group>"; };
 		02C38A522A13D7B40019D796 /* POIDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POIDetailView.swift; sourceTree = "<group>"; };
 		02D241902A151409003B4FC4 /* POIListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POIListView.swift; sourceTree = "<group>"; };
@@ -69,9 +72,18 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		024850B32A2A648900189325 /* Playgrounds */ = {
+			isa = PBXGroup;
+			children = (
+				024850B42A2A649F00189325 /* MyPlayground.playground */,
+			);
+			path = Playgrounds;
+			sourceTree = "<group>";
+		};
 		026CA3AC2A1054BC00659D36 = {
 			isa = PBXGroup;
 			children = (
+				024850B32A2A648900189325 /* Playgrounds */,
 				026CA3C72A1054E200659D36 /* Packages */,
 				026CA3B72A1054BC00659D36 /* rockland-me */,
 				026CA3B62A1054BC00659D36 /* Products */,
@@ -93,6 +105,7 @@
 				026CA3B82A1054BC00659D36 /* rockland_meApp.swift */,
 				02D241922A151611003B4FC4 /* AppEntryView.swift */,
 				026CA3BA2A1054BC00659D36 /* ContentView.swift */,
+				029C492C2A39E89000A8C183 /* Hours */,
 				02D2418D2A15138A003B4FC4 /* Locations */,
 				02D2418C2A151385003B4FC4 /* Festivals */,
 				02D2418B2A151381003B4FC4 /* POIs */,
@@ -120,6 +133,14 @@
 				021D57CB2A282557009892BE /* MacUI */,
 			);
 			path = Packages;
+			sourceTree = "<group>";
+		};
+		029C492C2A39E89000A8C183 /* Hours */ = {
+			isa = PBXGroup;
+			children = (
+				029C492D2A39E89A00A8C183 /* BusinessHourList.swift */,
+			);
+			path = Hours;
 			sourceTree = "<group>";
 		};
 		02C38A4B2A13C8150019D796 /* Views */ = {
@@ -244,6 +265,7 @@
 				02C38A512A13D2AF0019D796 /* HorizontalTagPicker.swift in Sources */,
 				02D241972A1516DF003B4FC4 /* FestivalModel.swift in Sources */,
 				02D241912A151409003B4FC4 /* POIListView.swift in Sources */,
+				029C492E2A39E89A00A8C183 /* BusinessHourList.swift in Sources */,
 				0203BEB72A151AE600C2921B /* POIMapView.swift in Sources */,
 				02C38A532A13D7B40019D796 /* POIDetailView.swift in Sources */,
 				02D241992A1517D2003B4FC4 /* FestivalListView.swift in Sources */,

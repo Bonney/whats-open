@@ -26,6 +26,7 @@ struct Festival: Codable, Identifiable, Hashable {
     let name: String
     let description: String
     let notes: String
+    let emoji: String
     let address: String
     let phone: String
     let webUrl: String
@@ -38,6 +39,7 @@ struct Festival: Codable, Identifiable, Hashable {
         self.name = try container.decode(String.self, forKey: .name)
         self.description = try container.decode(String.self, forKey: .description)
         self.notes = try container.decode(String.self, forKey: .notes)
+        self.emoji = try container.decode(String.self, forKey: .emoji)
         self.address = try container.decode(String.self, forKey: .address)
         self.phone = try container.decode(String.self, forKey: .phone)
         self.webUrl = try container.decode(String.self, forKey: .webUrl)

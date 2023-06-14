@@ -43,7 +43,8 @@ struct POIDetailView: View {
             if let poiCoordinate {
                 Map(coordinateRegion: .constant(MKCoordinateRegion(center: poiCoordinate, span: .delta(0.003))), interactionModes: .zoom)
                     .frame(height: 200)
-                    .listRowInsets(EdgeInsets())
+                    .cornerRadius(10)
+                    .listRowSeparator(.hidden, edges: .bottom)
             }
 
 
@@ -61,7 +62,9 @@ struct POIDetailView: View {
                 }
             }
 
-            hoursSection(hours: poi.hours)
+            Section("Business Hours") {
+                BusinessHourList(hours: poi.hours)
+            }
         }
         .listStyle(.plain)
         .toolbar {

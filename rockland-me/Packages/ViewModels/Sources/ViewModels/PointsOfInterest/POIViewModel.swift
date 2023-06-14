@@ -46,11 +46,11 @@ public class PointOfInterestViewModel: ObservableObject {
             do {
                 pointsOfInterest = try JSONDecoder().decode([PointOfInterest].self, from: data)
             } catch {
-                print(error.localizedDescription)
+                print(error)
                 self.jsonDecodeError = error
             }
         } catch {
-            print(error.localizedDescription)
+            print(error)
             self.urlSessionError = error
         }
     }

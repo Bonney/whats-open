@@ -10,17 +10,36 @@ import SwiftUI
 struct FestivalListView: View {
     @EnvironmentObject private var viewModel: FestivalsViewModel
 
+
+    func header(for dates: [Date]) -> String {
+        // Extract start and end dates.
+        guard let start = dates.sorted().first,
+              let end = dates.sorted().last else {
+            return "No Dates"
+        }
+
+        return [start, end].map { date in
+            date.formatted(date: .abbreviated, time: .omitted)
+        }
+        .joined(separator: " to ")
+    }
+
     var body: some View {
         NavigationStack {
             List {
-                Section {
-                    ForEach(viewModel.festivalsFilteredBySearch) { festival in
+                ForEach(viewModel.festivalsFilteredBySearch.sorted {
+                    ($0.dates.first ?? Date.now) < ($1.dates.first ?? Date.now)
+                }) { festival in
+                    Section {
                         NavigationLink(value: festival) {
-                            LabeledContent {
-                            } label: {
+                            HStack {
+                                Text(festival.emoji)
+                                    .font(.system(size: 40))
                                 festival.listCell()
                             }
                         }
+                    } header: {
+                        Text(header(for: festival.dates))
                     }
                 }
             }

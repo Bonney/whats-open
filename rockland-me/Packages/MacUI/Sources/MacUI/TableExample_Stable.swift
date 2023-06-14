@@ -50,7 +50,7 @@ struct TableExample: View {
     @State private var sortOrder = [KeyPathComparator(\TableItem.timestamp)]
 
     var body: some View {
-        HSplitView {
+        HStack {
             table
             detail
         }

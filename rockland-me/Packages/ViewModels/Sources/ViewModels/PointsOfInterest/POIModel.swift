@@ -10,23 +10,23 @@ import MapKit
 
 // Example of JSON data from server:
 //    {
-//        "id": 0,
-//        "name": String,
-//        "description": String,
-//        "address": String,
-//        "phone": String,
-//        "url": String,
+//        "id": "1111",
+//        "name": "Bob's Burgers",
+//        "description": "A family-owned burger place.",
+//        "address": "123 Main St, Rockland ME 04841",
+//        "phone": "207-123-4567",
+//        "url": "www.bobsburgers.com/",
 //        "tags": [
-//            String
+//            "pub", "burgers", "beer"
 //        ],
 //        "hours": {
-//            "mon": "XX am - YY pm",
-//            "tue": "11 am - 8:30 pm",
-//            "wed": "11 am - 8:30 pm",
-//            "thr": "11 am - 8:30 pm",
-//            "fri": "11 am - 9 pm",
-//            "sat": "11 am - 9 pm",
-//            "sun": "closed"
+//            "mon": ["9 am - 5 pm"],
+//            "tue": ["11 am - 12 pm", "3 pm - 5pm],
+//            "wed": ["11 am - 8:30 pm"],
+//            "thr": ["11 am - 8:30 pm"],
+//            "fri": ["11 am - 9 pm"],
+//            "sat": ["11 am - 9 pm"],
+//            "sun": ["closed"]
 //        }
 //    },
 
@@ -34,15 +34,15 @@ public struct PointOfInterest: Codable, Identifiable, Hashable {
     public typealias Tag = String
 
     public struct Hours: Codable, Hashable {
-        public let mon: String
-        public let tue: String
-        public let wed: String
-        public let thr: String
-        public let fri: String
-        public let sat: String
-        public let sun: String
+        public let mon: [String]
+        public let tue: [String]
+        public let wed: [String]
+        public let thr: [String]
+        public let fri: [String]
+        public let sat: [String]
+        public let sun: [String]
 
-        public var today: String {
+        public var today: [String] {
             switch Calendar.current.component(.weekday, from: Date.now) {
                 case 1:
                     return mon
@@ -63,18 +63,18 @@ public struct PointOfInterest: Codable, Identifiable, Hashable {
 
         public func asArray() -> [(Day: String, BusinessHours: String)] {
             [
-                ("Monday", mon),
-                ("Tuesday", tue),
-                ("Wednesday", wed),
-                ("Thursday", thr),
-                ("Friday", fri),
-                ("Saturday", sat),
-                ("Sunday", sun)
+                ("Monday", mon.joined(separator: ", ")),
+                ("Tuesday", tue.joined(separator: ", ")),
+                ("Wednesday", wed.joined(separator: ", ")),
+                ("Thursday", thr.joined(separator: ", ")),
+                ("Friday", fri.joined(separator: ", ")),
+                ("Saturday", sat.joined(separator: ", ")),
+                ("Sunday", sun.joined(separator: ", "))
             ]
         }
     }
 
-    public let id: Int
+    public let id: String
     public let name: String
     public let description: String
     public let address: String
@@ -84,13 +84,28 @@ public struct PointOfInterest: Codable, Identifiable, Hashable {
     public let hours: PointOfInterest.Hours
 }
 
-public extension PointOfInterest {
-    func willBeOpenToday() -> Bool {
-        let currentWeekday = Calendar.current.component(.weekday, from: Date())
-        // @TODO: Logic for determining if business is open.
-        return Bool.random()
-    }
-}
+//public extension PointOfInterest {
+//    func willBeOpenToday() -> Bool {
+//        let currentWeekday = Calendar.current.component(.weekday, from: Date())
+//        // @TODO: Logic for determining if business is open.
+//        switch currentWeekday {
+//            case 1:
+//                return hours.mon.contains("closed") == false
+//            case 2:
+//                return hours.tue.contains("closed") == false
+//            case 3:
+//                return hours.wed.contains("closed") == false
+//            case 4:
+//                return hours.thr.contains("closed") == false
+//            case 5:
+//                return hours.fri.contains("closed") == false
+//            case 6:
+//                return hours.sat.contains("closed") == false
+//            default:
+//                return hours.sun.contains("closed") == false
+//        }
+//    }
+//}
 
 public extension Array<PointOfInterest> {
     func containing(searchTerm: String) -> Self {
@@ -267,25 +282,25 @@ public extension PointOfInterest {
     static let preview: PointOfInterest = {
         let jsonString = """
 [{
-        "id": 0,
-        "name": "Archers on the Pier",
-        "description": "Seafood-centric cafe with a waterfront deck providing comfort eats & a robust beer & wine list.",
-        "address": "58 Ocean St, Rockland ME 04841",
-        "phone": "207-594-2435",
-        "url": "https://archersonthepier.com/",
+        "id": "eclipse-of-the-pearl-rockland",
+        "name": "Eclipse of the Pearl",
+        "description": "",
+        "address": "273 Main St, Rockland ME 04841",
+        "phone": "207-593-8847",
+        "url": "https://www.facebook.com/eclipseofthepearl",
         "tags": [
             "seafood"
         ],
         "hours": {
-            "mon": "11 am - 8:30 pm",
-            "tue": "11 am - 8:30 pm",
-            "wed": "11 am - 8:30 pm",
-            "thr": "11 am - 8:30 pm",
-            "fri": "11 am - 9 pm",
-            "sat": "11 am - 9 pm",
-            "sun": "closed"
+            "mon": ["11 am - 2:30 pm", "4 pm - 7:30 pm"],
+            "tue": [],
+            "wed": [],
+            "thr": ["11 am - 2:30 pm", "4 pm - 7:30 pm"],
+            "fri": ["11 am - 2:30 pm", "4 pm - 7:30 pm"],
+            "sat": ["11 am - 2:30 pm", "4 pm - 7:30 pm"],
+            "sun": ["11 am - 2:30 pm", "4 pm - 7 pm"]
         }
-}]
+    }]
 """
         return try! JSONDecoder().decode([PointOfInterest].self, from: jsonString.data(using: .utf8)!).first!
     }()
