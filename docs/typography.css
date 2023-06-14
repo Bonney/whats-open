@@ -76,3 +76,38 @@
   font-size: 11px;
   line-height: 13px;
 }
+
+/* CSS font weights */
+
+/* Bold */
+.weight-bold {
+    font-weight: bold;
+  }
+  
+  /* Semibold */
+  .weight-semibold {
+    font-weight: 600;
+  }
+  
+  /* Regular */
+  .weight-regular {
+    font-weight: normal;
+  }
+  
+  /* Light */
+  .weight-light {
+    font-weight: lighter;
+  }
+  
+/* Foreground styles */
+.primary {
+    opacity: 100%;
+}
+
+.secondary {
+    opacity: 80%;
+}
+
+.tertiary {
+    opacity: 60%;
+}
