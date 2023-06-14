@@ -1,0 +1,78 @@
+/* CSS font styles */
+
+/* Large Title */
+.large-title {
+  font-weight: normal;
+  font-size: 34px;
+  line-height: 41px;
+}
+
+/* Title 1 */
+.title-1 {
+  font-weight: normal;
+  font-size: 28px;
+  line-height: 34px;
+}
+
+/* Title 2 */
+.title-2 {
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 28px;
+}
+
+/* Title 3 */
+.title-3 {
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 25px;
+}
+
+/* Headline */
+.headline {
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 22px;
+}
+
+/* Body */
+.body {
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 22px;
+}
+
+/* Callout */
+.callout {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 21px;
+}
+
+/* Subhead */
+.subhead {
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 20px;
+}
+
+/* Footnote */
+.footnote {
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* Caption 1 */
+.caption-1 {
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+/* Caption 2 */
+.caption-2 {
+  font-weight: normal;
+  font-size: 11px;
+  line-height: 13px;
+}
