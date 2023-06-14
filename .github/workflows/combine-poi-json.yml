@@ -33,10 +33,10 @@ jobs:
         done
         
         # Join the JSON objects with a comma
-        combined_json=$(printf ",%s" "${combined_json[@]}")
+        combined_json=$(printf "%s," "${combined_json[@]}")
         
         # Remove the leading comma and wrap the result in square brackets to create a valid JSON array
-        combined_json="[$(echo "$combined_json" | cut -c 2-)]"
+        combined_json="[$(echo "$combined_json")]"
         
         # Save the combined JSON to a file
         echo "$combined_json" >  ${{ github.workspace }}/docs/restaurants-combined.json
