@@ -7,11 +7,19 @@ on:
 jobs:
   combine-json:
     runs-on: ubuntu-latest
+    
+    defaults:
+      run:
+        shell: bash
 
-    steps:
+     steps:
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+
     - name: Checkout repository
       uses: actions/checkout@v2
-
     - name: Combine POI JSON files
       run: |
         # Create an empty array to store the combined JSON objects
