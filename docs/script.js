@@ -10,68 +10,72 @@ fetch('data.json')
 
         const details = document.createElement('div');
         details.innerHTML = `
-            <hr>
-            ${name(restaurant)}
-            ${description(restaurant)}
-            ${address(restaurant)}
+            ${generateBusinessHTML(restaurant)}
         `;
 
         tbody.appendChild(details);
-
-        const restaurantHours = document.createElement('div');
-        restaurantHours.innerHTML = `
-            ${formatHours(restaurant.hours)}
-        `;
-        tbody.appendChild(restaurantHours);
-
     });
   })
   .catch(error => console.error('Error fetching data: ', error));
 
-function name(restaurant) {
-    let html = `<h3>${restaurant.name}</h3>`
-    return html
-}
-
-function description(restaurant) {
-    let html = `<p>${restaurant.description}</p>`
-    return html
-}
-
-function address(restaurant) {
-    let html = `<p>${restaurant.address}</p>`
-    return html
-}
-
-function formatHours(hours) {
-    let html = `<small>`;
-
-    // Weekday names
-    html += `<div class="row">`;
+  function generateBusinessHTML(data) {
+    const name = data.name;
+    const address = data.address;
+    const phone = data.phone;
+    const hours = data.hours;
+  
+    let tableHTML = `
+      <table>
+        <tr>
+          <th colspan="2">${name}</th>
+        </tr>
+        <tr>
+          <td>Address:</td>
+          <td>${address}</td>
+        </tr>
+        <tr>
+          <td>Phone:</td>
+          <td>${phone}</td>
+        </tr>
+        <tr>
+          <td>Business Hours:</td>
+          <td>
+            <table>
+              <tr>
+                <th>Day</th>
+                <th>Hours</th>
+              </tr>
+    `;
+  
+    // Iterate over the days of the week and their corresponding hours
     for (const day in hours) {
-        html += `<div class="col">`;
-        html += `${day}`;
-        html += `</div>`;
+      if (hours.hasOwnProperty(day) && hours[day].length > 0) {
+        tableHTML += `
+          <tr>
+            <td>${capitalizeFirstLetter(day)}</td>
+            <td>${formatHours(hours[day])}</td>
+          </tr>
+        `;
+      }
     }
-    html += `</div>`;
-
-    // Actual hours
-    html += `<div class="row">`;
-    for (const day in hours) {
-        html += `<div class="col">`;
-        html += `${hours[day]}`;
-        html += `</div>`;
-    }
-    html += `</div>`;
-
-    // for (const day in hours) {
-    //     html += `<td>`;
-    //     html += `${day}`;
-    //     html += `<hr>`;
-    //     html += `${hours[day]}`;
-    //     html += `</td>`;
-    // }
-
-    html += `</small>`;
-    return html;
-}
+  
+    tableHTML += `
+            </table>
+          </td>
+        </tr>
+      </table>
+    `;
+  
+    return tableHTML;
+  }
+  
+  // Helper function to capitalize the first letter of a string
+  function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  }
+  
+  // Helper function to format the business hours
+  function formatHours(hours) {
+    return hours.join(", ");
+  }
+  
