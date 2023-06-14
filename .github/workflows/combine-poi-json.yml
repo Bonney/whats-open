@@ -36,10 +36,10 @@ jobs:
         combined_json=$(printf ",%s" "${combined_json[@]}")
         
         # Remove the leading comma and wrap the result in square brackets to create a valid JSON array
-        combined_json="$(echo "$combined_json" | cut -c 2-)]"
+        combined_json="$(echo ["$combined_json" | cut -c 2-)]"
         
         # Save the combined JSON to a file
-        echo "$combined_json" >  ${{ github.workspace }}/docs/restaurants/_restaurants-all.json
+        echo "$combined_json" >  ${{ github.workspace }}/docs/restaurants-combined.json
         
         # Print the combined JSON
         echo "Combined JSON: $combined_json"
@@ -48,6 +48,6 @@ jobs:
       run: |
         git config user.name "bonney"
         git config user.email "bonneym@gmail.com"
-        git add  ${{ github.workspace }}/docs/restaurants/_restaurants-all.json
+        git add  ${{ github.workspace }}/docs/restaurants-combined.json
         git commit -m "Combine JSON files"
         git push
