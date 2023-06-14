@@ -5,7 +5,7 @@ on:
       - main
 
 jobs:
-  combine-json:
+  combine-poi-json:
     runs-on: ubuntu-latest
     
     defaults:
