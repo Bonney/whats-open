@@ -2,7 +2,7 @@
     {
         "id": "archers-on-the-pier-rockland",
         "name": "Archer's on the Pier",
-        "description": "Seafood-centric cafe with a waterfront deck providing comfort eats & a robust beer & wine list.",
+        "description": "Seafood-centric cafe with a waterfront deck providing comfort eats and a robust beer and wine list.",
         "address": "58 Ocean St, Rockland ME 04841",
         "phone": "207-594-2435",
         "url": "https://archersonthepier.com/",
@@ -111,10 +111,10 @@
         "hours": {
             "mon": [],
             "tue": ["11 am - 2 pm"],
-            "wed": ["11 am - 2pm", "5pm - 8pm"],
-            "thr": ["11 am - 2pm", "5pm - 8pm"],
-            "fri": ["11 am - 2pm", "5pm - 8pm"],
-            "sat": ["11 am - 2pm", "5pm - 8pm"],
+            "wed": ["11 am - 2 pm", "5 pm - 8 pm"],
+            "thr": ["11 am - 2 pm", "5 pm - 8 pm"],
+            "fri": ["11 am - 2 pm", "5 pm - 8 pm"],
+            "sat": ["11 am - 2 pm", "5 pm - 8 pm"],
             "sun": []
         }
     },
@@ -190,11 +190,11 @@
         ],
         "hours": {
             "mon": [],
-            "tue": ["11:30 am - 2:30 pm, 5 pm - 7:30 pm"],
-            "wed": ["11:30 am - 2:30 pm, 5 pm - 7:30 pm"],
-            "thr": ["11:30 am - 2:30 pm, 5 pm - 7:30 pm"],
-            "fri": ["11:30 am - 2:30 pm, 5 pm - 7:30 pm"],
-            "sat": ["11:30 am - 2:30 pm, 5 pm - 7:30 pm"],
+            "tue": ["11:30 am - 2:30 pm", "5 pm - 7:30 pm"],
+            "wed": ["11:30 am - 2:30 pm", "5 pm - 7:30 pm"],
+            "thr": ["11:30 am - 2:30 pm", "5 pm - 7:30 pm"],
+            "fri": ["11:30 am - 2:30 pm", "5 pm - 7:30 pm"],
+            "sat": ["11:30 am - 2:30 pm", "5 pm - 7:30 pm"],
             "sun": []
         }
     },
@@ -330,8 +330,8 @@
         ],
         "hours": {
             "mon": ["11:30 am - 11 pm"],
-            "tue": [""],
-            "wed": [""],
+            "tue": [],
+            "wed": [],
             "thr": ["11:30 am - 11 pm"],
             "fri": ["11:30 am - 11 pm"],
             "sat": ["11:30 am - 11 pm"],
@@ -449,13 +449,13 @@
             "seafood"
         ],
         "hours": {
-            "mon": ["11:30 am - 2 pm", "5pm - 8pm"],
+            "mon": ["11:30 am - 2 pm", "5 pm - 8 pm"],
             "tue": [],
             "wed": [],
-            "thr": ["11:30 am - 2 pm", "5pm - 8pm"],
-            "fri": ["11:30 am - 2 pm", "5pm - 8pm"],
-            "sat": ["11:30 am - 2 pm", "5pm - 8pm"],
-            "sun": ["11:30 am - 2 pm", "5pm - 8pm"]
+            "thr": ["11:30 am - 2 pm", "5 pm - 8 pm"],
+            "fri": ["11:30 am - 2 pm", "5 pm - 8 pm"],
+            "sat": ["11:30 am - 2 pm", "5 pm - 8 pm"],
+            "sun": ["11:30 am - 2 pm", "5 pm - 8 pm"]
         }
     },
     {
