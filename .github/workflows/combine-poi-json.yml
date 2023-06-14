@@ -5,22 +5,23 @@ on:
       - main
 
 jobs:
-  combine-poi-json:
+  combine-json:
     runs-on: ubuntu-latest
     
     defaults:
       run:
         shell: bash
 
-     steps:
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: '16'
+    steps:
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '16'
 
     - name: Checkout repository
       uses: actions/checkout@v2
-    - name: Combine POI JSON files
+
+    - name: Combine JSON files
       run: |
         # Create an empty array to store the combined JSON objects
         combined_json=()
@@ -38,7 +39,7 @@ jobs:
         combined_json="[$(echo "$combined_json" | cut -c 2-)]"
         
         # Save the combined JSON to a file
-        echo "$combined_json" > docs/restaurants.json
+        echo "$combined_json" > docs/poi-combined.json
         
         # Print the combined JSON
         echo "Combined JSON: $combined_json"
@@ -47,6 +48,6 @@ jobs:
       run: |
         git config user.name "bonney"
         git config user.email "bonneym@gmail.com"
-        git add docs/restaurants.json
-        git commit -m "Combine POI JSON files"
+        git add docs/poi-combined.json
+        git commit -m "Combine JSON files"
         git push
