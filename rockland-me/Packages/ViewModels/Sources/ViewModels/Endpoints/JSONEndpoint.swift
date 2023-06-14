@@ -8,7 +8,7 @@
 import Foundation
 
 public enum JSONEndpoint: String {
-    case pointsOfInterest = "https://bonney.github.io/rockland-me/data.json"
+    case pointsOfInterest = "https://bonney.github.io/rockland-me/restaurants-combined.json"
     case festivals = "https://bonney.github.io/rockland-me/festivals.json"
 
     public func url() -> URL {
