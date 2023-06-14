@@ -119,7 +119,7 @@
         }
     },
     {
-        "id": 6,
+        "id": "adas-kitchen-rockland",
         "name": "Ada's Kitchen",
         "description": "",
         "address": "449 Main St, Rockland ME 04841",
@@ -139,7 +139,7 @@
         }
     },
     {
-        "id": 7,
+        "id": "claws-rockland",
         "name": "Claws",
         "description": "",
         "address": "743 Main St, Rockland ME 04841",
@@ -159,7 +159,7 @@
         }
     },
     {
-        "id": 8,
+        "id": "eclipse-of-the-pearl-rockland",
         "name": "Eclipse of the Pearl",
         "description": "",
         "address": "273 Main St, Rockland ME 04841",
@@ -179,7 +179,7 @@
         }
     },
     {
-        "id": 9,
+        "id": "hills-seafood-co-rockland",
         "name": "Hill's Seafood Co.",
         "description": "",
         "address": "226 Main St, Rockland ME 04841",
@@ -189,17 +189,17 @@
             "seafood"
         ],
         "hours": {
-            "mon": [,
-            "tue": ["11:30 am - 2:30 pm, 5 pm - 7:30 pm",
-            "wed": ["11:30 am - 2:30 pm, 5 pm - 7:30 pm",
-            "thr": ["11:30 am - 2:30 pm, 5 pm - 7:30 pm",
-            "fri": ["11:30 am - 2:30 pm, 5 pm - 7:30 pm",
-            "sat": ["11:30 am - 2:30 pm, 5 pm - 7:30 pm",
-            "sun": [
+            "mon": [],
+            "tue": ["11:30 am - 2:30 pm, 5 pm - 7:30 pm"],
+            "wed": ["11:30 am - 2:30 pm, 5 pm - 7:30 pm"],
+            "thr": ["11:30 am - 2:30 pm, 5 pm - 7:30 pm"],
+            "fri": ["11:30 am - 2:30 pm, 5 pm - 7:30 pm"],
+            "sat": ["11:30 am - 2:30 pm, 5 pm - 7:30 pm"],
+            "sun": []
         }
     },
     {
-        "id": 10,
+        "id": "home-kitchen-cafe-rockland",
         "name": "Home Kitchen Cafe",
         "description": "",
         "address": "650 Main St, Rockland ME 04841",
@@ -209,17 +209,17 @@
             "breakfast"
         ],
         "hours": {
-            "mon": ["8 am - 2:30 pm",
-            "tue": [,
-            "wed": ["8 am - 2:30 pm",
-            "thr": ["8 am - 2:30 pm",
-            "fri": ["8 am - 2:30 pm",
-            "sat": ["8 am - 2:30 pm",
-            "sun": ["8 am - 2 pm"
+            "mon": ["8 am - 2:30 pm"],
+            "tue": [],
+            "wed": ["8 am - 2:30 pm"],
+            "thr": ["8 am - 2:30 pm"],
+            "fri": ["8 am - 2:30 pm"],
+            "sat": ["8 am - 2:30 pm"],
+            "sun": ["8 am - 2 pm"]
         }
     },
     {
-        "id": 11,
+        "id": "in-good-company-rockland",
         "name": "In Good Company",
         "description": "",
         "address": "415 Main St, Rockland ME 04841",
@@ -229,17 +229,17 @@
             "wine"
         ],
         "hours": {
-            "mon": [,
-            "tue": [,
-            "wed": ["4:30 pm - 8:30 pm",
-            "thr": ["4:30 pm - 8:30 pm",
-            "fri": ["4:30 pm - 8:30 pm",
-            "sat": ["4:30 pm - 8:30 pm",
-            "sun": [
+            "mon": [],
+            "tue": [],
+            "wed": ["4:30 pm - 8:30 pm"],
+            "thr": ["4:30 pm - 8:30 pm"],
+            "fri": ["4:30 pm - 8:30 pm"],
+            "sat": ["4:30 pm - 8:30 pm"],
+            "sun": []
         }
     },
     {
-        "id": 12,
+        "id": "north-beacon-oyster-rockland",
         "name": "North Beacon Oyster",
         "description": "",
         "address": "421 Main St, Rockland ME 04841",
@@ -249,17 +249,17 @@
             "seafood"
         ],
         "hours": {
-            "mon": [,
-            "tue": [,
-            "wed": ["5 pm - 9 pm",
-            "thr": ["5 pm - 9 pm",
-            "fri": ["5 pm - 9 pm",
-            "sat": ["5 pm - 9 pm",
-            "sun": [
+            "mon": [],
+            "tue": [],
+            "wed": ["5 pm - 9 pm"],
+            "thr": ["5 pm - 9 pm"],
+            "fri": ["5 pm - 9 pm"],
+            "sat": ["5 pm - 9 pm"],
+            "sun": []
         }
     },
     {
-        "id": 13,
+        "id": "park-street-grille-rockland",
         "name": "Park Street Grille",
         "description": "",
         "address": "1 Park Dr, Rockland ME 04841",
@@ -269,17 +269,17 @@
             "mexican"
         ],
         "hours": {
-            "mon": [,
-            "tue": ["11:30 am - 8 pm",
-            "wed": ["11:30 am - 8 pm",
-            "thr": ["11:30 am - 8 pm",
-            "fri": ["11:30 am - 8 pm",
-            "sat": ["11:30 am - 8 pm",
-            "sun": [
+            "mon": [],
+            "tue": ["11:30 am - 8 pm"],
+            "wed": ["11:30 am - 8 pm"],
+            "thr": ["11:30 am - 8 pm"],
+            "fri": ["11:30 am - 8 pm"],
+            "sat": ["11:30 am - 8 pm"],
+            "sun": []
         }
     },
     {
-        "id": 14,
+        "id": "primo-rockland",
         "name": "Primo",
         "description": "",
         "address": "2 Main St, Rockland ME 04841",
@@ -289,17 +289,17 @@
             "italian"
         ],
         "hours": {
-            "mon": [,
-            "tue": [,
-            "wed": ["5 pm - 9:30 pm",
-            "thr": ["5 pm - 9:30 pm",
-            "fri": ["5 pm - 9:30 pm",
-            "sat": ["5 pm - 9:30 pm",
-            "sun": ["5 pm - 9:30 pm"
+            "mon": [],
+            "tue": [],
+            "wed": ["5 pm - 9:30 pm"],
+            "thr": ["5 pm - 9:30 pm"],
+            "fri": ["5 pm - 9:30 pm"],
+            "sat": ["5 pm - 9:30 pm"],
+            "sun": ["5 pm - 9:30 pm"]
         }
     },
     {
-        "id": 15,
+        "id": "rock-city-cafe-rockland",
         "name": "Rock City Cafe",
         "description": "",
         "address": "316 Main St, Rockland ME 04841",
@@ -319,7 +319,7 @@
         }
     },
     {
-        "id": 16,
+        "id": "rock-harbor-pub-and-brewery-rockland",
         "name": "Rock Harbor Pub and Brewery",
         "description": "",
         "address": "416 Main St, Rockland ME 04841",
@@ -329,17 +329,17 @@
             "pub"
         ],
         "hours": {
-            "mon": [""],
+            "mon": ["11:30 am - 11 pm"],
             "tue": [""],
             "wed": [""],
-            "thr": [""],
-            "fri": [""],
-            "sat": [""],
-            "sun": [""]
+            "thr": ["11:30 am - 11 pm"],
+            "fri": ["11:30 am - 11 pm"],
+            "sat": ["11:30 am - 11 pm"],
+            "sun": ["11:30 am - 11 pm"]
         }
     },
     {
-        "id": 17,
+        "id": "rockland-cafe-rockland",
         "name": "Rockland Cafe",
         "description": "",
         "address": "441 Main St, Rockland ME 04841",
@@ -359,7 +359,7 @@
         }
     },
     {
-        "id": 18,
+        "id": "roselyn-thai-rockland",
         "name": "Roselyn Thai Fine Cuisine",
         "description": "",
         "address": "80 Camden St, Rockland ME 04841",
@@ -379,7 +379,7 @@
         }
     },
     {
-        "id": 19,
+        "id": "rustica-rockland",
         "name": "Rustica Cucina Italiana",
         "description": "",
         "address": "315 Main St, Rockland ME 04841",
@@ -399,7 +399,7 @@
         }
     },
     {
-        "id": 20,
+        "id": "suzukis-sushi-rockland",
         "name": "Suzuki's Sushi Bar",
         "description": "",
         "address": "419 Main, Rockland ME 04841",
@@ -419,7 +419,7 @@
         }
     },
     {
-        "id": 21,
+        "id": "trackside-station-rockland",
         "name": "Trackside Station",
         "description": "",
         "address": "4 Union St, Rockland ME 04841",
@@ -439,7 +439,7 @@
         }
     },
     {
-        "id": 22,
+        "id": "landings-rockland",
         "name": "Landings Restaurant",
         "description": "",
         "address": "1 Commercial St, Rockland ME 04841",
@@ -459,7 +459,7 @@
         }
     },
     {
-        "id": 23,
+        "id": "waterworks-rockland",
         "name": "Waterworks Restaurant",
         "description": "",
         "address": "7 Lindsey St, Rockland ME 04841",
@@ -479,7 +479,7 @@
         }
     },
     {
-        "id": 24,
+        "id": "mulligans-pub-rockland",
         "name": "Mulligan's Pub",
         "description": "Drinks and dining with a view of the beautiful Rockland golf course.",
         "address": "606 Old County Rd, Rockland ME 04841",
