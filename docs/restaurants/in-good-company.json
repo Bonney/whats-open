@@ -1,0 +1,20 @@
+{
+    "id": "in-good-company-rockland",
+    "name": "In Good Company",
+    "description": "",
+    "address": "415 Main St, Rockland ME 04841",
+    "phone": "207-593-9110",
+    "url": "https://ingoodcompanymaine.com/",
+    "tags": [
+        "wine"
+    ],
+    "hours": {
+        "mon": [],
+        "tue": [],
+        "wed": ["4:30 pm - 8:30 pm"],
+        "thr": ["4:30 pm - 8:30 pm"],
+        "fri": ["4:30 pm - 8:30 pm"],
+        "sat": ["4:30 pm - 8:30 pm"],
+        "sun": []
+    }
+}

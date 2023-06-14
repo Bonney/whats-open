@@ -1,0 +1,20 @@
+{
+    "id": "rock-harbor-pub-and-brewery-rockland",
+    "name": "Rock Harbor Pub and Brewery",
+    "description": "",
+    "address": "416 Main St, Rockland ME 04841",
+    "phone": "207-593-7488",
+    "url": "https://rockharborbrewing.com/",
+    "tags": [
+        "pub"
+    ],
+    "hours": {
+        "mon": ["11:30 am - 11 pm"],
+        "tue": [],
+        "wed": [],
+        "thr": ["11:30 am - 11 pm"],
+        "fri": ["11:30 am - 11 pm"],
+        "sat": ["11:30 am - 11 pm"],
+        "sun": ["11:30 am - 11 pm"]
+    }
+}

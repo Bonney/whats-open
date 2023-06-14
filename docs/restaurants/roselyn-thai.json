@@ -1,0 +1,20 @@
+{
+    "id": "roselyn-thai-rockland",
+    "name": "Roselyn Thai Fine Cuisine",
+    "description": "",
+    "address": "80 Camden St, Rockland ME 04841",
+    "phone": "207-596-7348",
+    "url": "https://roselynthai.com/",
+    "tags": [
+        "thai"
+    ],
+    "hours": {
+        "mon": [],
+        "tue": [],
+        "wed": ["11:30 am - 8:30 pm"],
+        "thr": ["11:30 am - 8:30 pm"],
+        "fri": ["11:30 am - 9 pm"],
+        "sat": ["12 pm - 9 pm"],
+        "sun": ["12 pm - 8:30 pm"]
+    }
+}

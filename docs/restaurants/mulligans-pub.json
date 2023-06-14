@@ -1,0 +1,20 @@
+{
+    "id": "mulligans-pub-rockland",
+    "name": "Mulligan's Pub",
+    "description": "Drinks and dining with a view of the beautiful Rockland golf course.",
+    "address": "606 Old County Rd, Rockland ME 04841",
+    "phone": "207-706-6996",
+    "url": "http://mulligansrockland.com/",
+    "tags": [
+        "pub"
+    ],
+    "hours": {
+        "mon": ["3 pm - 5 pm"],
+        "tue": ["3 pm - 5 pm"],
+        "wed": ["3 pm - 5 pm"],
+        "thr": ["3 pm - 5 pm"],
+        "fri": ["3 pm - 5 pm"],
+        "sat": ["3 pm - 5 pm"],
+        "sun": ["3 pm - 5 pm"]
+    }
+}

@@ -1,0 +1,20 @@
+{
+    "id": "hills-seafood-co-rockland",
+    "name": "Hill's Seafood Co.",
+    "description": "",
+    "address": "226 Main St, Rockland ME 04841",
+    "phone": "207-593-8400",
+    "url": "https://www.hillsseafoodco.com/",
+    "tags": [
+        "seafood"
+    ],
+    "hours": {
+        "mon": [],
+        "tue": ["11:30 am - 2:30 pm", "5 pm - 7:30 pm"],
+        "wed": ["11:30 am - 2:30 pm", "5 pm - 7:30 pm"],
+        "thr": ["11:30 am - 2:30 pm", "5 pm - 7:30 pm"],
+        "fri": ["11:30 am - 2:30 pm", "5 pm - 7:30 pm"],
+        "sat": ["11:30 am - 2:30 pm", "5 pm - 7:30 pm"],
+        "sun": []
+    }
+}

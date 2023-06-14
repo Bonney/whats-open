@@ -1,0 +1,19 @@
+{
+    "id": "thomaston-cafe-thomaston",
+    "name": "Thomaston Cafe",
+    "description": "",
+    "address": "154 Main St, Thomaston ME 04861",
+    "phone": "207-354-8589",
+    "url": "https://www.thomastoncafeme.com/",
+    "tags": [
+    ],
+    "hours": {
+        "mon": [],
+        "tue": ["11 am - 2 pm"],
+        "wed": ["11 am - 2 pm", "5 pm - 8 pm"],
+        "thr": ["11 am - 2 pm", "5 pm - 8 pm"],
+        "fri": ["11 am - 2 pm", "5 pm - 8 pm"],
+        "sat": ["11 am - 2 pm", "5 pm - 8 pm"],
+        "sun": []
+    }
+}
