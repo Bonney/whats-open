@@ -1,6 +1,6 @@
 // script.js
 
-fetch('data.json')
+fetch('restaurants-combined.json')
   .then(response => response.json())
   .then(data => {
     const tbody = document.getElementById('restaurant-table-body');
