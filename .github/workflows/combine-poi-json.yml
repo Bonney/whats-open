@@ -39,7 +39,7 @@ jobs:
         combined_json="[$(echo "$combined_json" | cut -c 2-)]"
         
         # Save the combined JSON to a file
-        echo "$combined_json" >  ${{ github.workspace }}/docs/poi-combined.json
+        echo "$combined_json" >  ${{ github.workspace }}/docs/restaurants/_restaurants-all.json
         
         # Print the combined JSON
         echo "Combined JSON: $combined_json"
@@ -48,6 +48,6 @@ jobs:
       run: |
         git config user.name "bonney"
         git config user.email "bonneym@gmail.com"
-        git add  ${{ github.workspace }}/docs/poi-combined.json
+        git add  ${{ github.workspace }}/docs/restaurants/_restaurants-all.json
         git commit -m "Combine JSON files"
         git push
