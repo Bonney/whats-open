@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>My Web App</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="typography.css">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+</head>
+<body>
+    <h1 class="large-title weight-bold">Submit a Restaurant</h1>
+    <p class="body weight-regular secondary">All submissions are subject to review and verification.</p>
+
+    <form action="https://api.staticforms.xyz/submit" method="post">
+        <input type="text" name="name" placeholder="Your Name">
+        <input type="text" name="email" placeholder="Your Email" />
+        <textarea name="message"></textarea>
+        <input type="text" name="honeypot" style="display:none">
+        <input type="hidden" name="accessKey" value="cac5c2ad-10e9-468b-aa78-73a4def62bde">
+        <input type="hidden" name="subject" value="Contact us from - example.com" />
+        <input type="hidden" name="replyTo" value="@">
+         <!-- If we receive data in this field submission will be ignored -->
+        <input type="text" name="honeypot" style="display: none;">
+        <input type="hidden" name="redirectTo" value="/submit-confirm.html">
+        <input type="submit" value="Submit" />
+    </form>
+
+</body>
+</html>
