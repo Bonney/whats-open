@@ -49,11 +49,13 @@ fetch('data.json')
   
     // Iterate over the days of the week and their corresponding hours
     for (const day in hours) {
-      if (hours.hasOwnProperty(day) && hours[day].length > 0) {
+      if (hours.hasOwnProperty(day)) {
+        const dayHours = hours[day];
+        const formattedHours = dayHours.length > 0 ? formatHours(dayHours) : "Closed";
         tableHTML += `
           <tr>
             <td>${capitalizeFirstLetter(day)}</td>
-            <td>${formatHours(hours[day])}</td>
+            <td>${formattedHours}</td>
           </tr>
         `;
       }
@@ -67,7 +69,7 @@ fetch('data.json')
     `;
   
     return tableHTML;
-  }
+  }  
   
   // Helper function to capitalize the first letter of a string
   function capitalizeFirstLetter(string) {
