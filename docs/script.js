@@ -41,26 +41,25 @@ function generateBusinessHTML(data) {
   `;
 
   // Create the table data with corresponding hours for each day
-  let rowCounter = 0;
+  let dayNamesHTML = '';
+  let hoursHTML = '';
+
   for (const day in hours) {
     if (hours.hasOwnProperty(day)) {
       const dayHours = hours[day];
       const formattedHours = dayHours.length > 0 ? formatHours(dayHours) : "Closed";
-      const rowColorClass = rowCounter % 2 === 0 ? 'even-row' : 'odd-row';
-      const dividerStyle = rowCounter === 0 ? '' : 'border-top: 1px solid #dddddd;';
-
-      tableHTML += `
-            <tr style="${dividerStyle}">
-              <td style="width: 30%;">${capitalizeFirstLetter(day)}:</td>
-              <td style="width: 70%;">${formattedHours}</td>
-            </tr>
+      dayNamesHTML += `
+            <td>${capitalizeFirstLetter(day)}</td>
       `;
-
-      rowCounter++;
+      hoursHTML += `
+            <td>${formattedHours}</td>
+      `;
     }
   }
 
   tableHTML += `
+            <tr>${dayNamesHTML}</tr>
+            <tr>${hoursHTML}</tr>
           </table>
         </td>
       </tr>
