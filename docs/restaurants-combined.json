@@ -113,7 +113,7 @@
         "sun": ["11 am - 2:30 pm", "4 pm - 7 pm"]
     }
 },{
-    "id": "hills-seafood-co-rockland",
+    "id": "hills-seafood-rockland",
     "name": "Hill's Seafood Co.",
     "description": "",
     "address": "226 Main St, Rockland ME 04841",
@@ -473,7 +473,7 @@
         "sun": []
     }
 },{
-    "id": "the-zack-shack-thomaston",
+    "id": "zack-shack-thomaston",
     "name": "The Zack Shack",
     "description": "",
     "address": "210 New County Rd, Thomaston ME 04861",
