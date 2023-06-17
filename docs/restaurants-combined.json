@@ -94,6 +94,25 @@
         "sun": ["11 am - 8 pm"]
     }
 },{
+    "id": "doormans-thomaston",
+    "name": "Dorman's Dairy Dream",
+    "description": "",
+    "address": "189 New County Rd, Thomaston ME 04861",
+    "phone": "207-596-2449",
+    "url": "https://www.facebook.com/dormansdairydream/",
+    "tags": [
+        "ice cream"
+    ],
+    "hours": {
+        "mon": ["12 pm - 8 pm"],
+        "tue": ["12 pm - 8 pm"],
+        "wed": ["12 pm - 8 pm"],
+        "thr": ["12 pm - 8 pm"],
+        "fri": ["12 pm - 8 pm"],
+        "sat": ["12 pm - 8 pm"],
+        "sun": ["12 pm - 6 pm"]
+    }
+},{
     "id": "eclipse-of-the-pearl-rockland",
     "name": "Eclipse of the Pearl",
     "description": "",
