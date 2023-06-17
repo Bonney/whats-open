@@ -1,31 +1,81 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <title>My Web App</title>
-    <link rel="stylesheet" href="stylesheet.css">
-    <link rel="stylesheet" href="typography.css">
-    
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+    <title>Create JSON Structure</title>
 </head>
 <body>
-    <h1 class="large-title weight-bold">Submit a Restaurant</h1>
-    <p class="body weight-regular secondary">All submissions are subject to review and verification.</p>
+    <form id="jsonForm">
+        <label for="id">ID:</label>
+        <input type="text" id="id" required><br>
 
-    <form action="https://api.staticforms.xyz/submit" method="post">
-        <input type="text" name="name" placeholder="Your Name">
-        <input type="text" name="email" placeholder="Your Email" />
-        <textarea name="message"></textarea>
-        <input type="text" name="honeypot" style="display:none">
-        <input type="hidden" name="accessKey" value="cac5c2ad-10e9-468b-aa78-73a4def62bde">
-        <input type="hidden" name="subject" value="Contact us from - example.com" />
-        <input type="hidden" name="replyTo" value="@">
-         <!-- If we receive data in this field submission will be ignored -->
-        <input type="text" name="honeypot" style="display: none;">
-        <input type="hidden" name="redirectTo" value="/submit-confirm.html">
-        <input type="submit" value="Submit" />
+        <label for="name">Name:</label>
+        <input type="text" id="name" required><br>
+
+        <label for="description">Description:</label>
+        <input type="text" id="description"><br>
+
+        <label for="address">Address:</label>
+        <input type="text" id="address" required><br>
+
+        <label for="phone">Phone:</label>
+        <input type="text" id="phone" required><br>
+
+        <label for="url">URL:</label>
+        <input type="text" id="url" required><br>
+
+        <label for="tags">Tags:</label>
+        <input type="text" id="tags" required><br>
+
+        <label for="mon">Monday Hours:</label>
+        <input type="text" id="mon" required><br>
+
+        <label for="tue">Tuesday Hours:</label>
+        <input type="text" id="tue"><br>
+
+        <label for="wed">Wednesday Hours:</label>
+        <input type="text" id="wed"><br>
+
+        <label for="thr">Thursday Hours:</label>
+        <input type="text" id="thr" required><br>
+
+        <label for="fri">Friday Hours:</label>
+        <input type="text" id="fri" required><br>
+
+        <label for="sat">Saturday Hours:</label>
+        <input type="text" id="sat" required><br>
+
+        <label for="sun">Sunday Hours:</label>
+        <input type="text" id="sun" required><br>
+
+        <input type="submit" value="Create JSON">
     </form>
 
+    <script>
+        document.getElementById("jsonForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            var json = {
+                id: document.getElementById("id").value,
+                name: document.getElementById("name").value,
+                description: document.getElementById("description").value,
+                address: document.getElementById("address").value,
+                phone: document.getElementById("phone").value,
+                url: document.getElementById("url").value,
+                tags: document.getElementById("tags").value.split(","),
+                hours: {
+                    mon: document.getElementById("mon").value.split(","),
+                    tue: document.getElementById("tue").value.split(","),
+                    wed: document.getElementById("wed").value.split(","),
+                    thr: document.getElementById("thr").value.split(","),
+                    fri: document.getElementById("fri").value.split(","),
+                    sat: document.getElementById("sat").value.split(","),
+                    sun: document.getElementById("sun").value.split(",")
+                }
+            };
+
+            console.log(JSON.stringify(json));
+            // You can use the JSON structure as needed, e.g., send it to a server or perform further processing.
+        });
+    </script>
 </body>
 </html>
