@@ -5,13 +5,73 @@
     <title>My Web App</title>
     <link rel="stylesheet" href="stylesheet.css">
     <link rel="stylesheet" href="typography.css">
+    <script src="https://cdn.tailwindcss.com"></script>
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css"> -->
 </head>
-<body>
-    <h1 class="large-title weight-bold">What's Open?</h1>
-    <h2 class="body">Welcome to Midcoast Maine! Below, you will find a selection of local restaurants.</h2>
+<body class="container mx-auto p-12">
+
+    <div class="hidden grid grid-rows-2 border border-gray-200 rounded">
+        <div class="grid grid-cols-3 m-1">
+            <div class="text-left font-bold">
+                Ada's Kitchen
+            </div>
+            <div class="opacity-75 text-right">
+                207-593-7735
+            </div>
+            <div class="opacity-75 text-right">
+                449 Main St, Rockland ME 04841
+            </div>
+        </div>
+        <div class="grid grid-cols-7 text-sm bg-gray-50 font-bold">
+            <div class="border-t border-gray-200 p-1">
+                Mon
+            </div>
+            <div class="border-t border-gray-200 p-1">
+                Tue
+            </div>
+            <div class="border-t border-gray-200 p-1">
+                Wed
+            </div>
+            <div class="border-t border-gray-200 p-1">
+                Thu
+            </div>
+            <div class="border-t border-gray-200 p-1">
+                Fri
+            </div>
+            <div class="border-t border-gray-200 p-1">
+                Sat
+            </div>
+            <div class="border-t border-gray-200 p-1">
+                Sun
+            </div>
+        </div>
+        <div class="grid grid-cols-7 text-sm">
+            <div class="border-t border-gray-200 p-1">
+                Closed
+            </div>
+            <div class="border-t border-gray-200 p-1">
+                4 pm - 9 pm
+            </div>
+            <div class="border-t border-gray-200 p-1">
+                4 pm - 9 pm
+            </div>
+            <div class="border-t border-gray-200 p-1">
+                4 pm - 9 pm
+            </div>
+            <div class="border-t border-gray-200 p-1">
+                4 pm - 9:30 pm
+            </div>
+            <div class="border-t border-gray-200 p-1">
+                4 pm - 9:30 pm
+            </div>
+            <div class="border-t border-gray-200 p-1">
+                Closed
+            </div>
+        </div>
+    </div>
+
         <section id="restaurant-table-body">
             <!-- Rows will be dynamically added here -->
         </section>
