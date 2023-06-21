@@ -14,47 +14,48 @@ fetch('restaurants-combined.json')
 
 function generateHTML(business) {
     const name = business.name;
+    const description = business.description;
     const address = business.address;
     const phone = business.phone;
     const hours = business.hours;
 
     let html = `
-    <div class="grid grid-rows-2 rounded mb-4">
-        <div class="grid grid-cols-3 m-1">
-            <div class="text-left font-bold">
-               ${name}
-            </div>
-            <div class="opacity-75 text-right">
-                ${phone}
-            </div>
-            <div class="opacity-75 text-right">
+    <div class="flex flex-col p-4 bg-white rounded-lg drop-shadow mb-4">
+        <div class="font-bold">
+           ${name}
+        </div>
+        <div class="flex flex-col md:flex-row space-x-0 md:space-x-8 mb-4">
+            <div class="text-sm opacity-75">
                 ${address}
             </div>
+            <div class="text-sm opacity-75">
+                ${phone}
+            </div>
         </div>
-        <div class="grid grid-cols-7 text-sm bg-gray-50 font-bold border-r">
-            <div class="border-t border-l border-gray-200 p-1">
+        <div class="grid grid-cols-7 gap-2 text-sm text-left font-bold">
+            <div class="bg-white p-1">
                 Mon
             </div>
-            <div class="border-t border-l border-gray-200 p-1">
+            <div class="bg-white p-1">
                 Tue
             </div>
-            <div class="border-t border-l border-gray-200 p-1">
+            <div class="bg-white p-1">
                 Wed
             </div>
-            <div class="border-t border-l border-gray-200 p-1">
+            <div class="bg-white p-1">
                 Thu
             </div>
-            <div class="border-t border-l border-gray-200 p-1">
+            <div class="bg-white p-1">
                 Fri
             </div>
-            <div class="border-t border-l border-gray-200 p-1">
+            <div class="bg-white p-1">
                 Sat
             </div>
-            <div class="border-t border-l border-gray-200 p-1">
+            <div class="bg-white p-1">
                 Sun
             </div>
         </div>
-        <div class="grid grid-cols-7 text-sm border-r border-b">
+        <div class="grid grid-cols-7 gap-2 text-sm text-left">
     `;
 
     let hoursHTML = '';
@@ -63,7 +64,7 @@ function generateHTML(business) {
         const dayHours = hours[day];
         const formattedHours = dayHours.length > 0 ? formatHours(dayHours) : "Closed";
         hoursHTML += `
-        <div class="border-t border-l border-gray-200 p-1">
+        <div class="bg-white p-1">
             ${formattedHours}
         </div>
         `;
