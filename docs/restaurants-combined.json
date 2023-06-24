@@ -170,6 +170,24 @@
         "sun": ["8 am - 2 pm"]
     }
 },{
+    "id": "hot-hill-tavern-thomaston",
+    "name": "Hot Hill Tavern",
+    "description": "",
+    "address": "1 Starr St, Thomaston, ME 04861",
+    "phone": "207-354-5144",
+    "url": "https://www.facebook.com/hothilltavern/",
+    "tags": [
+    ],
+    "hours": {
+        "mon": [],
+        "tue": [],
+        "wed": ["11 am - 12 am"],
+        "thr": ["11 am - 12 am"],
+        "fri": ["11 am - 12 am"],
+        "sat": ["11 am - 12 am"],
+        "sun": []
+    }
+},{
     "id": "in-good-company-rockland",
     "name": "In Good Company",
     "description": "",
