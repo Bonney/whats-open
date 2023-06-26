@@ -46,8 +46,14 @@ jobs:
         
         # Print the combined JSON
         echo "Combined JSON: $combined_json"
-        
+
+    - name: Check for changes
+      id: git-diff
+      run: |
+        git diff --exit-code --quiet || echo "::set-output name=changes::true"
+
     - name: Commit and push changes
+      if: steps.git-diff.outputs.changes == 'true'
       run: |
         git config user.name "bonney"
         git config user.email "bonneym@gmail.com"

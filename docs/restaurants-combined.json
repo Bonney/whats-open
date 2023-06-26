@@ -94,6 +94,25 @@
         "sun": ["11 am - 8 pm"]
     }
 },{
+    "id": "doormans-thomaston",
+    "name": "Dorman's Dairy Dream",
+    "description": "",
+    "address": "189 New County Rd, Thomaston ME 04861",
+    "phone": "207-596-2449",
+    "url": "https://www.facebook.com/dormansdairydream/",
+    "tags": [
+        "ice cream"
+    ],
+    "hours": {
+        "mon": ["12 pm - 8 pm"],
+        "tue": ["12 pm - 8 pm"],
+        "wed": ["12 pm - 8 pm"],
+        "thr": ["12 pm - 8 pm"],
+        "fri": ["12 pm - 8 pm"],
+        "sat": ["12 pm - 8 pm"],
+        "sun": ["12 pm - 6 pm"]
+    }
+},{
     "id": "eclipse-of-the-pearl-rockland",
     "name": "Eclipse of the Pearl",
     "description": "",
@@ -113,7 +132,7 @@
         "sun": ["11 am - 2:30 pm", "4 pm - 7 pm"]
     }
 },{
-    "id": "hills-seafood-co-rockland",
+    "id": "hills-seafood-rockland",
     "name": "Hill's Seafood Co.",
     "description": "",
     "address": "226 Main St, Rockland ME 04841",
@@ -149,6 +168,24 @@
         "fri": ["8 am - 2:30 pm"],
         "sat": ["8 am - 2:30 pm"],
         "sun": ["8 am - 2 pm"]
+    }
+},{
+    "id": "hot-hill-tavern-thomaston",
+    "name": "Hot Hill Tavern",
+    "description": "",
+    "address": "1 Starr St, Thomaston, ME 04861",
+    "phone": "207-354-5144",
+    "url": "https://www.facebook.com/hothilltavern/",
+    "tags": [
+    ],
+    "hours": {
+        "mon": [],
+        "tue": [],
+        "wed": ["11 am - 12 am"],
+        "thr": ["11 am - 12 am"],
+        "fri": ["11 am - 12 am"],
+        "sat": ["11 am - 12 am"],
+        "sun": []
     }
 },{
     "id": "in-good-company-rockland",
@@ -454,6 +491,44 @@
         "sun": []
     }
 },{
+    "id": "wasses-rockland",
+    "name": "Wasses Hot Dogs",
+    "description": "Take-out stand offering grilled hot dogs and burgers. Uses peanut oil. Cash only.",
+    "address": "2 N Main St, Rockland ME 04841",
+    "phone": "",
+    "url": "https://www.facebook.com/people/Wasses/100063547511258/",
+    "tags": [
+        "hot dogs", "burgers", "take-out"
+    ],
+    "hours": {
+        "mon": ["10:30 am - 4 pm"],
+        "tue": ["10:30 am - 4 pm"],
+        "wed": [],
+        "thr": ["10:30 am - 4 pm"],
+        "fri": ["10:30 am - 4 pm"],
+        "sat": ["10:30 am - 4 pm"],
+        "sun": ["10:30 am - 4 pm"]
+    }
+},{
+    "id": "wasses-thomaston",
+    "name": "Wasses Hot Dogs",
+    "description": "Take-out stand offering grilled hot dogs and burgers. Uses peanut oil. Cash only.",
+    "address": "179 New County Rd, Thomaston ME 04861",
+    "phone": "",
+    "url": "",
+    "tags": [
+        "hot dogs", "burgers", "take-out"
+    ],
+    "hours": {
+        "mon": [],
+        "tue": ["11 am - 3 pm"],
+        "wed": ["11 am - 3 pm"],
+        "thr": ["11 am - 3 pm"],
+        "fri": ["11 am - 3 pm"],
+        "sat": ["11 am - 3 pm"],
+        "sun": []
+    }
+},{
     "id": "waterworks-rockland",
     "name": "Waterworks Restaurant",
     "description": "",
@@ -473,7 +548,7 @@
         "sun": []
     }
 },{
-    "id": "the-zack-shack-thomaston",
+    "id": "zack-shack-thomaston",
     "name": "The Zack Shack",
     "description": "",
     "address": "210 New County Rd, Thomaston ME 04861",

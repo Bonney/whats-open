@@ -1,0 +1,20 @@
+{
+    "id": "wasses-rockland",
+    "name": "Wasses Hot Dogs",
+    "description": "Take-out stand offering grilled hot dogs and burgers. Uses peanut oil. Cash only.",
+    "address": "2 N Main St, Rockland ME 04841",
+    "phone": "",
+    "url": "https://www.facebook.com/people/Wasses/100063547511258/",
+    "tags": [
+        "hot dogs", "burgers", "take-out"
+    ],
+    "hours": {
+        "mon": ["10:30 am - 4 pm"],
+        "tue": ["10:30 am - 4 pm"],
+        "wed": [],
+        "thr": ["10:30 am - 4 pm"],
+        "fri": ["10:30 am - 4 pm"],
+        "sat": ["10:30 am - 4 pm"],
+        "sun": ["10:30 am - 4 pm"]
+    }
+}
