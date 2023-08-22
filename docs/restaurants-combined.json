@@ -18,25 +18,6 @@
         "sun": []
     }
 },{
-        "id": "archers-on-the-pier-rockland",
-        "name": "Archer's on the Pier",
-        "description": "Seafood-centric cafe with a waterfront deck providing comfort eats and a robust beer and wine list.",
-        "address": "58 Ocean St, Rockland ME 04841",
-        "phone": "207-594-2435",
-        "url": "https://archersonthepier.com/",
-        "tags": [
-            "seafood"
-        ],
-        "hours": {
-            "mon": ["11 am - 8:30 pm"],
-            "tue": ["11 am - 8:30 pm"],
-            "wed": ["11 am - 8:30 pm"],
-            "thr": ["11 am - 8:30 pm"],
-            "fri": ["11 am - 9 pm"],
-            "sat": ["11 am - 9 pm"],
-            "sun": []
-        }
-    },{
     "id": "athens-pizza-thomaston",
     "name": "Athens Pizzeria",
     "description": "",
