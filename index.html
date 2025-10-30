@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rockland, Maine - Travel Guide</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Garamond', serif;
+            background-color: #f4e9d8;
+            color: #2c2416;
+            line-height: 1.6;
+            background-image:
+                repeating-linear-gradient(
+                    0deg,
+                    transparent,
+                    transparent 29px,
+                    rgba(139, 115, 85, 0.05) 29px,
+                    rgba(139, 115, 85, 0.05) 30px
+                );
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            border-bottom: 3px double #8b7355;
+            margin-bottom: 40px;
+            background: linear-gradient(180deg, #f9f3e8 0%, #f4e9d8 100%);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            font-size: 3.5em;
+            font-weight: bold;
+            color: #1a4d2e;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 0px rgba(139, 115, 85, 0.2);
+        }
+
+        .subtitle {
+            font-size: 1.3em;
+            font-style: italic;
+            color: #5d4e37;
+            margin-bottom: 15px;
+        }
+
+        .tagline {
+            font-size: 0.95em;
+            color: #6b5d52;
+            border-top: 1px solid #c9b896;
+            padding-top: 15px;
+            margin-top: 15px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .nav-btn {
+            padding: 12px 25px;
+            background: #e8dcc0;
+            border: 2px solid #8b7355;
+            border-radius: 3px;
+            cursor: pointer;
+            font-family: inherit;
+            font-size: 1em;
+            color: #2c2416;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: bold;
+        }
+
+        .nav-btn:hover {
+            background: #d4c4a8;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+
+        .nav-btn.active {
+            background: #1a4d2e;
+            color: #f4e9d8;
+            border-color: #1a4d2e;
+        }
+
+        .search-filter {
+            margin-bottom: 30px;
+            padding: 25px;
+            background: #f9f3e8;
+            border: 2px solid #c9b896;
+            border-radius: 5px;
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .search-box {
+            width: 100%;
+            padding: 12px 20px;
+            font-size: 1.1em;
+            border: 2px solid #8b7355;
+            border-radius: 3px;
+            font-family: inherit;
+            background: #fff;
+            margin-bottom: 15px;
+        }
+
+        .filter-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .tag-filter {
+            padding: 8px 15px;
+            background: #fff;
+            border: 1px solid #c9b896;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.9em;
+            transition: all 0.2s;
+        }
+
+        .tag-filter:hover {
+            background: #e8dcc0;
+            border-color: #8b7355;
+        }
+
+        .tag-filter.active {
+            background: #1a4d2e;
+            color: #f4e9d8;
+            border-color: #1a4d2e;
+        }
+
+        .section {
+            margin-bottom: 50px;
+        }
+
+        .section-title {
+            font-size: 2.5em;
+            color: #1a4d2e;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #8b7355;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .intro-text {
+            font-size: 1.1em;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: #f9f3e8;
+            border-left: 4px solid #1a4d2e;
+            line-height: 1.8;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: #fff;
+            border: 2px solid #c9b896;
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: 3px 3px 10px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 5px 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 10px;
+        }
+
+        .card-title {
+            font-size: 1.4em;
+            color: #1a4d2e;
+            font-weight: bold;
+            flex: 1;
+        }
+
+        .card-link {
+            color: #1a4d2e;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .card-link:hover {
+            color: #2d6a45;
+            text-decoration: underline;
+        }
+
+        .open-badge {
+            background: #2d6a45;
+            color: white;
+            padding: 4px 10px;
+            border-radius: 3px;
+            font-size: 0.8em;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-left: 10px;
+        }
+
+        .closed-badge {
+            background: #8b4513;
+            color: white;
+            padding: 4px 10px;
+            border-radius: 3px;
+            font-size: 0.8em;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-left: 10px;
+        }
+
+        .card-description {
+            font-size: 0.95em;
+            color: #4a4a4a;
+            margin-bottom: 12px;
+            font-style: italic;
+        }
+
+        .card-info {
+            font-size: 0.9em;
+            color: #5d4e37;
+            margin-bottom: 8px;
+        }
+
+        .card-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 12px;
+        }
+
+        .tag {
+            background: #e8dcc0;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.85em;
+            color: #2c2416;
+            border: 1px solid #c9b896;
+        }
+
+        .hours-grid {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 5px 15px;
+            margin-top: 10px;
+            font-size: 0.9em;
+            padding: 10px;
+            background: #f9f3e8;
+            border-radius: 3px;
+        }
+
+        .day {
+            font-weight: bold;
+            color: #2c2416;
+            text-transform: uppercase;
+            font-size: 0.85em;
+        }
+
+        .day.today {
+            color: #1a4d2e;
+            font-weight: bold;
+        }
+
+        .time {
+            color: #5d4e37;
+        }
+
+        .time.today {
+            color: #1a4d2e;
+            font-weight: bold;
+        }
+
+        .closed {
+            color: #8b4513;
+            font-style: italic;
+        }
+
+        .festival-card {
+            border-left: 4px solid #1a4d2e;
+        }
+
+        .festival-emoji {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .festival-dates {
+            font-weight: bold;
+            color: #1a4d2e;
+            margin-top: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            border-top: 3px double #8b7355;
+            margin-top: 60px;
+            color: #5d4e37;
+            font-style: italic;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2em;
+                letter-spacing: 2px;
+            }
+
+            .subtitle {
+                font-size: 1.1em;
+            }
+
+            .grid {
+                grid-template-columns: 1fr;
+            }
+
+            .nav {
+                flex-direction: column;
+                align-items: stretch;
+            }
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Rockland, Maine</h1>
+            <div class="subtitle">A Coastal Midcoast Guide</div>
+            <div class="tagline">Discover the finest dining, events, and experiences in Rockland, Thomaston, and Spruce Head</div>
+        </header>
+
+        <nav class="nav">
+            <button class="nav-btn active" onclick="showSection('all')">Complete Guide</button>
+            <button class="nav-btn" onclick="showSection('restaurants')">Dining</button>
+            <button class="nav-btn" onclick="showSection('festivals')">Festivals & Events</button>
+        </nav>
+
+        <div class="search-filter">
+            <input type="text" class="search-box" id="searchBox" placeholder="Search restaurants, cuisines, or locations...">
+            <div id="filterTags" class="filter-tags"></div>
+        </div>
+
+        <section id="restaurantsSection" class="section">
+            <h2 class="section-title">Dining Guide</h2>
+            <div class="intro-text">
+                From fresh lobster shacks to fine Italian dining, Rockland's culinary scene offers something for every palate.
+                Browse our carefully curated selection of local establishments, complete with hours of operation and specialty tags.
+            </div>
+            <div id="restaurantsGrid" class="grid"></div>
+        </section>
+
+        <section id="festivalsSection" class="section">
+            <h2 class="section-title">Festivals & Events</h2>
+            <div class="intro-text">
+                Rockland hosts world-renowned festivals celebrating music, seafood, and local culture.
+                Plan your visit around these spectacular events that draw visitors from around the globe.
+            </div>
+            <div id="festivalsGrid" class="grid"></div>
+        </section>
+
+        <footer>
+            <p>Rockland, Maine Travel Guide</p>
+            <p>Explore the beauty and flavor of Maine's Midcoast</p>
+        </footer>
+    </div>
+
+    <script>
+        let restaurantsData = [];
+        let festivalsData = [];
+        let tagsData = {};
+        let allTags = new Set();
+        let activeFilters = new Set();
+
+        const dayNames = ['sun', 'mon', 'tue', 'wed', 'thr', 'fri', 'sat'];
+        const dayLabels = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+
+        function getCurrentDay() {
+            return dayNames[new Date().getDay()];
+        }
+
+        function isOpenNow(hours) {
+            const now = new Date();
+            const currentDay = dayNames[now.getDay()];
+            const currentTime = now.getHours() * 60 + now.getMinutes();
+
+            const todayHours = hours[currentDay];
+            if (!todayHours || todayHours.length === 0) return false;
+
+            return todayHours.some(timeRange => {
+                const [start, end] = timeRange.split(' - ');
+                const startTime = parseTime(start);
+                const endTime = parseTime(end);
+                return currentTime >= startTime && currentTime <= endTime;
+            });
+        }
+
+        function parseTime(timeStr) {
+            const [time, period] = timeStr.split(' ');
+            let [hours, minutes] = time.split(':').map(Number);
+            if (!minutes) minutes = 0;
+
+            if (period === 'pm' && hours !== 12) hours += 12;
+            if (period === 'am' && hours === 12) hours = 0;
+
+            return hours * 60 + minutes;
+        }
+
+        function renderRestaurants(restaurants = restaurantsData) {
+            const grid = document.getElementById('restaurantsGrid');
+            const currentDay = getCurrentDay();
+
+            grid.innerHTML = restaurants.map(restaurant => {
+                const isOpen = isOpenNow(restaurant.hours);
+                const openBadge = isOpen ? '<span class="open-badge">Open Now</span>' : '<span class="closed-badge">Closed</span>';
+
+                const hoursHTML = dayNames.map((day, index) => {
+                    const hours = restaurant.hours[day];
+                    const isToday = day === currentDay;
+                    const dayClass = isToday ? 'day today' : 'day';
+                    const timeClass = isToday ? 'time today' : 'time';
+
+                    if (!hours || hours.length === 0) {
+                        return `<div class="${dayClass}">${dayLabels[index]}:</div><div class="${timeClass} closed">Closed</div>`;
+                    }
+                    return `<div class="${dayClass}">${dayLabels[index]}:</div><div class="${timeClass}">${hours.join(', ')}</div>`;
+                }).join('');
+
+                const tagsHTML = restaurant.tags.map(tag =>
+                    `<span class="tag">${tag}</span>`
+                ).join('');
+
+                return `
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">
+                                ${restaurant.url ? `<a href="${restaurant.url}" target="_blank" class="card-link">${restaurant.name}</a>` : restaurant.name}
+                            </h3>
+                            ${openBadge}
+                        </div>
+                        ${restaurant.description ? `<div class="card-description">${restaurant.description}</div>` : ''}
+                        <div class="card-info">📍 ${restaurant.address}</div>
+                        ${restaurant.phone ? `<div class="card-info">📞 ${restaurant.phone}</div>` : ''}
+                        ${restaurant.tags.length > 0 ? `<div class="card-tags">${tagsHTML}</div>` : ''}
+                        <div class="hours-grid">${hoursHTML}</div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        function renderFestivals(festivals = festivalsData) {
+            const grid = document.getElementById('festivalsGrid');
+
+            grid.innerHTML = festivals.map(festival => {
+                const tagsHTML = festival.tags.map(tag =>
+                    `<span class="tag">${tag}</span>`
+                ).join('');
+
+                const datesFormatted = festival.dates.map(date => {
+                    const d = new Date(date + 'T00:00:00');
+                    return d.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+                }).join(' - ');
+
+                return `
+                    <div class="card festival-card">
+                        <div class="festival-emoji">${festival.emoji}</div>
+                        <h3 class="card-title">
+                            ${festival.webUrl ? `<a href="${festival.webUrl}" target="_blank" class="card-link">${festival.name}</a>` : festival.name}
+                        </h3>
+                        <div class="card-description">${festival.description}</div>
+                        <div class="card-info">📍 ${festival.address}</div>
+                        ${festival.phone ? `<div class="card-info">📞 ${festival.phone}</div>` : ''}
+                        <div class="festival-dates">📅 ${datesFormatted}</div>
+                        ${festival.tags.length > 0 ? `<div class="card-tags">${tagsHTML}</div>` : ''}
+                    </div>
+                `;
+            }).join('');
+        }
+
+        function extractAllTags() {
+            restaurantsData.forEach(restaurant => {
+                restaurant.tags.forEach(tag => allTags.add(tag.toLowerCase()));
+            });
+        }
+
+        function renderFilterTags() {
+            const container = document.getElementById('filterTags');
+            const sortedTags = Array.from(allTags).sort();
+
+            container.innerHTML = sortedTags.map(tag =>
+                `<span class="tag-filter" onclick="toggleFilter('${tag}')">${tag}</span>`
+            ).join('');
+        }
+
+        function toggleFilter(tag) {
+            if (activeFilters.has(tag)) {
+                activeFilters.delete(tag);
+            } else {
+                activeFilters.add(tag);
+            }
+            updateFilterUI();
+            filterRestaurants();
+        }
+
+        function updateFilterUI() {
+            document.querySelectorAll('.tag-filter').forEach(el => {
+                const tag = el.textContent;
+                if (activeFilters.has(tag)) {
+                    el.classList.add('active');
+                } else {
+                    el.classList.remove('active');
+                }
+            });
+        }
+
+        function filterRestaurants() {
+            const searchTerm = document.getElementById('searchBox').value.toLowerCase();
+
+            let filtered = restaurantsData;
+
+            if (activeFilters.size > 0) {
+                filtered = filtered.filter(restaurant =>
+                    restaurant.tags.some(tag => activeFilters.has(tag.toLowerCase()))
+                );
+            }
+
+            if (searchTerm) {
+                filtered = filtered.filter(restaurant =>
+                    restaurant.name.toLowerCase().includes(searchTerm) ||
+                    restaurant.address.toLowerCase().includes(searchTerm) ||
+                    restaurant.description.toLowerCase().includes(searchTerm) ||
+                    restaurant.tags.some(tag => tag.toLowerCase().includes(searchTerm))
+                );
+            }
+
+            renderRestaurants(filtered);
+        }
+
+        function showSection(section) {
+            const restaurantsSection = document.getElementById('restaurantsSection');
+            const festivalsSection = document.getElementById('festivalsSection');
+            const buttons = document.querySelectorAll('.nav-btn');
+
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+
+            if (section === 'all') {
+                restaurantsSection.classList.remove('hidden');
+                festivalsSection.classList.remove('hidden');
+            } else if (section === 'restaurants') {
+                restaurantsSection.classList.remove('hidden');
+                festivalsSection.classList.add('hidden');
+            } else if (section === 'festivals') {
+                restaurantsSection.classList.add('hidden');
+                festivalsSection.classList.remove('hidden');
+            }
+        }
+
+        async function loadData() {
+            try {
+                const [restaurantsResponse, festivalsResponse] = await Promise.all([
+                    fetch('docs/restaurants-combined.json'),
+                    fetch('docs/festivals.json')
+                ]);
+
+                restaurantsData = await restaurantsResponse.json();
+                festivalsData = await festivalsResponse.json();
+
+                extractAllTags();
+                renderFilterTags();
+                renderRestaurants();
+                renderFestivals();
+
+                document.getElementById('searchBox').addEventListener('input', filterRestaurants);
+            } catch (error) {
+                console.error('Error loading data:', error);
+            }
+        }
+
+        loadData();
+    </script>
+</body>
+</html>
