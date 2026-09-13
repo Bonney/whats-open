@@ -1,0 +1,24 @@
+{
+    "id": "main-street-markets-rockland",
+    "name": "Main Street Markets",
+    "description": "Local foods market and cafe in downtown Rockland offering locally sourced provisions, prepared foods, lunch specials, salads, and smoothies. Full-service cafe with indoor and outdoor patio seating.",
+    "address": "435 Main St, Rockland ME 04841",
+    "phone": "207-594-8515",
+    "url": "https://www.mainstreetmarkets.com/",
+    "tags": [
+        "Café",
+        "Takeout",
+        "Locally Sourced",
+        "Healthy",
+        "Sandwiches"
+    ],
+    "hours": {
+        "mon": ["8 am - 5 pm"],
+        "tue": ["8 am - 5 pm"],
+        "wed": ["8 am - 5 pm"],
+        "thr": ["8 am - 5 pm"],
+        "fri": ["8 am - 5 pm"],
+        "sat": ["9 am - 5 pm"],
+        "sun": []
+    }
+}

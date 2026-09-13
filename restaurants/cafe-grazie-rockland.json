@@ -1,0 +1,24 @@
+{
+    "id": "cafe-grazie-rockland",
+    "name": "Cafe Grazie",
+    "description": "Daytime cafe and market in the former Wiggins' Meat Market. Offers breakfast sandwiches, burritos, frittata, porridge, pasta, focaccia, cardamom buns, and fresh pastries from Double Grazie bakery. Serves Tandem coffee and afternoon spritzes.",
+    "address": "148 S Main St, Rockland ME 04841",
+    "phone": "207-466-9113",
+    "url": "https://www.doublegrazie.world/",
+    "tags": [
+        "Café",
+        "Breakfast",
+        "Italian",
+        "Coffee",
+        "Takeout"
+    ],
+    "hours": {
+        "mon": [],
+        "tue": [],
+        "wed": ["8 am - 2 pm"],
+        "thr": ["8 am - 2 pm"],
+        "fri": ["8 am - 2 pm"],
+        "sat": ["8 am - 2 pm"],
+        "sun": ["9 am - 1 pm"]
+    }
+}

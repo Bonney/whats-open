@@ -14,6 +14,7 @@
         "Outdoor Seating": "🏖️",
         "Pizza": "🍕",
         "Pub": "🍔",
+        "Raw Bar": "🦪",
         "Sandwiches": "🥪",
         "Seafood": "🦞",
         "Soup": "🍲",
@@ -71,6 +72,8 @@
         "Vineyard": "🍇",
         "Wi-Fi Available": "📶",
         "Wheelchair Accessible": "♿",
-        "Delivery": "🚗"
+        "Delivery": "🚗",
+        "Donuts": "🍩",
+        "Fried Chicken": "🍗"
     }
 ]

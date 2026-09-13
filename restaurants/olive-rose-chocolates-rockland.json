@@ -1,0 +1,22 @@
+{
+    "id": "olive-rose-chocolates-rockland",
+    "name": "Olive Rose Chocolates",
+    "description": "Handmade chocolate shop and small cafe with open production kitchen next to 250 Main Hotel. Produces caramels, truffles, buttercreams, buttercrunch, fudge, and marshmallows. Also serves coffee from Blue Hill roasted beans. Named after Olive Rose, the first woman elected to public office in the United States.",
+    "address": "252 Main St, Rockland ME 04841",
+    "phone": "207-466-9445",
+    "url": "https://www.oliverosechocolates.com/",
+    "tags": [
+        "Desserts",
+        "Café",
+        "Coffee"
+    ],
+    "hours": {
+        "mon": [],
+        "tue": [],
+        "wed": [],
+        "thr": [],
+        "fri": [],
+        "sat": [],
+        "sun": []
+    }
+}

@@ -1,4 +1,25 @@
 [{
+    "id": "13-oak-rockland",
+    "name": "13 Oak",
+    "description": "Wood-fired restaurant serving French-inflected comfort food with Maine seafood at the center. Located in a historic downtown space, features an approachable-yet-elevated menu with items ranging from wood-fired pasta to expertly prepared seafood.",
+    "address": "13 Oak St, Rockland ME 04841",
+    "phone": "207-466-9264",
+    "url": "https://www.13oakrockland.com/",
+    "tags": [
+        "Seafood",
+        "French",
+        "Fine Dining"
+    ],
+    "hours": {
+        "mon": ["5 pm - 8:30 pm"],
+        "tue": ["5 pm - 8:30 pm"],
+        "wed": ["5 pm - 8:30 pm"],
+        "thr": ["5 pm - 8:30 pm"],
+        "fri": ["5 pm - 8:30 pm"],
+        "sat": ["5 pm - 9:30 pm"],
+        "sun": []
+    }
+},{
     "id": "adas-kitchen-rockland",
     "name": "Ada's Kitchen",
     "description": "Casual Italian restaurant serving handmade pasta and pizza alongside craft cocktails.",
@@ -20,6 +41,47 @@
         "sun": []
     }
 },{
+    "id": "alaskan-captain-rockland",
+    "name": "Alaskan Captain",
+    "description": "Seafood market and takeout specializing in frozen prepared meals and fresh seafood products. Founded by a former Alaska Bering Sea commercial fisheries captain, features shrimp scampi, garlic butter shrimp, lobster mac and cheese, and scallops.",
+    "address": "230 Park St, Rockland ME 04841",
+    "phone": "207-596-3603",
+    "url": "https://www.mainelobsterclub.com/",
+    "tags": [
+        "Seafood",
+        "Takeout"
+    ],
+    "hours": {
+        "mon": ["11 am - 5 pm"],
+        "tue": ["11 am - 5 pm"],
+        "wed": ["11 am - 5 pm"],
+        "thr": ["11 am - 5 pm"],
+        "fri": ["11 am - 5 pm"],
+        "sat": ["11 am - 5 pm"],
+        "sun": ["11 am - 5 pm"]
+    }
+},{
+    "id": "archers-on-the-pier-rockland",
+    "name": "Archer's on the Pier",
+    "description": "Waterfront seafood restaurant featuring fresh lobster rolls, local seafood, pasta, and salads. House-made desserts and extensive wine selection with outdoor deck seating overlooking the harbor.",
+    "address": "58 Ocean St, Rockland ME 04841",
+    "phone": "207-594-2435",
+    "url": "https://archersonthepier.com/",
+    "tags": [
+        "Seafood",
+        "Waterfront",
+        "Fine Dining"
+    ],
+    "hours": {
+        "mon": ["11 am - 8 pm"],
+        "tue": [],
+        "wed": ["11 am - 8 pm"],
+        "thr": ["11 am - 8 pm"],
+        "fri": ["11 am - 8 pm"],
+        "sat": ["11 am - 8 pm"],
+        "sun": ["11 am - 8 pm"]
+    }
+},{
     "id": "athens-pizza-thomaston",
     "name": "Athens Pizzeria",
     "description": "Family-owned pizzeria serving Greek specialties like gyros and spanakopita alongside pizza, pasta, and subs.",
@@ -37,6 +99,74 @@
         "fri": ["11 am - 9 pm"],
         "sat": ["11 am - 9 pm"],
         "sun": []
+    }
+},{
+    "id": "atlantic-baking-company-rockland",
+    "name": "Atlantic Baking Company",
+    "description": "European-style bakery and cafe featuring artisan breads and French pastries made fresh daily. Also serves breakfast, soups, and desserts.",
+    "address": "351 Main St, Rockland ME 04841",
+    "phone": "207-596-0505",
+    "url": "https://atlanticbakingco.com/",
+    "tags": [
+        "Bakery",
+        "Breakfast",
+        "Café",
+        "Vegetarian",
+        "Vegan",
+        "Gluten-Free"
+    ],
+    "hours": {
+        "mon": ["7 am - 5 pm"],
+        "tue": ["7 am - 5 pm"],
+        "wed": ["7 am - 5 pm"],
+        "thr": ["7 am - 5 pm"],
+        "fri": ["7 am - 5 pm"],
+        "sat": ["7 am - 5 pm"],
+        "sun": []
+    }
+},{
+    "id": "black-harpoon-spruce-head",
+    "name": "The Black Harpoon",
+    "description": "Family-friendly seafood restaurant and bar in Port Clyde featuring locally sourced fish, steaks, and seasonal specials. Casual dining with lively evening bar scene.",
+    "address": "202 Drift Inn Rd, Port Clyde ME 04855",
+    "phone": "207-372-2167",
+    "url": "http://www.theblackharpoon.com/",
+    "tags": [
+        "Seafood",
+        "Steakhouse",
+        "Pub"
+    ],
+    "hours": {
+        "mon": [],
+        "tue": ["4:30 pm - 8 pm"],
+        "wed": ["4:30 pm - 8 pm"],
+        "thr": ["4:30 pm - 8 pm"],
+        "fri": ["4:30 pm - 8 pm"],
+        "sat": [],
+        "sun": []
+    }
+},{
+    "id": "cafe-grazie-rockland",
+    "name": "Cafe Grazie",
+    "description": "Daytime cafe and market in the former Wiggins' Meat Market. Offers breakfast sandwiches, burritos, frittata, porridge, pasta, focaccia, cardamom buns, and fresh pastries from Double Grazie bakery. Serves Tandem coffee and afternoon spritzes.",
+    "address": "148 S Main St, Rockland ME 04841",
+    "phone": "207-466-9113",
+    "url": "https://www.doublegrazie.world/",
+    "tags": [
+        "Café",
+        "Breakfast",
+        "Italian",
+        "Coffee",
+        "Takeout"
+    ],
+    "hours": {
+        "mon": [],
+        "tue": [],
+        "wed": ["8 am - 2 pm"],
+        "thr": ["8 am - 2 pm"],
+        "fri": ["8 am - 2 pm"],
+        "sat": ["8 am - 2 pm"],
+        "sun": ["9 am - 1 pm"]
     }
 },{
     "id": "causeway-spruce-head",
@@ -60,6 +190,28 @@
         "sun": ["10 am - 8 pm"]
     }
 },{
+    "id": "clan-maclaren-rockland",
+    "name": "Clan MacLaren",
+    "description": "Sandwich shop serving cold sandwiches, lobster rolls in season, panini, salads, and seafood chowder. Bread sourced from Borealis Breads in Waldoboro. Vegan and gluten-free options available.",
+    "address": "397 Main St, Rockland ME 04841",
+    "phone": "207-593-7778",
+    "url": "http://www.clanmaclaren.net/home",
+    "tags": [
+        "Sandwiches",
+        "Seafood",
+        "Takeout",
+        "Vegan-Friendly"
+    ],
+    "hours": {
+        "mon": ["10:30 am - 3 pm"],
+        "tue": ["10:30 am - 3 pm"],
+        "wed": ["10:30 am - 3 pm"],
+        "thr": ["10:30 am - 3 pm"],
+        "fri": ["10:30 am - 3 pm"],
+        "sat": ["10:30 am - 3 pm"],
+        "sun": []
+    }
+},{
     "id": "claws-rockland",
     "name": "Claws",
     "description": "Casual lobster shack on Rockland Harbor with picnic-table seating, serving lobster rolls and fresh-caught seafood.",
@@ -69,7 +221,7 @@
     "tags": [
         "seafood",
         "waterfront",
-        "take-out",
+        "takeout",
         "outdoor seating"
     ],
     "hours": {
@@ -82,6 +234,27 @@
         "sun": ["11 am - 8 pm"]
     }
 },{
+    "id": "crooked-spoon-thomaston",
+    "name": "Crooked Spoon",
+    "description": "Intimate Italian restaurant featuring handmade fresh pasta, focaccia, and seasonal dishes paired with craft cocktails and carefully curated wines. Limited dinner hours.",
+    "address": "173 Main St, Thomaston ME 04861",
+    "phone": "908-415-2434",
+    "url": "https://www.crookedspoonmaine.com/",
+    "tags": [
+        "Italian",
+        "Cocktails",
+        "Wine"
+    ],
+    "hours": {
+        "mon": ["4:30 pm - 9 pm"],
+        "tue": [],
+        "wed": [],
+        "thr": ["4:30 pm - 9 pm"],
+        "fri": ["4:30 pm - 9 pm"],
+        "sat": [],
+        "sun": []
+    }
+},{
     "id": "doormans-thomaston",
     "name": "Dorman's Dairy Dream",
     "description": "Beloved seasonal ice cream stand making its own ice cream in-house, with flavors from Maine blueberry to grapenut.",
@@ -90,7 +263,7 @@
     "url": "https://www.facebook.com/dormansdairydream/",
     "tags": [
         "ice cream",
-        "take-out"
+        "takeout"
     ],
     "hours": {
         "mon": [],
@@ -122,6 +295,62 @@
         "fri": ["11 am - 7:30 pm"],
         "sat": ["11 am - 7:30 pm"],
         "sun": ["11 am - 7 pm"]
+    }
+},{
+    "id": "flipside-coffee-thomaston",
+    "name": "FlipSide Coffee",
+    "description": "Beloved downtown Thomaston gathering spot with thoughtfully sourced coffee, espresso drinks, and a menu of breakfast and lunch items. Wheelchair accessible with covered patio and local art on display.",
+    "address": "189 Main St, Thomaston ME 04861",
+    "phone": "207-354-5221",
+    "url": "https://www.facebook.com/flipsidecoffeemaine/",
+    "tags": [
+        "Coffee",
+        "Café",
+        "Breakfast"
+    ],
+    "hours": {
+        "mon": [
+            "7 am - 3 pm"
+        ],
+        "tue": [
+            "7 am - 3 pm"
+        ],
+        "wed": [
+            "7 am - 3 pm"
+        ],
+        "thr": [
+            "7 am - 3 pm"
+        ],
+        "fri": [
+            "7 am - 3 pm"
+        ],
+        "sat": [
+            "7 am - 3 pm"
+        ],
+        "sun": [
+            "7 am - 3 pm"
+        ]
+    }
+},{
+    "id": "high-tide-rockland",
+    "name": "High Tide",
+    "description": "Beer bar and restaurant featuring fresh local seafood, Mediterranean dishes, and burgers. Menu includes lobster bisque, baked stuffed lobster, lobster mac and cheese, lobster rolls, and salads with a curated selection of local beers and wines.",
+    "address": "275 Main St, Rockland ME 04841",
+    "phone": "207-466-9067",
+    "url": "https://www.instagram.com/hightiderockland/",
+    "tags": [
+        "Beer",
+        "Seafood",
+        "Casual Dining"
+    ],
+    "hours": {
+        "mon": ["11:30 am - 9 pm"],
+        "tue": ["11:30 am - 9 pm"],
+        "wed": ["11:30 am - 9 pm"],
+        "thr": ["11:30 am - 9 pm"],
+        "fri": ["11:30 am - 11 pm"],
+        "sat": ["11:30 am - 11 pm"],
+        "sun": ["11:30 am - 10 pm"]
     }
 },{
     "id": "hills-seafood-rockland",
@@ -164,6 +393,27 @@
         "sun": ["8 am - 2 pm"]
     }
 },{
+    "id": "honeys-fried-chicken-palace-thomaston",
+    "name": "Honey's Fried Chicken Palace",
+    "description": "Casual fried chicken spot specializing in hand-trimmed chicken thighs seasoned in a custom blend of 12 herbs and spices, served with 17+ housemade sauces on brioche buns. Opened April 2025.",
+    "address": "153 New County Rd, Thomaston ME 04861",
+    "phone": "207-593-8090",
+    "url": "https://www.gethoneys.com/",
+    "tags": [
+        "Fried Chicken",
+        "Takeout",
+        "Fast Food"
+    ],
+    "hours": {
+        "mon": ["11 am - 7 pm"],
+        "tue": ["11 am - 7 pm"],
+        "wed": ["11 am - 7 pm"],
+        "thr": ["11 am - 7 pm"],
+        "fri": ["11 am - 7 pm"],
+        "sat": ["11 am - 7 pm"],
+        "sun": ["11 am - 7 pm"]
+    }
+},{
     "id": "hot-hill-tavern-thomaston",
     "name": "Hot Hill Tavern",
     "description": "Neighborhood tavern serving pub fare with Puerto Rican-influenced specialties, plus live music and pool tables.",
@@ -202,6 +452,146 @@
         "thr": ["4:30 pm - 8:30 pm"],
         "fri": ["4:30 pm - 8:30 pm"],
         "sat": ["4:30 pm - 8:30 pm"],
+        "sun": []
+    }
+},{
+    "id": "ka-chai-thai-street-food-thomaston",
+    "name": "Ka Chai Thai Street Food",
+    "description": "Authentic Bangkok-style Thai street food using traditional recipes and fresh ingredients. Offers takeout and delivery, with vegetarian options available.",
+    "address": "444 Main St, Thomaston ME 04861",
+    "phone": "207-354-5152",
+    "url": "https://kachaithaistreetfood.com/",
+    "tags": [
+        "Thai",
+        "Takeout",
+        "Delivery"
+    ],
+    "hours": {
+        "mon": [],
+        "tue": [
+            "11:30 am - 2 pm",
+            "4:30 pm - 7:30 pm"
+        ],
+        "wed": [
+            "11:30 am - 2 pm",
+            "4:30 pm - 7:30 pm"
+        ],
+        "thr": [
+            "11:30 am - 2 pm",
+            "4:30 pm - 7:30 pm"
+        ],
+        "fri": [
+            "11:30 am - 2 pm",
+            "4:30 pm - 8 pm"
+        ],
+        "sat": [
+            "11:30 am - 2 pm",
+            "4:30 pm - 8 pm"
+        ],
+        "sun": [
+            "4:30 pm - 7 pm"
+        ]
+    }
+},{
+    "id": "laurels-dolce-vita-thomaston",
+    "name": "Laurel's Dolce Vita",
+    "description": "Italian bakery and café in a historic 1870s firehouse featuring small-batch pastries baked fresh daily. Specializes in authentic Italian pastries, fresh pasta, and artisan breads using locally sourced ingredients.",
+    "address": "350 Main St, Thomaston ME 04861",
+    "phone": "207-354-5242",
+    "url": "https://www.facebook.com/laurelsdolcevita/",
+    "tags": [
+        "Bakery",
+        "Italian",
+        "Café"
+    ],
+    "hours": {
+        "mon": [],
+        "tue": [],
+        "wed": [],
+        "thr": [
+            "9 am - 2 pm"
+        ],
+        "fri": [
+            "9 am - 2 pm"
+        ],
+        "sat": [
+            "9 am - 2 pm"
+        ],
+        "sun": [
+            "9 am - 1 pm"
+        ]
+    }
+},{
+    "id": "lemon-bar-rockland",
+    "name": "Lemon Bar",
+    "description": "Intimate wine and cocktail bar with a sweet approach to spirits. Features a curated selection of wines, craft cocktails, and small snacks.",
+    "address": "305 Main St, Rockland ME 04841",
+    "phone": "207-596-3316",
+    "url": "https://www.lemonbarmaine.com/",
+    "tags": [
+        "Wine",
+        "Cocktails"
+    ],
+    "hours": {
+        "mon": [],
+        "tue": [],
+        "wed": [
+            "5 pm - 10 pm"
+        ],
+        "thr": [
+            "5 pm - 10 pm"
+        ],
+        "fri": [
+            "5 pm - 10 pm"
+        ],
+        "sat": [
+            "5 pm - 10 pm"
+        ],
+        "sun": []
+    }
+},{
+    "id": "lulus-ice-cream-and-gelato-rockland",
+    "name": "Lulu's Ice Cream & Gelato",
+    "description": "Over 25 years of serving homemade ice cream and authentic Italian gelato with rotating seasonal flavors. Cozy alley location behind Fog Bar with shaded outdoor seating. About eight ice cream flavors and around 15 gelato options available.",
+    "address": "23-31 Oak St, Rockland ME 04841",
+    "phone": "646-226-1105",
+    "url": "https://www.facebook.com/Lulusicecreamandgelato/",
+    "tags": [
+        "Ice Cream",
+        "Desserts",
+        "Takeout",
+        "Vegan-Friendly"
+    ],
+    "hours": {
+        "mon": ["1 pm - 9 pm"],
+        "tue": ["12 pm - 9 pm"],
+        "wed": ["1 pm - 9 pm"],
+        "thr": ["1 pm - 9 pm"],
+        "fri": ["1 pm - 9 pm"],
+        "sat": ["1 pm - 9 pm"],
+        "sun": ["1 pm - 9 pm"]
+    }
+},{
+    "id": "main-street-markets-rockland",
+    "name": "Main Street Markets",
+    "description": "Local foods market and cafe in downtown Rockland offering locally sourced provisions, prepared foods, lunch specials, salads, and smoothies. Full-service cafe with indoor and outdoor patio seating.",
+    "address": "435 Main St, Rockland ME 04841",
+    "phone": "207-594-8515",
+    "url": "https://www.mainstreetmarkets.com/",
+    "tags": [
+        "Café",
+        "Takeout",
+        "Locally Sourced",
+        "Healthy",
+        "Sandwiches"
+    ],
+    "hours": {
+        "mon": ["8 am - 5 pm"],
+        "tue": ["8 am - 5 pm"],
+        "wed": ["8 am - 5 pm"],
+        "thr": ["8 am - 5 pm"],
+        "fri": ["8 am - 5 pm"],
+        "sat": ["9 am - 5 pm"],
         "sun": []
     }
 },{
@@ -267,6 +657,27 @@
         "fri": ["11:30 am - 9 pm"],
         "sat": ["11:30 am - 9 pm"],
         "sun": ["11:30 am - 9 pm"]
+    }
+},{
+    "id": "olive-rose-chocolates-rockland",
+    "name": "Olive Rose Chocolates",
+    "description": "Handmade chocolate shop and small cafe with open production kitchen next to 250 Main Hotel. Produces caramels, truffles, buttercreams, buttercrunch, fudge, and marshmallows. Also serves coffee from Blue Hill roasted beans. Named after Olive Rose, the first woman elected to public office in the United States.",
+    "address": "252 Main St, Rockland ME 04841",
+    "phone": "207-466-9445",
+    "url": "https://www.oliverosechocolates.com/",
+    "tags": [
+        "Desserts",
+        "Café",
+        "Coffee"
+    ],
+    "hours": {
+        "mon": [],
+        "tue": [],
+        "wed": [],
+        "thr": [],
+        "fri": [],
+        "sat": [],
+        "sun": []
     }
 },{
     "id": "park-street-grille-rockland",
@@ -382,7 +793,7 @@
     "url": "https://roselynthai.com/",
     "tags": [
         "thai",
-        "take-out"
+        "takeout"
     ],
     "hours": {
         "mon": [],
@@ -394,6 +805,29 @@
         "sun": ["12 pm - 8:30 pm"]
     }
 },{
+    "id": "ruckus-donuts-rockland",
+    "name": "Ruckus Donuts",
+    "description": "Family-owned donut shop featuring fresh, made-to-order brioche-style yeast donuts with creative daily flavors. Also serves coffee. Arrive early, as selection often sells out.",
+    "address": "377 Main St, Rockland ME 04841",
+    "phone": "207-975-4388",
+    "url": "https://www.ruckusdonuts.com/",
+    "tags": [
+        "Donuts",
+        "Bakery",
+        "Breakfast",
+        "Coffee",
+        "Takeout"
+    ],
+    "hours": {
+        "mon": [],
+        "tue": [],
+        "wed": ["7:30 am - 11 am"],
+        "thr": ["7:30 am - 11 am"],
+        "fri": ["7:30 am - 11 am"],
+        "sat": ["7:30 am - 11 am"],
+        "sun": ["8 am - 11 am"]
+    }
+},{
     "id": "rustica-rockland",
     "name": "Rustica Cucina Italiana",
     "description": "Housemade pasta, bread, and traditional Italian plates in a spacious downtown dining room, made from scratch since 2006.",
@@ -403,7 +837,7 @@
     "tags": [
         "italian",
         "delivery",
-        "take-out"
+        "takeout"
     ],
     "hours": {
         "mon": [],
@@ -415,6 +849,48 @@
         "sun": []
     }
 },{
+    "id": "sammys-deluxe-rockland",
+    "name": "Sammy's Deluxe",
+    "description": "Fresh, straightforward American comfort food using seasonal ingredients and locally sourced items. Simple, high-value cooking featuring innovative dishes in the style of elevated homestyle fare.",
+    "address": "488 Main St, Rockland ME 04841",
+    "phone": "207-466-9059",
+    "url": "https://sammysdeluxe-onlinestore.square.site/",
+    "tags": [
+        "Casual Dining",
+        "Cocktails",
+        "Takeout"
+    ],
+    "hours": {
+        "mon": [],
+        "tue": [],
+        "wed": ["5 pm - 9 pm"],
+        "thr": ["5 pm - 9 pm"],
+        "fri": ["5 pm - 9 pm"],
+        "sat": ["5 pm - 9 pm"],
+        "sun": []
+    }
+},{
+    "id": "squid-ink-coffee-spruce-head",
+    "name": "Squid Ink Coffee",
+    "description": "Dock-side coffee café in Port Clyde with espresso drinks and pastries, featuring outdoor seating with harbor views and views of passing lobster boats.",
+    "address": "6 Cold Storage Rd, Port Clyde ME 04855",
+    "phone": "207-372-2088",
+    "url": "https://www.instagram.com/_squidinkcoffee/",
+    "tags": [
+        "Coffee",
+        "Outdoor Seating",
+        "Café"
+    ],
+    "hours": {
+        "mon": [],
+        "tue": [],
+        "wed": ["7 am - 2:30 pm"],
+        "thr": ["7 am - 2:30 pm"],
+        "fri": ["7 am - 2:30 pm"],
+        "sat": ["7 am - 2:30 pm"],
+        "sun": ["7 am - 2:30 pm"]
+    }
+},{
     "id": "station-188-bbq-thomaston",
     "name": "Station 118 BBQ",
     "description": "Smoked pulled pork, brisket, and ribs with homemade sides and a full bar in a casual dining room.",
@@ -423,7 +899,7 @@
     "url": "https://www.station118.com/",
     "tags": [
         "bbq",
-        "take-out"
+        "takeout"
     ],
     "hours": {
         "mon": ["4pm - 8pm"],
@@ -455,6 +931,53 @@
         "sun": []
     }
 },{
+    "id": "tenants-harbor-general-store-spruce-head",
+    "name": "Tenants Harbor General Store",
+    "description": "Full-service general store with deli counter serving breakfast, lunch, and dinner sandwiches, wraps, and salads. Also offers Maine-roasted coffee, meat and seafood counter, and wine selection.",
+    "address": "16 Main St, Tenants Harbor ME 04860",
+    "phone": "207-372-6311",
+    "url": "https://www.facebook.com/TenantsHarborGeneralStore/",
+    "tags": [
+        "Sandwiches",
+        "Coffee",
+        "Takeout"
+    ],
+    "hours": {
+        "mon": ["5 am - 8 pm"],
+        "tue": ["5 am - 8 pm"],
+        "wed": ["5 am - 8 pm"],
+        "thr": ["5 am - 8 pm"],
+        "fri": ["5 am - 8 pm"],
+        "sat": ["5 am - 8 pm"],
+        "sun": ["5 am - 8 pm"]
+    }
+},{
+    "id": "the-uproot-pie-co-and-the-carriage-house-thomaston",
+    "name": "The Uproot Pie Co & The Carriage House",
+    "description": "Wood-fired pizza restaurant in a 19th-century carriage house. Offers seasonal pizza menus, salads, small bites, and a rotating beer and wine selection. Hosts pizza-making classes and special events.",
+    "address": "9 Green St, Thomaston ME 04861",
+    "phone": "207-370-1568",
+    "url": "https://www.theuprootpieco.com/carriage-house",
+    "tags": [
+        "Pizza",
+        "Café"
+    ],
+    "hours": {
+        "mon": [],
+        "tue": [],
+        "wed": [],
+        "thr": [
+            "4 pm - 8 pm"
+        ],
+        "fri": [
+            "4 pm - 8 pm"
+        ],
+        "sat": [
+            "9 am - 1 pm"
+        ],
+        "sun": []
+    }
+},{
     "id": "thomaston-cafe-thomaston",
     "name": "Thomaston Cafe",
     "description": "Casual lunch-and-dinner cafe known for weekly specials like Prime Rib Wednesday and Thursday burger night.",
@@ -462,7 +985,7 @@
     "phone": "207-354-8589",
     "url": "https://thomastoncafeme.wixsite.com/mysite",
     "tags": [
-        "take-out"
+        "takeout"
     ],
     "hours": {
         "mon": [],
@@ -493,6 +1016,35 @@
         "sun": ["11 am - 4 pm"]
     }
 },{
+    "id": "tuck-and-roll-rockland",
+    "name": "Tuck & Roll",
+    "description": "Breakfast and lunch food truck specializing in waffles. Offers creative waffle dishes, gluten-free options with separate preparation equipment, and fresh-roasted coffee.",
+    "address": "3 Park Dr, Rockland ME 04841",
+    "phone": "207-390-5880",
+    "url": "https://www.facebook.com/TuckAndRollFoodTruck/",
+    "tags": [
+        "Food Truck",
+        "Breakfast",
+        "Gluten-Free"
+    ],
+    "hours": {
+        "mon": [],
+        "tue": [],
+        "wed": [],
+        "thr": [
+            "8 am - 2 pm"
+        ],
+        "fri": [
+            "8 am - 2 pm"
+        ],
+        "sat": [
+            "8 am - 2 pm"
+        ],
+        "sun": [
+            "8 am - 1 pm"
+        ]
+    }
+},{
     "id": "wasses-rockland",
     "name": "Wasses Hot Dogs",
     "description": "Take-out stand offering grilled hot dogs and burgers. Uses peanut oil. Cash only.",
@@ -500,7 +1052,7 @@
     "phone": "207-594-7472",
     "url": "https://www.facebook.com/people/Wasses/100063547511258/",
     "tags": [
-        "hot dogs", "burgers", "take-out"
+        "hot dogs", "burgers", "takeout"
     ],
     "hours": {
         "mon": ["10:30 am - 4 pm"],
@@ -519,7 +1071,7 @@
     "phone": "207-594-4347",
     "url": "https://www.facebook.com/p/Wasses-100063547511258/",
     "tags": [
-        "hot dogs", "burgers", "take-out"
+        "hot dogs", "burgers", "takeout"
     ],
     "hours": {
         "mon": [],
@@ -557,7 +1109,7 @@
     "phone": "207-542-6837",
     "url": "https://www.facebook.com/ZackShackTruck/",
     "tags": [
-        "seafood", "food truck", "take-out"
+        "seafood", "food truck", "takeout"
     ],
     "hours": {
         "mon": ["11 am - 4 pm"],

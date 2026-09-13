@@ -1,0 +1,22 @@
+{
+    "id": "13-oak-rockland",
+    "name": "13 Oak",
+    "description": "Wood-fired restaurant serving French-inflected comfort food with Maine seafood at the center. Located in a historic downtown space, features an approachable-yet-elevated menu with items ranging from wood-fired pasta to expertly prepared seafood.",
+    "address": "13 Oak St, Rockland ME 04841",
+    "phone": "207-466-9264",
+    "url": "https://www.13oakrockland.com/",
+    "tags": [
+        "Seafood",
+        "French",
+        "Fine Dining"
+    ],
+    "hours": {
+        "mon": ["5 pm - 8:30 pm"],
+        "tue": ["5 pm - 8:30 pm"],
+        "wed": ["5 pm - 8:30 pm"],
+        "thr": ["5 pm - 8:30 pm"],
+        "fri": ["5 pm - 8:30 pm"],
+        "sat": ["5 pm - 9:30 pm"],
+        "sun": []
+    }
+}

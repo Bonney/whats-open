@@ -1,0 +1,22 @@
+{
+    "id": "crooked-spoon-thomaston",
+    "name": "Crooked Spoon",
+    "description": "Intimate Italian restaurant featuring handmade fresh pasta, focaccia, and seasonal dishes paired with craft cocktails and carefully curated wines. Limited dinner hours.",
+    "address": "173 Main St, Thomaston ME 04861",
+    "phone": "908-415-2434",
+    "url": "https://www.crookedspoonmaine.com/",
+    "tags": [
+        "Italian",
+        "Cocktails",
+        "Wine"
+    ],
+    "hours": {
+        "mon": ["4:30 pm - 9 pm"],
+        "tue": [],
+        "wed": [],
+        "thr": ["4:30 pm - 9 pm"],
+        "fri": ["4:30 pm - 9 pm"],
+        "sat": [],
+        "sun": []
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "id": "sammys-deluxe-rockland",
+    "name": "Sammy's Deluxe",
+    "description": "Fresh, straightforward American comfort food using seasonal ingredients and locally sourced items. Simple, high-value cooking featuring innovative dishes in the style of elevated homestyle fare.",
+    "address": "488 Main St, Rockland ME 04841",
+    "phone": "207-466-9059",
+    "url": "https://sammysdeluxe-onlinestore.square.site/",
+    "tags": [
+        "Casual Dining",
+        "Cocktails",
+        "Takeout"
+    ],
+    "hours": {
+        "mon": [],
+        "tue": [],
+        "wed": ["5 pm - 9 pm"],
+        "thr": ["5 pm - 9 pm"],
+        "fri": ["5 pm - 9 pm"],
+        "sat": ["5 pm - 9 pm"],
+        "sun": []
+    }
+}

@@ -1,0 +1,30 @@
+{
+    "id": "laurels-dolce-vita-thomaston",
+    "name": "Laurel's Dolce Vita",
+    "description": "Italian bakery and café in a historic 1870s firehouse featuring small-batch pastries baked fresh daily. Specializes in authentic Italian pastries, fresh pasta, and artisan breads using locally sourced ingredients.",
+    "address": "350 Main St, Thomaston ME 04861",
+    "phone": "207-354-5242",
+    "url": "https://www.facebook.com/laurelsdolcevita/",
+    "tags": [
+        "Bakery",
+        "Italian",
+        "Café"
+    ],
+    "hours": {
+        "mon": [],
+        "tue": [],
+        "wed": [],
+        "thr": [
+            "9 am - 2 pm"
+        ],
+        "fri": [
+            "9 am - 2 pm"
+        ],
+        "sat": [
+            "9 am - 2 pm"
+        ],
+        "sun": [
+            "9 am - 1 pm"
+        ]
+    }
+}

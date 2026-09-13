@@ -1,0 +1,36 @@
+{
+    "id": "flipside-coffee-thomaston",
+    "name": "FlipSide Coffee",
+    "description": "Beloved downtown Thomaston gathering spot with thoughtfully sourced coffee, espresso drinks, and a menu of breakfast and lunch items. Wheelchair accessible with covered patio and local art on display.",
+    "address": "189 Main St, Thomaston ME 04861",
+    "phone": "207-354-5221",
+    "url": "https://www.facebook.com/flipsidecoffeemaine/",
+    "tags": [
+        "Coffee",
+        "Café",
+        "Breakfast"
+    ],
+    "hours": {
+        "mon": [
+            "7 am - 3 pm"
+        ],
+        "tue": [
+            "7 am - 3 pm"
+        ],
+        "wed": [
+            "7 am - 3 pm"
+        ],
+        "thr": [
+            "7 am - 3 pm"
+        ],
+        "fri": [
+            "7 am - 3 pm"
+        ],
+        "sat": [
+            "7 am - 3 pm"
+        ],
+        "sun": [
+            "7 am - 3 pm"
+        ]
+    }
+}

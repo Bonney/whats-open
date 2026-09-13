@@ -1,0 +1,29 @@
+{
+    "id": "lemon-bar-rockland",
+    "name": "Lemon Bar",
+    "description": "Intimate wine and cocktail bar with a sweet approach to spirits. Features a curated selection of wines, craft cocktails, and small snacks.",
+    "address": "305 Main St, Rockland ME 04841",
+    "phone": "207-596-3316",
+    "url": "https://www.lemonbarmaine.com/",
+    "tags": [
+        "Wine",
+        "Cocktails"
+    ],
+    "hours": {
+        "mon": [],
+        "tue": [],
+        "wed": [
+            "5 pm - 10 pm"
+        ],
+        "thr": [
+            "5 pm - 10 pm"
+        ],
+        "fri": [
+            "5 pm - 10 pm"
+        ],
+        "sat": [
+            "5 pm - 10 pm"
+        ],
+        "sun": []
+    }
+}

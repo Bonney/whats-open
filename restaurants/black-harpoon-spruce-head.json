@@ -1,0 +1,22 @@
+{
+    "id": "black-harpoon-spruce-head",
+    "name": "The Black Harpoon",
+    "description": "Family-friendly seafood restaurant and bar in Port Clyde featuring locally sourced fish, steaks, and seasonal specials. Casual dining with lively evening bar scene.",
+    "address": "202 Drift Inn Rd, Port Clyde ME 04855",
+    "phone": "207-372-2167",
+    "url": "http://www.theblackharpoon.com/",
+    "tags": [
+        "Seafood",
+        "Steakhouse",
+        "Pub"
+    ],
+    "hours": {
+        "mon": [],
+        "tue": ["4:30 pm - 8 pm"],
+        "wed": ["4:30 pm - 8 pm"],
+        "thr": ["4:30 pm - 8 pm"],
+        "fri": ["4:30 pm - 8 pm"],
+        "sat": [],
+        "sun": []
+    }
+}

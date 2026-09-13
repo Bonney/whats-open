@@ -1,0 +1,22 @@
+{
+    "id": "high-tide-rockland",
+    "name": "High Tide",
+    "description": "Beer bar and restaurant featuring fresh local seafood, Mediterranean dishes, and burgers. Menu includes lobster bisque, baked stuffed lobster, lobster mac and cheese, lobster rolls, and salads with a curated selection of local beers and wines.",
+    "address": "275 Main St, Rockland ME 04841",
+    "phone": "207-466-9067",
+    "url": "https://www.instagram.com/hightiderockland/",
+    "tags": [
+        "Beer",
+        "Seafood",
+        "Casual Dining"
+    ],
+    "hours": {
+        "mon": ["11:30 am - 9 pm"],
+        "tue": ["11:30 am - 9 pm"],
+        "wed": ["11:30 am - 9 pm"],
+        "thr": ["11:30 am - 9 pm"],
+        "fri": ["11:30 am - 11 pm"],
+        "sat": ["11:30 am - 11 pm"],
+        "sun": ["11:30 am - 10 pm"]
+    }
+}

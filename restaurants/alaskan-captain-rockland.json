@@ -1,0 +1,21 @@
+{
+    "id": "alaskan-captain-rockland",
+    "name": "Alaskan Captain",
+    "description": "Seafood market and takeout specializing in frozen prepared meals and fresh seafood products. Founded by a former Alaska Bering Sea commercial fisheries captain, features shrimp scampi, garlic butter shrimp, lobster mac and cheese, and scallops.",
+    "address": "230 Park St, Rockland ME 04841",
+    "phone": "207-596-3603",
+    "url": "https://www.mainelobsterclub.com/",
+    "tags": [
+        "Seafood",
+        "Takeout"
+    ],
+    "hours": {
+        "mon": ["11 am - 5 pm"],
+        "tue": ["11 am - 5 pm"],
+        "wed": ["11 am - 5 pm"],
+        "thr": ["11 am - 5 pm"],
+        "fri": ["11 am - 5 pm"],
+        "sat": ["11 am - 5 pm"],
+        "sun": ["11 am - 5 pm"]
+    }
+}

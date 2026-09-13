@@ -1,0 +1,39 @@
+{
+    "id": "ka-chai-thai-street-food-thomaston",
+    "name": "Ka Chai Thai Street Food",
+    "description": "Authentic Bangkok-style Thai street food using traditional recipes and fresh ingredients. Offers takeout and delivery, with vegetarian options available.",
+    "address": "444 Main St, Thomaston ME 04861",
+    "phone": "207-354-5152",
+    "url": "https://kachaithaistreetfood.com/",
+    "tags": [
+        "Thai",
+        "Takeout",
+        "Delivery"
+    ],
+    "hours": {
+        "mon": [],
+        "tue": [
+            "11:30 am - 2 pm",
+            "4:30 pm - 7:30 pm"
+        ],
+        "wed": [
+            "11:30 am - 2 pm",
+            "4:30 pm - 7:30 pm"
+        ],
+        "thr": [
+            "11:30 am - 2 pm",
+            "4:30 pm - 7:30 pm"
+        ],
+        "fri": [
+            "11:30 am - 2 pm",
+            "4:30 pm - 8 pm"
+        ],
+        "sat": [
+            "11:30 am - 2 pm",
+            "4:30 pm - 8 pm"
+        ],
+        "sun": [
+            "4:30 pm - 7 pm"
+        ]
+    }
+}

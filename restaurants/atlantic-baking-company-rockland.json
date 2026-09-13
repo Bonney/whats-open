@@ -1,0 +1,25 @@
+{
+    "id": "atlantic-baking-company-rockland",
+    "name": "Atlantic Baking Company",
+    "description": "European-style bakery and cafe featuring artisan breads and French pastries made fresh daily. Also serves breakfast, soups, and desserts.",
+    "address": "351 Main St, Rockland ME 04841",
+    "phone": "207-596-0505",
+    "url": "https://atlanticbakingco.com/",
+    "tags": [
+        "Bakery",
+        "Breakfast",
+        "Café",
+        "Vegetarian",
+        "Vegan",
+        "Gluten-Free"
+    ],
+    "hours": {
+        "mon": ["7 am - 5 pm"],
+        "tue": ["7 am - 5 pm"],
+        "wed": ["7 am - 5 pm"],
+        "thr": ["7 am - 5 pm"],
+        "fri": ["7 am - 5 pm"],
+        "sat": ["7 am - 5 pm"],
+        "sun": []
+    }
+}

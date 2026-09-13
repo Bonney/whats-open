@@ -1,0 +1,24 @@
+{
+    "id": "ruckus-donuts-rockland",
+    "name": "Ruckus Donuts",
+    "description": "Family-owned donut shop featuring fresh, made-to-order brioche-style yeast donuts with creative daily flavors. Also serves coffee. Arrive early, as selection often sells out.",
+    "address": "377 Main St, Rockland ME 04841",
+    "phone": "207-975-4388",
+    "url": "https://www.ruckusdonuts.com/",
+    "tags": [
+        "Donuts",
+        "Bakery",
+        "Breakfast",
+        "Coffee",
+        "Takeout"
+    ],
+    "hours": {
+        "mon": [],
+        "tue": [],
+        "wed": ["7:30 am - 11 am"],
+        "thr": ["7:30 am - 11 am"],
+        "fri": ["7:30 am - 11 am"],
+        "sat": ["7:30 am - 11 am"],
+        "sun": ["8 am - 11 am"]
+    }
+}
