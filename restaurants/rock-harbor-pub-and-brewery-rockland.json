@@ -9,12 +9,12 @@
         "pub"
     ],
     "hours": {
-        "mon": ["12 pm - 10 pm"],
-        "tue": ["12 pm - 10 pm"],
+        "mon": ["12 pm - 9 pm"],
+        "tue": ["12 pm - 9 pm"],
         "wed": [],
         "thr": [],
-        "fri": ["12 pm - 11 pm"],
-        "sat": ["12 pm - 10 pm"],
-        "sun": ["12 pm - 10 pm"]
+        "fri": ["12 pm - 9 pm"],
+        "sat": ["12 pm - 9 pm"],
+        "sun": ["12 pm - 9 pm"]
     }
 }

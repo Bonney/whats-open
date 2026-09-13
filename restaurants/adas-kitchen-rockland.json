@@ -9,12 +9,12 @@
         "italian"
     ],
     "hours": {
-        "mon": [],
+        "mon": ["4 pm - 9 pm"],
         "tue": ["4 pm - 9 pm"],
         "wed": ["4 pm - 9 pm"],
         "thr": ["4 pm - 9 pm"],
-        "fri": ["4 pm - 9:30 pm"],
-        "sat": ["4 pm - 9:30 pm"],
+        "fri": ["4 pm - 9 pm"],
+        "sat": ["4 pm - 9 pm"],
         "sun": []
     }
 }

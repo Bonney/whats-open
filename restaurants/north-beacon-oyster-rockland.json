@@ -11,10 +11,10 @@
     "hours": {
         "mon": [],
         "tue": [],
-        "wed": ["5 pm - 9 pm"],
-        "thr": ["5 pm - 9 pm"],
-        "fri": ["5 pm - 9 pm"],
-        "sat": ["5 pm - 9 pm"],
-        "sun": []
+        "wed": ["11:30 am - 9 pm"],
+        "thr": ["11:30 am - 9 pm"],
+        "fri": ["11:30 am - 9 pm"],
+        "sat": ["11:30 am - 9 pm"],
+        "sun": ["11:30 am - 9 pm"]
     }
 }

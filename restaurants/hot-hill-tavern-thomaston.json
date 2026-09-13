@@ -9,11 +9,11 @@
     ],
     "hours": {
         "mon": [],
-        "tue": [],
-        "wed": ["11 am - 12 am"],
-        "thr": ["11 am - 12 am"],
+        "tue": ["11 am - 10 pm"],
+        "wed": ["11 am - 10 pm"],
+        "thr": ["11 am - 10 pm"],
         "fri": ["11 am - 12 am"],
-        "sat": ["11 am - 12 am"],
-        "sun": []
+        "sat": ["9 am - 12 am"],
+        "sun": ["9 am - 10 pm"]
     }
 }
