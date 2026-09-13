@@ -45,8 +45,8 @@ h1, h2, h3, h4, h5, h6 { text-wrap: balance; }
   --paper-raised: lch(99.4% 2.1 90.8);
   --paper-sunk:   lch(92.2% 10.3 90.6);
   --ink:          lch(13.1% 9.7 72.8);
-  --ink-70:       lch(32.6% 14.4 75.3);
-  --ink-45:       lch(51.5% 15.1 77);
+  --ink-70:       lch(22.6% 14.4 75.3);
+  --ink-45:       lch(41.5% 15.1 77);
   --rule:         lch(88% 12.5 91.7);
   --rule-strong:  lch(75.9% 24 88.1);
 
@@ -63,7 +63,7 @@ h1, h2, h3, h4, h5, h6 { text-wrap: balance; }
 
   --shadow: 0 1px 1px lch(12.8% 3.7 92.9 / 0.03),
             0 10px 30px -18px lch(12.8% 3.7 92.9 / 0.18);
-
+†
   --measure: 84rem;             /* outer bound of the guide — a two-page spread */
   --gutter: clamp(1.15rem, 4vw, 3rem);
   --entry-min: 26rem;           /* narrowest an entry column gets */
