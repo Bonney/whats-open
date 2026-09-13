@@ -1,0 +1,20 @@
+{
+    "id": "mcloons-lobster-shack-spruce-head",
+    "name": "McLoons Lobster Shack",
+    "description": "",
+    "address": "315 Island Rd, Spruce Head ME 04858",
+    "phone": "207-593-1382",
+    "url": "https://www.mcloonslobster.com/",
+    "tags": [
+        "seafood"
+    ],
+    "hours": {
+        "mon": ["11:30 am - 7 pm"],
+        "tue": ["11:30 am - 7 pm"],
+        "wed": [],
+        "thr": ["11:30 am - 7 pm"],
+        "fri": ["11:30 am - 7 pm"],
+        "sat": ["11:30 am - 7 pm"],
+        "sun": ["11:30 am - 7 pm"]
+    }
+}

@@ -1,0 +1,20 @@
+{
+    "id": "rustica-rockland",
+    "name": "Rustica Cucina Italiana",
+    "description": "",
+    "address": "315 Main St, Rockland ME 04841",
+    "phone": "207-594-0015",
+    "url": "http://rusticamaine.com/",
+    "tags": [
+        "italian"
+    ],
+    "hours": {
+        "mon": [],
+        "tue": ["5 pm - 9 pm"],
+        "wed": ["5 pm - 9 pm"],
+        "thr": ["5 pm - 9 pm"],
+        "fri": ["5 pm - 9 pm"],
+        "sat": ["5 pm - 9 pm"],
+        "sun": []
+    }
+}

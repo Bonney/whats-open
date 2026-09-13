@@ -1,0 +1,20 @@
+{
+    "id": "eclipse-of-the-pearl-rockland",
+    "name": "Eclipse of the Pearl",
+    "description": "",
+    "address": "273 Main St, Rockland ME 04841",
+    "phone": "207-593-8847",
+    "url": "https://www.facebook.com/eclipseofthepearl",
+    "tags": [
+        "seafood"
+    ],
+    "hours": {
+        "mon": ["11 am - 2:30 pm", "4 pm - 7:30 pm"],
+        "tue": [],
+        "wed": [],
+        "thr": ["11 am - 2:30 pm", "4 pm - 7:30 pm"],
+        "fri": ["11 am - 2:30 pm", "4 pm - 7:30 pm"],
+        "sat": ["11 am - 2:30 pm", "4 pm - 7:30 pm"],
+        "sun": ["11 am - 2:30 pm", "4 pm - 7 pm"]
+    }
+}

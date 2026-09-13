@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Midcoast Maine — Who's Open</title>
+  <meta name="description" content="A small guide to who's open, and when, for eating out in Rockland, Thomaston, and Spruce Head, Maine.">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#faf6ee" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#1a1712" media="(prefers-color-scheme: dark)">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Midcoast Maine — Who's Open">
+  <meta property="og:description" content="Who's open, and when, for eating out in Rockland, Thomaston, and Spruce Head, Maine.">
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2032%2032'%3E%3Crect%20width='32'%20height='32'%20rx='6'%20fill='%23faf6ee'/%3E%3Ccircle%20cx='16'%20cy='16'%20r='6.5'%20fill='none'%20stroke='%23ab3f28'%20stroke-width='2.5'/%3E%3Cg%20stroke='%23ab3f28'%20stroke-width='2.5'%20stroke-linecap='round'%3E%3Cpath%20d='M16%203v3.5M16%2025.5V29M3%2016h3.5M25.5%2016H29M6.7%206.7l2.5%202.5M22.8%2022.8l2.5%202.5M25.3%206.7l-2.5%202.5M9.2%2022.8l-2.5%202.5'/%3E%3C/g%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600&display=swap">
+
+  <link rel="stylesheet" href="pylon.css">
+  <link rel="stylesheet" href="typography.css">
+  <link rel="stylesheet" href="stylesheet.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#guide">Skip to the listings</a>
+
+  <header class="topbar">
+    <div class="topbar__inner">
+      <nav class="tagnav" aria-label="Filter listings">
+        <div class="tagnav__scroll" id="tagnav-scroll"></div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="guide" id="guide">
+    <p class="guide__message" id="loading">Gathering the listings&hellip;</p>
+    <noscript>
+      <p class="guide__message">
+        This guide assembles itself in the browser from a small set of JSON
+        files. With JavaScript turned off, the underlying data is still readable
+        at <a href="restaurants-combined.json">restaurants-combined.json</a>.
+      </p>
+    </noscript>
+
+    <div class="board" id="board" hidden>
+      <table class="board__table">
+        <thead>
+          <tr>
+            <th scope="col" class="board__col-name" data-sort="name" aria-sort="ascending"><button type="button">Name</button></th>
+            <th scope="col" class="board__col-town" data-sort="town" aria-sort="none"><button type="button">Town</button></th>
+            <th scope="col" class="board__col-cuisine" data-sort="cuisine" aria-sort="none"><button type="button">Cuisine</button></th>
+            <th scope="col" class="board__day" data-day="mon"><span><abbr title="Monday">Mon</abbr></span></th>
+            <th scope="col" class="board__day" data-day="tue"><span><abbr title="Tuesday">Tue</abbr></span></th>
+            <th scope="col" class="board__day" data-day="wed"><span><abbr title="Wednesday">Wed</abbr></span></th>
+            <th scope="col" class="board__day" data-day="thr"><span><abbr title="Thursday">Thu</abbr></span></th>
+            <th scope="col" class="board__day" data-day="fri"><span><abbr title="Friday">Fri</abbr></span></th>
+            <th scope="col" class="board__day" data-day="sat"><span><abbr title="Saturday">Sat</abbr></span></th>
+            <th scope="col" class="board__day" data-day="sun"><span><abbr title="Sunday">Sun</abbr></span></th>
+          </tr>
+        </thead>
+        <tbody id="board-body"></tbody>
+      </table>
+      <div class="cards" id="cards"></div>
+      <p class="guide__message" id="empty" hidden>Nothing matches those filters.</p>
+    </div>
+  </main>
+
+  <footer class="colophon">
+    <p>Made in Maine. Corrections and additions are welcome.</p>
+    <p id="colophon-count"></p>
+  </footer>
+
+  <template id="tpl-card">
+    <article class="place">
+      <div class="place__head">
+        <h3 class="place__name"><a class="place__link" data-name></a></h3>
+        <p class="place__status" data-status hidden></p>
+      </div>
+      <p class="place__town" data-town hidden></p>
+      <p class="place__tags" data-tags hidden></p>
+      <p class="place__desc" data-desc hidden></p>
+      <p class="place__contact">
+        <a class="place__addr" data-addr rel="noopener" hidden></a>
+        <a class="place__phone" data-phone hidden></a>
+      </p>
+      <dl class="hours" data-hours aria-label="Weekly hours"></dl>
+    </article>
+  </template>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

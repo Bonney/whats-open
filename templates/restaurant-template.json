@@ -1,0 +1,19 @@
+{
+    "id": "name-city",
+    "name": "",
+    "description": "",
+    "address": "",
+    "phone": "",
+    "url": "",
+    "tags": [
+    ],
+    "hours": {
+        "mon": [],
+        "tue": [],
+        "wed": [],
+        "thr": [],
+        "fri": [],
+        "sat": [],
+        "sun": []
+    }
+}

@@ -1,0 +1,20 @@
+{
+    "id": "primo-rockland",
+    "name": "Primo",
+    "description": "",
+    "address": "2 Main St, Rockland ME 04841",
+    "phone": "207-596-0770",
+    "url": "https://www.primorestaurant.com/daily-menu",
+    "tags": [
+        "italian"
+    ],
+    "hours": {
+        "mon": [],
+        "tue": [],
+        "wed": ["5 pm - 9:30 pm"],
+        "thr": ["5 pm - 9:30 pm"],
+        "fri": ["5 pm - 9:30 pm"],
+        "sat": ["5 pm - 9:30 pm"],
+        "sun": ["5 pm - 9:30 pm"]
+    }
+}

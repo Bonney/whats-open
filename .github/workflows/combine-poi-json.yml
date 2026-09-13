@@ -1,0 +1,62 @@
+name: Combine JSON files
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  combine-json:
+    runs-on: ubuntu-latest
+    
+    defaults:
+      run:
+        shell: bash
+
+    steps:
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '16'
+
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Combine JSON files
+      run: |
+        # Create an empty array to store the combined JSON objects
+        combined_json=()
+        
+        # Loop through all JSON files in the specified directory
+        for file in  ${{ github.workspace }}/restaurants/*.json; do
+          # Read the content of each file and append it to the combined JSON array
+          combined_json+=("$(cat "$file")")
+        done
+        
+        # Join the JSON objects with a comma
+        combined_json=$(printf "%s," "${combined_json[@]}")
+        
+        # Remove the trailing comma
+        combined_json=${combined_json%,}
+        
+        # Wrap the result in square brackets to create a valid JSON array
+        combined_json="[$(echo "$combined_json")]"
+        
+        # Save the combined JSON to a file
+        echo "$combined_json" >  ${{ github.workspace }}/restaurants-combined.json
+        
+        # Print the combined JSON
+        echo "Combined JSON: $combined_json"
+
+    - name: Check for changes
+      id: git-diff
+      run: |
+        git diff --exit-code --quiet || echo "::set-output name=changes::true"
+
+    - name: Commit and push changes
+      if: steps.git-diff.outputs.changes == 'true'
+      run: |
+        git config user.name "bonney"
+        git config user.email "bonneym@gmail.com"
+        git add  ${{ github.workspace }}/restaurants-combined.json
+        git commit -m "Combine JSON files"
+        git push

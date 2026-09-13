@@ -1,0 +1,133 @@
+/* ==========================================================================
+   Typography — an editorial type system for the guide
+   Fraunces (display, variable optical size) sets the wordmark and names;
+   Inter carries running text, contact details, the table, and the schedule.
+   ========================================================================== */
+
+:root {
+  --font-display: "Fraunces", "Iowan Old Style", "Palatino Linotype", Palatino,
+    "Book Antiqua", Georgia, serif;
+  --font-text: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif;
+
+  /* Fluid type scale — minor third, hinged on the viewport */
+  --step--1: clamp(0.83rem, 0.80rem + 0.14vw, 0.92rem);
+  --step-0:  clamp(1.00rem, 0.96rem + 0.20vw, 1.09rem);
+  --step-1:  clamp(1.20rem, 1.13rem + 0.34vw, 1.42rem);
+  --step-2:  clamp(1.44rem, 1.33rem + 0.55vw, 1.85rem);
+  --step-3:  clamp(1.73rem, 1.55rem + 0.90vw, 2.41rem);
+  --step-4:  clamp(2.07rem, 1.78rem + 1.45vw, 3.13rem);
+  --step-5:  clamp(2.49rem, 2.02rem + 2.35vw, 4.07rem);
+}
+
+body {
+  font-family: var(--font-text);
+  font-size: var(--step-0);
+  font-weight: 400;
+  line-height: 1.55;
+  font-feature-settings: "cv05" 1, "cv08" 1; /* Inter: friendlier l, tailed a */
+  text-rendering: optimizeLegibility;
+}
+
+/* Display face -------------------------------------------------------------- */
+
+.wordmark__name,
+.place__name,
+.board__name,
+.guide__message {
+  font-family: var(--font-display);
+  font-optical-sizing: auto;
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: -0.015em;
+  text-wrap: balance;
+}
+
+.wordmark__name {
+  font-size: var(--step-1);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.place__name {
+  font-size: var(--step-1);
+  font-weight: 500;
+  letter-spacing: -0.012em;
+  line-height: 1.15;
+}
+
+.board__name {
+  font-size: var(--step-0);
+  font-weight: 500;
+}
+
+/* Editorial supporting text ---------------------------------------------------- */
+
+.wordmark__where,
+.colophon {
+  font-size: var(--step--1);
+  line-height: 1.5;
+}
+
+.place__desc {
+  font-family: var(--font-display);
+  font-optical-sizing: auto;
+  font-style: italic;
+  font-size: var(--step--1);
+  line-height: 1.45;
+  text-wrap: pretty;
+}
+
+.place__tags,
+.place__contact,
+.place__town {
+  font-size: var(--step--1);
+  line-height: 1.5;
+}
+
+.place__town {
+  font-variant-numeric: tabular-nums;
+}
+
+.place__status {
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+/* The tag nav-bar & the table --------------------------------------------------- */
+
+.chip {
+  font-family: var(--font-text);
+  font-size: var(--step--1);
+  font-weight: 500;
+}
+
+.board__table {
+  font-size: var(--step--1);
+}
+
+.board__table thead th > button,
+.board__table thead th > span {
+  font-family: var(--font-text);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.board__status,
+.board__today {
+  font-variant-numeric: tabular-nums;
+}
+
+.hours {
+  font-size: 0.8rem;
+  line-height: 1.35;
+  font-variant-numeric: tabular-nums;
+}
+
+.hours dt {
+  font-weight: 500;
+}

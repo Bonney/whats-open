@@ -1,0 +1,664 @@
+/* ==========================================================================
+   Midcoast Maine — a guide to who's open, and when.
+
+   Layout intent: one honest column on a phone, an expansive multi-column
+   spread on a wide screen, and a clean set of guidebook entries on paper.
+   Same markup throughout; the container query on each entry does the work.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Reset  (adapted from Josh W. Comeau's custom CSS reset)
+   -------------------------------------------------------------------------- */
+
+*, *::before, *::after { box-sizing: border-box; }
+*:not(dialog) { margin: 0; }
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+    scroll-behavior: smooth;
+  }
+}
+
+html { scroll-padding-top: 5rem; }
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg { display: block; max-width: 100%; }
+input, button, textarea, select { font: inherit; color: inherit; }
+p, h1, h2, h3, h4, h5, h6 { overflow-wrap: break-word; }
+p { text-wrap: pretty; }
+h1, h2, h3, h4, h5, h6 { text-wrap: balance; }
+
+/* --------------------------------------------------------------------------
+   2. Design tokens
+   -------------------------------------------------------------------------- */
+
+:root {
+  color-scheme: light dark;
+
+  /* Paper & ink — warm, like a sheet of wood-pulp stock */
+  --paper:        lch(97% 4.3 90.5);
+  --paper-raised: lch(99.4% 2.1 90.8);
+  --paper-sunk:   lch(92.2% 10.3 90.6);
+  --ink:          lch(13.1% 9.7 72.8);
+  --ink-70:       lch(32.6% 14.4 75.3);
+  --ink-45:       lch(51.5% 15.1 77);
+  --rule:         lch(88% 12.5 91.7);
+  --rule-strong:  lch(75.9% 24 88.1);
+
+  /* Accents — pine green (primary) and a deep ocean blue (secondary),
+     with a working leaf-green for "open" and a dash of lobster red kept
+     for small, deliberate accents only. */
+  --accent:       lch(32.3% 23 168.3);
+  --accent-weak:  color-mix(in lch, var(--accent) 10%, transparent);
+  --accent-blue:  lch(32% 28.7 268);
+  --lobster:      lch(42.3% 59.5 36.5);
+  --open:         lch(45.7% 39.1 151.8);
+  --closed:       lch(59.8% 13.7 89.2);
+  --focus:        var(--accent-blue);
+
+  --shadow: 0 1px 1px lch(12.8% 3.7 92.9 / 0.03),
+            0 10px 30px -18px lch(12.8% 3.7 92.9 / 0.18);
+
+  --measure: 84rem;             /* outer bound of the guide — a two-page spread */
+  --gutter: clamp(1.15rem, 4vw, 3rem);
+  --entry-min: 26rem;           /* narrowest an entry column gets */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper:        lch(7.9% 3.7 84.4);
+    --paper-raised: lch(11% 4.9 82.5);
+    --paper-sunk:   lch(5.2% 2.4 78.8);
+    --ink:          lch(91.5% 7.7 90);
+    --ink-70:       lch(73.6% 14.8 85);
+    --ink-45:       lch(56.2% 14.9 85);
+    --rule:         lch(22% 7.3 84.6);
+    --rule-strong:  lch(31.6% 17.5 87.2);
+    --accent:       lch(66.5% 40.1 161);
+    --accent-blue:  lch(66.7% 29.7 258.1);
+    --lobster:      lch(61.2% 47.1 43.6);
+    --open:         lch(72.8% 37.9 155.7);
+    --closed:       lch(48.1% 14.5 86.9);
+    --focus:        var(--accent-blue);
+    --shadow: 0 1px 1px lch(0% 0 0 / 0.3),
+              0 12px 32px -18px lch(0% 0 0 / 0.55);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   3. Base
+   -------------------------------------------------------------------------- */
+
+body {
+  margin: 0;
+  background-color: var(--paper);
+  color: var(--ink);
+}
+
+a { color: inherit; }
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--paper-raised);
+}
+
+.u-visually-hidden {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.skip-link {
+  position: absolute;
+  left: 0.75rem;
+  top: -3rem;
+  z-index: 100;
+  padding: 0.5rem 0.9rem;
+  background: var(--ink);
+  color: var(--paper);
+  text-decoration: none;
+  border-radius: 0 0 6px 6px;
+  transition: top 120ms ease;
+}
+.skip-link:focus { top: 0; }
+
+/* --------------------------------------------------------------------------
+   4. Topbar — the wordmark + the permanent tag nav-bar
+   -------------------------------------------------------------------------- */
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  border-bottom: 1px solid var(--rule-strong);
+  background: color-mix(in lch, var(--paper) 88%, transparent);
+}
+@supports (backdrop-filter: blur(1px)) {
+  .topbar { backdrop-filter: blur(10px) saturate(1.4); }
+}
+
+.topbar__inner {
+  max-width: var(--measure);
+  margin-inline: auto;
+  padding: 0.6rem var(--gutter);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem 1.5rem;
+  flex-wrap: wrap;
+}
+
+.wordmark {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: baseline;
+  gap: 0.55rem;
+}
+.wordmark__name {
+  position: relative;
+  padding-left: 0.7rem;
+}
+.wordmark__name::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.15em;
+  bottom: 0.15em;
+  width: 3px;
+  background: var(--lobster);
+}
+.wordmark__where {
+  color: var(--ink-45);
+  white-space: nowrap;
+}
+
+/* The tag nav-bar: a centred cluster of chips that wraps to new lines as
+   needed — never scrolls. */
+.tagnav {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+.tagnav__scroll {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.45rem;
+  padding-block: 2px;
+}
+
+/* --------------------------------------------------------------------------
+   5. Chips  (the tag / open-now toggles in the nav-bar)
+   -------------------------------------------------------------------------- */
+
+.chip {
+  padding: 0.3rem 0.7rem;
+  border: 1px solid var(--rule-strong);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--ink-70);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color 120ms ease, color 120ms ease, border-color 120ms ease;
+}
+.chip:hover { border-color: var(--accent-blue); color: var(--ink); }
+.chip[aria-pressed="true"] {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--paper);
+}
+.chip--open[aria-pressed="true"] {
+  background: var(--open);
+  border-color: var(--open);
+  color: lch(100% 0 0);
+}
+.chip--clear {
+  border-style: dashed;
+  border-color: var(--rule-strong);
+}
+
+/* --------------------------------------------------------------------------
+   6. Guide layout — the board (a table on wide screens, cards on narrow)
+   -------------------------------------------------------------------------- */
+
+.guide {
+  max-width: var(--measure);
+  margin-inline: auto;
+  padding: clamp(1.25rem, 4vw, 2.5rem) var(--gutter) 4rem;
+}
+
+.guide__message {
+  font-size: var(--step-1);
+  color: var(--ink-70);
+  padding: 3rem 0;
+}
+
+/* --- The sortable table (wide screens) --------------------------------- */
+
+.board__table {
+  display: none;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.board__table thead th {
+  position: sticky;
+  top: var(--topbar-h, 3.5rem);
+  z-index: 10;
+  padding: 0;
+  text-align: left;
+  background: var(--paper);
+  border-bottom: 2px solid var(--ink);
+  white-space: nowrap;
+}
+.board__table thead th > button,
+.board__table thead th > span {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 0.35em;
+  padding: 0.65rem 0.9rem;
+  border: 0;
+  background: transparent;
+  color: var(--ink-45);
+  text-align: left;
+}
+.board__table thead th > button {
+  cursor: pointer;
+  transition: color 120ms ease;
+}
+.board__table thead th > button:hover { color: var(--ink); }
+.board__table thead th[data-sort] > button::after {
+  content: "↕";
+  opacity: 0.4;
+}
+.board__table thead th[aria-sort="ascending"] > button {
+  color: var(--ink);
+}
+.board__table thead th[aria-sort="ascending"] > button::after {
+  content: "↑";
+  opacity: 1;
+  color: var(--accent);
+}
+.board__table thead th[aria-sort="descending"] > button {
+  color: var(--ink);
+}
+.board__table thead th[aria-sort="descending"] > button::after {
+  content: "↓";
+  opacity: 1;
+  color: var(--accent);
+}
+
+.board__table tbody th,
+.board__table tbody td {
+  padding: 0.7rem 0.9rem;
+  text-align: left;
+  vertical-align: baseline;
+  border-bottom: 1px solid var(--rule);
+}
+.board__table tbody tr:hover { background: var(--paper-sunk); }
+
+.board__name { font-weight: 500; }
+.board__name .place__link { text-decoration: none; }
+.board__name .place__link:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+  text-underline-offset: 3px;
+}
+.board__addr {
+  margin-top: 0.15rem;
+  font-weight: 400;
+  font-size: var(--step--1);
+  color: var(--ink-45);
+  white-space: nowrap;
+}
+
+.board__cuisine { color: var(--ink-45); }
+
+/* --- The weekly timetable columns ------------------------------------------
+   The seven-day strip from the card's wide container query, recast as table
+   columns: small uppercase day headers, compact hours, today's column tinted. */
+
+.board__day { border-left: 1px solid var(--rule); }
+
+.board__table thead th.board__day > span {
+  justify-content: center;
+  padding-inline: 0.4rem;
+  font-size: 0.68rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.board__table thead th.board__day abbr { text-decoration: none; }
+
+.board__table tbody td.board__day {
+  padding: 0.7rem 0.35rem;
+  text-align: center;
+  vertical-align: top;
+  white-space: nowrap;
+  font-size: 0.72rem;
+  font-variant-numeric: tabular-nums;
+  color: var(--ink-70);
+}
+.board__day-range { display: block; }
+.board__day-range + .board__day-range { margin-top: 0.1rem; }
+.board__day[data-closed] { color: var(--closed); }
+
+.board__table thead th.board__day.is-today {
+  background: color-mix(in lch, var(--accent) 10%, var(--paper));
+}
+.board__table thead th.board__day.is-today > span {
+  color: var(--accent);
+  font-weight: 600;
+}
+.board__table tbody td.board__day.is-today {
+  background: var(--accent-weak);
+  color: var(--ink);
+  font-weight: 600;
+}
+.board__table tbody td.board__day.is-today[data-closed] { color: var(--closed); }
+
+/* --- The card list (narrow screens) ----------------------------------- */
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, var(--entry-min)), 1fr));
+  column-gap: clamp(1.75rem, 4vw, 3.25rem);
+  row-gap: clamp(1.5rem, 3.5vw, 2.5rem);
+  align-items: start;
+}
+
+/* Wide screens: the table (name + address + seven day columns) takes over,
+   the cards step aside, and the guide widens to hold the extra columns. The
+   switch waits until 78rem — ten columns need the room. */
+@media (min-width: 78rem) {
+  :root { --measure: 100rem; }
+  .board__table { display: table; }
+  .cards { display: none; }
+
+  /* Hold the identity columns to their content width so the slack of a wide
+     viewport pools in the seven day columns instead. */
+  .board__col-name,
+  .board__col-town,
+  .board__col-cuisine,
+  .board__name,
+  .board__cuisine { width: 1%; white-space: nowrap; }
+}
+
+/* --------------------------------------------------------------------------
+   7. A single entry
+   -------------------------------------------------------------------------- */
+
+.place {
+  container-type: inline-size;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-top: 1.15rem;
+  border-top: 1px solid var(--ink);
+}
+.place[hidden] { display: none; }
+
+.place__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.35rem 0.75rem;
+}
+
+.place__name { flex: 1 1 auto; }
+
+.place__link {
+  text-decoration: none;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+}
+.place__link:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+}
+
+.place__status {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  color: var(--ink-45);
+  transform: translateY(-0.15em);
+}
+.place__status::before {
+  content: "";
+  width: 0.5em;
+  height: 0.5em;
+  border-radius: 50%;
+  background: currentColor;
+}
+.place__status[data-state="open"] { color: var(--open); }
+.place__status[data-state="soon"] { color: var(--lobster); }
+
+.place__town {
+  color: var(--ink-45);
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+}
+
+.place__tags {
+  color: var(--ink-45);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 0.5rem;
+}
+.place__tags .tag + .tag::before {
+  content: "·";
+  margin-right: 0.5rem;
+  color: var(--rule-strong);
+}
+
+.place__desc { color: var(--ink-70); }
+
+.place__contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.15rem 1rem;
+  color: var(--ink-70);
+}
+.place__contact a {
+  text-decoration: none;
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 1px;
+}
+.place__contact a:hover { border-color: var(--accent-blue); color: var(--ink); }
+.place__addr { font-style: normal; }
+
+/* --- The weekly schedule ------------------------------------------------------
+   Narrow container: a stacked ledger (day .......... hours).
+   Wide container (>= 30rem): a seven-column timetable strip.            */
+
+.hours {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  color: var(--ink);
+}
+
+.hours__day {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.28rem 0;
+  border-top: 1px solid var(--rule);
+}
+.hours__day:first-child { border-top: 0; }
+
+.hours__day dt { color: var(--ink-45); }
+.hours__day dt abbr { text-decoration: none; }
+
+.hours__day dd {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+.hours__day dd[data-closed] { color: var(--closed); }
+
+.hours__day.is-today {
+  margin-inline: -0.5rem;
+  padding-inline: 0.5rem;
+  border-top-color: transparent;
+  background: var(--accent-weak);
+  border-radius: 5px;
+}
+.hours__day.is-today + .hours__day { border-top-color: transparent; }
+.hours__day.is-today dt { color: var(--accent); font-weight: 600; }
+.hours__day.is-today dd { color: var(--ink); font-weight: 600; }
+.hours__day.is-today dd[data-closed] { color: var(--closed); font-weight: 500; }
+
+.hours__val .is-compact { display: none; }
+
+@container (min-width: 30rem) {
+  .hours {
+    flex-direction: row;
+    margin-top: 0.75rem;
+  }
+  .hours__val .is-long { display: none; }
+  .hours__val .is-compact { display: inline; }
+  .hours__day {
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.25rem;
+    padding: 0.3rem 0.3rem 0.4rem;
+    border-top: 0;
+    border-left: 1px solid var(--rule);
+    text-align: center;
+  }
+  .hours__day:first-child { border-left: 0; }
+  .hours__day dt {
+    font-size: 0.68rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+  .hours__day dd { text-align: center; font-size: 0.75rem; }
+  .hours__day.is-today {
+    margin-inline: 0;
+    padding-inline: 0.3rem;
+    border-left-color: transparent;
+  }
+  .hours__day.is-today + .hours__day { border-left-color: transparent; }
+}
+
+/* --------------------------------------------------------------------------
+   8. Colophon
+   -------------------------------------------------------------------------- */
+
+.colophon {
+  max-width: var(--measure);
+  margin-inline: auto;
+  padding: 2.5rem var(--gutter) 4rem;
+  border-top: 1px solid var(--rule-strong);
+  color: var(--ink-45);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.5rem 2rem;
+}
+
+/* --------------------------------------------------------------------------
+   9. Print — a set of guidebook entries
+   -------------------------------------------------------------------------- */
+
+@media print {
+  :root {
+    --paper: lch(100% 0 0);
+    --paper-raised: lch(100% 0 0);
+    --ink: lch(0% 0 0);
+    --ink-70: lch(13.2% 0 0);
+    --ink-45: lch(28.9% 0 0);
+    --rule: lch(75.9% 0 0);
+    --rule-strong: lch(43.2% 0 0);
+    --accent: lch(0% 0 0);
+    --open: lch(0% 0 0);
+    --closed: lch(36.2% 0 0);
+  }
+
+  @page { margin: 15mm; }
+
+  html { font-size: 10.25pt; }
+  body { background: lch(100% 0 0); -webkit-print-color-adjust: economy; }
+
+  .skip-link,
+  .tagnav,
+  .board__table,
+  #empty,
+  .place__status { display: none !important; }
+
+  .topbar {
+    position: static;
+    background: none;
+    backdrop-filter: none;
+    border-bottom: 1.5px solid lch(0% 0 0);
+  }
+  .topbar__inner { padding: 0 0 0.6rem; max-width: none; }
+  .wordmark { display: block; }
+  .wordmark__where { display: block; color: lch(28.9% 0 0); }
+
+  .guide { padding: 0; max-width: none; }
+
+  /* Flowed columns read better than a grid on paper */
+  .cards {
+    display: block;
+    columns: 2;
+    column-gap: 14mm;
+    margin-top: 1.25rem;
+  }
+
+  .place {
+    container-type: normal;
+    break-inside: avoid;
+    border-top: 1px solid lch(63.2% 0 0);
+    padding-top: 0.55rem;
+    margin-bottom: 0.85rem;
+  }
+
+  .place__contact a,
+  .place__link { border: 0 !important; text-decoration: none; }
+
+  /* Always the stacked ledger on paper; drop the "today" tint */
+  .hours { flex-direction: column; }
+  .hours__val .is-compact { display: none !important; }
+  .hours__val .is-long { display: inline !important; }
+  .hours__day {
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+    border-left: 0;
+    border-top: 1px solid lch(88.1% 0 0);
+    padding: 0.12rem 0;
+    text-align: left;
+  }
+  .hours__day dt { font-size: inherit; text-transform: none; letter-spacing: 0; }
+  .hours__day dd { text-align: right; font-size: inherit; }
+  .hours__day.is-today {
+    background: none;
+    margin-inline: 0;
+    padding-inline: 0;
+    border-top-color: lch(88.1% 0 0);
+  }
+  .hours__day.is-today dt,
+  .hours__day.is-today dd { font-weight: 400; color: lch(0% 0 0); }
+
+  .colophon { border-top: 1px solid lch(0% 0 0); padding: 0.75rem 0 0; }
+}
