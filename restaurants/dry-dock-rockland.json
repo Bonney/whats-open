@@ -1,0 +1,23 @@
+{
+    "id": "dry-dock-rockland",
+    "name": "Dry Dock Restaurant",
+    "description": "Waterfront pub on Rockland Harbor serving American fare and seafood, including lobster rolls, with indoor and outdoor harborside seating. Formerly Eclipse of the Pearl.",
+    "address": "273 Main St, Rockland ME 04841",
+    "phone": "207-593-8847",
+    "url": "https://www.facebook.com/eclipseofthepearl",
+    "tags": [
+        "seafood",
+        "pub",
+        "waterfront",
+        "outdoor seating"
+    ],
+    "hours": {
+        "mon": ["11 am - 7:30 pm"],
+        "tue": [],
+        "wed": [],
+        "thr": ["11 am - 7:30 pm"],
+        "fri": ["11 am - 7:30 pm"],
+        "sat": ["11 am - 7:30 pm"],
+        "sun": ["11 am - 7 pm"]
+    }
+}

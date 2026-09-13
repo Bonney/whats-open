@@ -1,12 +1,12 @@
 {
     "id": "waterworks-rockland",
     "name": "Waterworks Restaurant",
-    "description": "",
+    "description": "Downtown pub in a historic former waterworks building, serving fresh Maine seafood and comfort-food classics with a patio just off Main Street.",
     "address": "7 Lindsey St, Rockland ME 04841",
     "phone": "207-596-2753",
     "url": "http://waterworksrockland.com/",
     "tags": [
-        "pub"
+        "pub", "seafood", "outdoor seating"
     ],
     "hours": {
         "mon": [],

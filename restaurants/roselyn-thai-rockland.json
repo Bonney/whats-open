@@ -1,12 +1,13 @@
 {
     "id": "roselyn-thai-rockland",
     "name": "Roselyn Thai Fine Cuisine",
-    "description": "",
+    "description": "Authentic Thai cuisine — curries, noodle and rice dishes, and appetizers — in a casual, welcoming dining room on Route 1.",
     "address": "80 Camden St, Rockland ME 04841",
     "phone": "207-596-7348",
     "url": "https://roselynthai.com/",
     "tags": [
-        "thai"
+        "thai",
+        "take-out"
     ],
     "hours": {
         "mon": [],

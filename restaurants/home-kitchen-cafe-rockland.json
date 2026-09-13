@@ -1,12 +1,14 @@
 {
     "id": "home-kitchen-cafe-rockland",
     "name": "Home Kitchen Cafe",
-    "description": "",
+    "description": "Scratch-made breakfast and lunch diner with an on-site bakery, plus seasonal outdoor seating.",
     "address": "650 Main St, Rockland ME 04841",
     "phone": "207-596-2449",
     "url": "https://www.homekitchencafe.com/",
     "tags": [
-        "breakfast"
+        "breakfast",
+        "bakery",
+        "outdoor seating"
     ],
     "hours": {
         "mon": ["8 am - 2:30 pm"],

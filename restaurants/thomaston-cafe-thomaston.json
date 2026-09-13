@@ -1,11 +1,12 @@
 {
     "id": "thomaston-cafe-thomaston",
     "name": "Thomaston Cafe",
-    "description": "",
+    "description": "Casual lunch-and-dinner cafe known for weekly specials like Prime Rib Wednesday and Thursday burger night.",
     "address": "154 Main St, Thomaston ME 04861",
     "phone": "207-354-8589",
-    "url": "https://www.thomastoncafeme.com/",
+    "url": "https://thomastoncafeme.wixsite.com/mysite",
     "tags": [
+        "take-out"
     ],
     "hours": {
         "mon": [],

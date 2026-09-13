@@ -1,12 +1,13 @@
 {
     "id": "station-188-bbq-thomaston",
     "name": "Station 118 BBQ",
-    "description": "",
+    "description": "Smoked pulled pork, brisket, and ribs with homemade sides and a full bar in a casual dining room.",
     "address": "118 Main St, Thomaston ME 04861",
     "phone": "207-593-8208",
     "url": "https://www.station118.com/",
     "tags": [
-        "bbq"
+        "bbq",
+        "take-out"
     ],
     "hours": {
         "mon": ["4pm - 8pm"],

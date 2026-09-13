@@ -1,12 +1,15 @@
 {
     "id": "primo-rockland",
     "name": "Primo",
-    "description": "",
+    "description": "Farm-to-table fine dining with a daily-changing seasonal menu sourced from the restaurant's own on-site farm.",
     "address": "2 Main St, Rockland ME 04841",
     "phone": "207-596-0770",
     "url": "https://www.primorestaurant.com/daily-menu",
     "tags": [
-        "italian"
+        "italian",
+        "fine dining",
+        "farm to table",
+        "wine"
     ],
     "hours": {
         "mon": [],

@@ -1,12 +1,14 @@
 {
     "id": "park-street-grille-rockland",
     "name": "Park Street Grille",
-    "description": "",
+    "description": "Family-owned neighborhood bar and grill with a \"Maine Meets Mexico\" menu of lobster rolls, enchiladas, and margaritas.",
     "address": "1 Park Dr, Rockland ME 04841",
     "phone": "207-594-4944",
     "url": "https://www.facebook.com/pages/Park-Street-Grill-Bar/205107222955593",
     "tags": [
-        "mexican"
+        "mexican",
+        "seafood",
+        "pub"
     ],
     "hours": {
         "mon": [],

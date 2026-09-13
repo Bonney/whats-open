@@ -1,12 +1,14 @@
 {
     "id": "rock-city-cafe-rockland",
     "name": "Rock City Cafe",
-    "description": "",
+    "description": "Worker-owned cafe and espresso bar serving specialty coffee, house-baked pastries, and quick breakfast and lunch.",
     "address": "316 Main St, Rockland ME 04841",
     "phone": "207-594-4123",
     "url": "https://rockcitycoffee.com/",
     "tags": [
-        "coffee"
+        "coffee",
+        "breakfast",
+        "bakery"
     ],
     "hours": {
         "mon": ["7 am - 5 pm"],

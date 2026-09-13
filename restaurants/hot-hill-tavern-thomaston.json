@@ -1,11 +1,13 @@
 {
     "id": "hot-hill-tavern-thomaston",
     "name": "Hot Hill Tavern",
-    "description": "",
+    "description": "Neighborhood tavern serving pub fare with Puerto Rican-influenced specialties, plus live music and pool tables.",
     "address": "1 Starr St, Thomaston, ME 04861",
     "phone": "207-354-5144",
-    "url": "https://www.facebook.com/hothilltavern/",
+    "url": "https://hothilltavernme.com/",
     "tags": [
+        "pub",
+        "live music"
     ],
     "hours": {
         "mon": [],

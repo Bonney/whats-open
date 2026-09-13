@@ -1,12 +1,15 @@
 {
     "id": "claws-rockland",
     "name": "Claws",
-    "description": "",
+    "description": "Casual lobster shack on Rockland Harbor with picnic-table seating, serving lobster rolls and fresh-caught seafood.",
     "address": "743 Main St, Rockland ME 04841",
     "phone": "207-596-5600",
     "url": "https://clawsrocklandmaine.com/",
     "tags": [
-        "seafood"
+        "seafood",
+        "waterfront",
+        "take-out",
+        "outdoor seating"
     ],
     "hours": {
         "mon": ["11 am - 8 pm"],

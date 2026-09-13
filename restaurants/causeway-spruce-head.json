@@ -1,12 +1,14 @@
 {
     "id": "causeway-spruce-head",
     "name": "Causeway Restaurant",
-    "description": "",
+    "description": "Year-round dining room and deck with ocean views over the Spruce Head coastline, serving local seafood.",
     "address": "5 3rd St, St George ME 04859",
     "phone": "207-594-7644",
     "url": "https://craignair.com/maine-inn-restaurant/",
     "tags": [
-        "seafood"
+        "seafood",
+        "waterfront",
+        "brunch"
     ],
     "hours": {
         "mon": ["5 pm - 8 pm"],

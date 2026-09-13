@@ -1,12 +1,12 @@
 {
     "id": "athens-pizza-thomaston",
     "name": "Athens Pizzeria",
-    "description": "",
+    "description": "Family-owned pizzeria serving Greek specialties like gyros and spanakopita alongside pizza, pasta, and subs.",
     "address": "179 Main St, Thomaston ME 04861",
     "phone": "207-354-0040",
     "url": "https://athenspizza.hrpos.heartland.us/menu",
     "tags": [
-        "pizza", "delivery"
+        "pizza", "delivery", "greek"
     ],
     "hours": {
         "mon": ["11 am - 8 pm"],

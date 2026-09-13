@@ -1,12 +1,14 @@
 {
     "id": "rustica-rockland",
     "name": "Rustica Cucina Italiana",
-    "description": "",
+    "description": "Housemade pasta, bread, and traditional Italian plates in a spacious downtown dining room, made from scratch since 2006.",
     "address": "315 Main St, Rockland ME 04841",
     "phone": "207-594-0015",
     "url": "http://rusticamaine.com/",
     "tags": [
-        "italian"
+        "italian",
+        "delivery",
+        "take-out"
     ],
     "hours": {
         "mon": [],

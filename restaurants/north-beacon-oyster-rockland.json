@@ -1,12 +1,14 @@
 {
     "id": "north-beacon-oyster-rockland",
     "name": "North Beacon Oyster",
-    "description": "",
+    "description": "Cozy oyster and raw bar with a rotating selection of local oysters, plus a few non-seafood options.",
     "address": "421 Main St, Rockland ME 04841",
-    "phone": "207-446-9120",
+    "phone": "207-466-9120",
     "url": "https://www.northbeaconoyster.com/",
     "tags": [
-        "seafood"
+        "seafood",
+        "raw bar",
+        "cocktails"
     ],
     "hours": {
         "mon": [],

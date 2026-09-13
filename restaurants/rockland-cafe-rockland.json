@@ -1,12 +1,13 @@
 {
     "id": "rockland-cafe-rockland",
     "name": "Rockland Cafe",
-    "description": "",
+    "description": "Bustling downtown diner serving breakfast, lunch, and dinner, known for its Maine seafood specials.",
     "address": "441 Main St, Rockland ME 04841",
     "phone": "207-596-7556",
     "url": "https://rocklandcafe.com/",
     "tags": [
-        "breakfast"
+        "breakfast",
+        "seafood"
     ],
     "hours": {
         "mon": [],

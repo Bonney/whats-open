@@ -1,12 +1,13 @@
 {
     "id": "suzukis-sushi-rockland",
     "name": "Suzuki's Sushi Bar",
-    "description": "",
-    "address": "419 Main, Rockland ME 04841",
+    "description": "Sushi and sashimi bar prizing seasonal, local seafood, with no fried or grilled dishes on the menu.",
+    "address": "419 Main St, Rockland ME 04841",
     "phone": "207-596-7447",
     "url": "http://www.suzukisushi.com/",
     "tags": [
-        "sushi"
+        "sushi",
+        "japanese"
     ],
     "hours": {
         "mon": [],
