@@ -1,0 +1,23 @@
+{
+    "id": "newtys-ice-cream-rockland",
+    "name": "Newty's Ice Cream",
+    "description": "Second Newty's location, a hand-scooped ice cream and espresso shop in a downtown Main Street storefront. Opened May 2026, alongside the original walk-up shack on the South End waterfront.",
+    "address": "367 Main St, Rockland ME 04841",
+    "phone": "323-898-8131",
+    "url": "https://www.facebook.com/p/Newtys-Ice-Cream-61563595716513/",
+    "tags": [
+        "Ice Cream",
+        "Coffee",
+        "Desserts",
+        "Takeout"
+    ],
+    "hours": {
+        "mon": ["12 pm - 8 pm"],
+        "tue": ["12 pm - 8 pm"],
+        "wed": ["12 pm - 8 pm"],
+        "thr": ["12 pm - 9 pm"],
+        "fri": ["12 pm - 9 pm"],
+        "sat": ["12 pm - 9 pm"],
+        "sun": ["12 pm - 8 pm"]
+    }
+}
