@@ -358,10 +358,6 @@ button:focus-visible {
 }
 .board__name-head .place__status { font-weight: 400; font-size: var(--step--1); }
 
-.board__name .place__tags,
-.board__name .place__desc,
-.board__name .place__contact { font-size: var(--step--1); }
-
 /* --- The weekly timetable columns ------------------------------------------
    The seven-day strip from the card's wide container query, recast as table
    columns: small uppercase day headers, compact hours, today's column tinted. */
