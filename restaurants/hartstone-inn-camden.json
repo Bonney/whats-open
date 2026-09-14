@@ -1,0 +1,22 @@
+{
+    "id": "hartstone-inn-camden",
+    "name": "Hartstone Inn Restaurant & Lounge",
+    "description": "Restaurant and lounge at the Hartstone Inn serving coastal Maine seafood with locally sourced, seasonally rotating menus. Live music Thursday evenings.",
+    "address": "41 Elm St, Camden ME 04843",
+    "phone": "207-236-4259",
+    "url": "https://www.hartstoneinn.com/dining",
+    "tags": [
+        "fine dining",
+        "seafood",
+        "live music"
+    ],
+    "hours": {
+        "mon": [],
+        "tue": ["4 pm - 8:30 pm"],
+        "wed": ["4 pm - 8:30 pm"],
+        "thr": ["4 pm - 8:30 pm"],
+        "fri": ["4 pm - 8:30 pm"],
+        "sat": ["4 pm - 8:30 pm"],
+        "sun": []
+    }
+}

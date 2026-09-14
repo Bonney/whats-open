@@ -1,0 +1,21 @@
+{
+    "id": "fresh-and-co-camden",
+    "name": "Fresh & Co",
+    "description": "Small, chef-owned dinner restaurant near the harbor serving an eclectic, globally-inspired menu built around locally sourced ingredients.",
+    "address": "1 Bay View Landing, Camden ME 04843",
+    "phone": "207-236-7005",
+    "url": "https://www.freshcamden.com/",
+    "tags": [
+        "farm to table",
+        "fine dining"
+    ],
+    "hours": {
+        "mon": [],
+        "tue": ["5 pm - 8:30 pm"],
+        "wed": ["5 pm - 8:30 pm"],
+        "thr": ["5 pm - 8:30 pm"],
+        "fri": ["5 pm - 8:30 pm"],
+        "sat": ["5 pm - 8:30 pm"],
+        "sun": ["5 pm - 8:30 pm"]
+    }
+}

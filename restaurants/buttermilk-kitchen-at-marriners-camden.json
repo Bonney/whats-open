@@ -1,0 +1,21 @@
+{
+    "id": "buttermilk-kitchen-at-marriners-camden",
+    "name": "Buttermilk Kitchen at Marriner's",
+    "description": "All-day breakfast and brunch restaurant on Main Street known for scratch biscuits and Southern-inflected morning fare, in the storefront that was formerly Marriner's Restaurant.",
+    "address": "35 Main St, Camden ME 04843",
+    "phone": "207-236-4949",
+    "url": "https://buttermilkcamden.com/",
+    "tags": [
+        "brunch",
+        "breakfast"
+    ],
+    "hours": {
+        "mon": ["7 am - 2 pm"],
+        "tue": [],
+        "wed": ["7 am - 2 pm"],
+        "thr": ["7 am - 2 pm"],
+        "fri": ["7 am - 2 pm"],
+        "sat": ["7 am - 2 pm"],
+        "sun": ["7 am - 2 pm"]
+    }
+}

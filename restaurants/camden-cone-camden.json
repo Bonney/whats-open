@@ -1,0 +1,22 @@
+{
+    "id": "camden-cone-camden",
+    "name": "Camden Cone",
+    "description": "Seasonal ice cream stand scooping Round Top ice cream and frozen yogurt in more than 30 flavors, a few blocks from Camden's harbor.",
+    "address": "33 Bayview St, Camden ME 04843",
+    "phone": "207-236-6448",
+    "url": "https://www.facebook.com/CamdenConeME/",
+    "tags": [
+        "ice cream",
+        "desserts",
+        "takeout"
+    ],
+    "hours": {
+        "mon": ["12 pm - 9 pm"],
+        "tue": ["12 pm - 9 pm"],
+        "wed": ["12 pm - 8 pm"],
+        "thr": ["12 pm - 9 pm"],
+        "fri": ["12 pm - 9 pm"],
+        "sat": ["12 pm - 9 pm"],
+        "sun": ["12 pm - 9 pm"]
+    }
+}

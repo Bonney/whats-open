@@ -1,0 +1,23 @@
+{
+    "id": "bagel-cafe-camden",
+    "name": "Bagel Cafe",
+    "description": "Breakfast-and-lunch spot known for daily-baked bagels, breakfast sandwiches, and deli sandwiches like the Reuben and turkey club.",
+    "address": "30 Main St, Camden ME 04843",
+    "phone": "207-236-2661",
+    "url": "https://www.bagelcafemaine.com/",
+    "tags": [
+        "bakery",
+        "breakfast",
+        "sandwiches",
+        "takeout"
+    ],
+    "hours": {
+        "mon": ["7 am - 2 pm"],
+        "tue": ["7 am - 2 pm"],
+        "wed": ["7 am - 2 pm"],
+        "thr": ["7 am - 2 pm"],
+        "fri": ["7 am - 2 pm"],
+        "sat": ["7 am - 2 pm"],
+        "sun": ["7:30 am - 2 pm"]
+    }
+}

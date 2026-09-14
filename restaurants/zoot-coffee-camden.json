@@ -1,0 +1,22 @@
+{
+    "id": "zoot-coffee-camden",
+    "name": "Zoot Coffee",
+    "description": "Cafe and on-site coffee roaster serving espresso drinks and a light breakfast and lunch menu near the harbor.",
+    "address": "5 Elm St, Camden ME 04843",
+    "phone": "207-236-9858",
+    "url": "https://zootcoffee.com/",
+    "tags": [
+        "coffee",
+        "café",
+        "breakfast"
+    ],
+    "hours": {
+        "mon": ["7 am - 4 pm"],
+        "tue": ["7 am - 4 pm"],
+        "wed": ["7 am - 4 pm"],
+        "thr": ["7 am - 4 pm"],
+        "fri": ["7 am - 4 pm"],
+        "sat": ["7 am - 4 pm"],
+        "sun": ["7 am - 4 pm"]
+    }
+}
