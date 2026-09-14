@@ -37,6 +37,7 @@ const NOW = new Date();
 
 const state = {
   open: false,
+  openToday: false,
   tags: new Set(),
   query: "",
   sortKey: "name",
@@ -155,6 +156,9 @@ function buildTagNav() {
   openBtn.classList.add("chip--open");
   scroll.append(openBtn);
 
+  const openTodayBtn = chip("Open today", { "data-open-today": "" });
+  scroll.append(openTodayBtn);
+
   for (const t of tags) {
     const emoji = TAG_EMOJI[t];
     scroll.append(
@@ -172,12 +176,15 @@ function buildTagNav() {
     if (!btn) return;
     if (btn.hasAttribute("data-open")) {
       state.open = !state.open;
+    } else if (btn.hasAttribute("data-open-today")) {
+      state.openToday = !state.openToday;
     } else if (btn.hasAttribute("data-tag")) {
       const t = btn.dataset.tag;
       if (state.tags.has(t)) state.tags.delete(t);
       else state.tags.add(t);
     } else if (btn.hasAttribute("data-clear")) {
       state.open = false;
+      state.openToday = false;
       state.tags.clear();
       state.query = "";
       const input = document.getElementById("search-input");
@@ -230,8 +237,12 @@ function trackTopbar() {
 /* --- Filter, sort, render --------------------------------------------------- */
 
 function currentList() {
+  const todayKey = DAY_KEYS[NOW.getDay()];
   const list = PLACES.filter((p) => {
     if (state.open && p.status.state !== "open") return false;
+    if (state.openToday && !((p.hours && p.hours[todayKey]) || []).length) {
+      return false;
+    }
     if (
       state.tags.size &&
       ![...state.tags].some((t) => p.tagList.includes(t))
@@ -271,10 +282,16 @@ function applyAndRender() {
   renderCards(list);
   document.getElementById("empty").hidden = list.length > 0;
 
-  const filtering = state.open || state.tags.size > 0 || state.query.length > 0;
+  const filtering =
+    state.open ||
+    state.openToday ||
+    state.tags.size > 0 ||
+    state.query.length > 0;
   for (const btn of document.querySelectorAll("#tagnav-scroll button")) {
     if (btn.hasAttribute("data-open")) {
       btn.setAttribute("aria-pressed", String(state.open));
+    } else if (btn.hasAttribute("data-open-today")) {
+      btn.setAttribute("aria-pressed", String(state.openToday));
     } else if (btn.hasAttribute("data-tag")) {
       btn.setAttribute("aria-pressed", String(state.tags.has(btn.dataset.tag)));
     } else if (btn.hasAttribute("data-clear")) {
@@ -549,6 +566,7 @@ function writeColophon(shown) {
 function readURL() {
   const q = new URLSearchParams(location.search);
   if (q.get("open") === "1") state.open = true;
+  if (q.get("today") === "1") state.openToday = true;
   for (const t of q.getAll("tag")) state.tags.add(t.toLowerCase());
   const query = q.get("q");
   if (query) state.query = query;
@@ -565,6 +583,7 @@ function readURL() {
 function writeURL() {
   const q = new URLSearchParams();
   if (state.open) q.set("open", "1");
+  if (state.openToday) q.set("today", "1");
   for (const t of state.tags) q.append("tag", t);
   if (state.query) q.set("q", state.query);
   if (state.sortKey !== "name" || state.sortDir !== "asc") {
