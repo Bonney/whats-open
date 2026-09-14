@@ -418,7 +418,7 @@ button:focus-visible {
    takes over, the cards step aside, and the guide widens to hold the extra
    columns. The switch waits until 78rem — eight columns need the room. */
 @media (min-width: 78rem) {
-  :root { --measure: 100rem; }
+  :root { --measure: 100rem; --sidebar-w: 18rem; }
   .board__table { display: table; }
   .cards { display: none; }
 
@@ -426,6 +426,65 @@ button:focus-visible {
      name column soak up the rest of the width for the condensed card. */
   .board__col-name,
   .board__name { width: auto; min-width: 34rem; }
+
+  /* The search bar and tag filters move into a sticky left-hand sidebar,
+     freeing the full width above the table for the day columns. */
+  body {
+    display: grid;
+    grid-template-columns: var(--sidebar-w) 1fr;
+    align-items: start;
+  }
+
+  .topbar {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+    border-bottom: 0;
+    border-right: 1px solid var(--rule-strong);
+  }
+
+  .topbar__inner {
+    max-width: none;
+    height: 100%;
+    margin-inline: 0;
+    padding: 1.25rem var(--gutter);
+    flex-direction: column;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    gap: 1rem;
+  }
+
+  .searchbar {
+    flex: 0 0 auto;
+    max-width: none;
+    margin-inline: 0;
+  }
+
+  .tagnav {
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow-y: auto;
+    mask-image: none;
+    -webkit-mask-image: none;
+  }
+  .tagnav__scroll {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    overflow-x: visible;
+    padding-inline-end: 0;
+  }
+  .tagnav .chip { width: 100%; text-align: left; }
+
+  .guide { grid-column: 2; grid-row: 1; }
+  .colophon { grid-column: 2; grid-row: 2; }
+
+  /* The topbar no longer sits above the table in this column, so the
+     sticky table header sticks to the viewport top directly. */
+  .board__table thead th { top: 0; }
 }
 
 /* --------------------------------------------------------------------------
