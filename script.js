@@ -38,6 +38,7 @@ const NOW = new Date();
 const state = {
   open: false,
   tags: new Set(),
+  query: "",
   sortKey: "name",
   sortDir: "asc",
 };
@@ -86,11 +87,22 @@ function enrich(place) {
   const tagList = (place.tags || [])
     .filter(Boolean)
     .map((t) => String(t).toLowerCase());
+  const searchText = [
+    place.name,
+    place.address,
+    place.description,
+    town ? town.name : "",
+    ...tagList,
+  ]
+    .filter(Boolean)
+    .join(" \n ")
+    .toLowerCase();
   return {
     ...place,
     townKey: town ? town.key : "",
     townName: town ? town.name : "",
     tagList,
+    searchText,
     status: statusFor(place.hours || {}, NOW),
     sortName: sortName(place.name),
   };
@@ -101,14 +113,28 @@ function enrich(place) {
 function setup() {
   const board = document.getElementById("board");
 
+  readURL();
+
   buildTagNav();
+  wireSearch();
   wireSorting();
   markTodayColumn();
   trackTopbar();
-  readURL();
 
   board.hidden = false;
   applyAndRender();
+}
+
+/* --- The search bar ------------------------------------------------------ */
+
+function wireSearch() {
+  const input = document.getElementById("search-input");
+  if (!input) return;
+  input.value = state.query;
+  input.addEventListener("input", () => {
+    state.query = input.value.trim();
+    applyAndRender();
+  });
 }
 
 /* --- The tag nav-bar ---------------------------------------------------- */
@@ -153,6 +179,9 @@ function buildTagNav() {
     } else if (btn.hasAttribute("data-clear")) {
       state.open = false;
       state.tags.clear();
+      state.query = "";
+      const input = document.getElementById("search-input");
+      if (input) input.value = "";
     }
     applyAndRender();
   });
@@ -209,6 +238,9 @@ function currentList() {
     ) {
       return false;
     }
+    if (state.query && !p.searchText.includes(state.query.toLowerCase())) {
+      return false;
+    }
     return true;
   });
 
@@ -239,7 +271,7 @@ function applyAndRender() {
   renderCards(list);
   document.getElementById("empty").hidden = list.length > 0;
 
-  const filtering = state.open || state.tags.size > 0;
+  const filtering = state.open || state.tags.size > 0 || state.query.length > 0;
   for (const btn of document.querySelectorAll("#tagnav-scroll button")) {
     if (btn.hasAttribute("data-open")) {
       btn.setAttribute("aria-pressed", String(state.open));
@@ -476,6 +508,8 @@ function readURL() {
   const q = new URLSearchParams(location.search);
   if (q.get("open") === "1") state.open = true;
   for (const t of q.getAll("tag")) state.tags.add(t.toLowerCase());
+  const query = q.get("q");
+  if (query) state.query = query;
   const sort = q.get("sort");
   if (sort) {
     const [key, dir] = sort.split(".");
@@ -490,6 +524,7 @@ function writeURL() {
   const q = new URLSearchParams();
   if (state.open) q.set("open", "1");
   for (const t of state.tags) q.append("tag", t);
+  if (state.query) q.set("q", state.query);
   if (state.sortKey !== "name" || state.sortDir !== "asc") {
     q.set("sort", `${state.sortKey}.${state.sortDir}`);
   }

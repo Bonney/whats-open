@@ -186,18 +186,44 @@ button:focus-visible {
   white-space: nowrap;
 }
 
-/* The tag nav-bar: a centred cluster of chips that wraps to new lines as
-   needed — never scrolls. */
+/* The search bar: its own full-width line above the tag nav-bar. */
+.searchbar {
+  flex: 1 1 100%;
+  max-width: 37.5rem; /* ~600px */
+  margin-inline: auto;
+}
+.searchbar__input {
+  width: 100%;
+  padding: 0.45rem 0.8rem;
+  border: 1px solid var(--rule-strong);
+  border-radius: 999px;
+  background: var(--paper-raised);
+  color: var(--ink);
+}
+.searchbar__input::placeholder { color: var(--ink-45); }
+.searchbar__input:hover { border-color: var(--accent-blue); }
+.searchbar__input::-webkit-search-cancel-button { cursor: pointer; }
+
+/* The tag nav-bar: a fixed two-row band of chips, packed left-to-right and
+   scrolling horizontally once they overrun the line — the trailing chips
+   run off the edge rather than wrapping to a third row. */
 .tagnav {
   flex: 1 1 auto;
   min-width: 0;
+  /* Fade the trailing edge instead of cutting the scroll off abruptly. */
+  mask-image: linear-gradient(to right, black calc(100% - 2.5rem), transparent);
+  -webkit-mask-image: linear-gradient(to right, black calc(100% - 2.5rem), transparent);
 }
 .tagnav__scroll {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-rows: repeat(2, auto);
+  justify-content: start;
   gap: 0.45rem;
   padding-block: 2px;
+  padding-inline-end: 2.5rem;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 /* --------------------------------------------------------------------------
