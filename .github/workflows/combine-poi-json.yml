@@ -27,7 +27,7 @@ jobs:
         combined_json=()
         
         # Loop through all JSON files in the specified directory
-        for file in  ${{ github.workspace }}/restaurants/*.json; do
+        for file in  ${{ github.workspace }}/restaurants/*/*.json; do
           # Read the content of each file and append it to the combined JSON array
           combined_json+=("$(cat "$file")")
         done

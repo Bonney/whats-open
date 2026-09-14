@@ -18,7 +18,7 @@ Then open `index.html` (it `fetch()`es `restaurants-combined.json`, so it must b
 
 ## Data architecture
 
-Each restaurant is a single JSON file in `restaurants/`, named `<slug>-<town>.json` (e.g. `restaurants/adas-kitchen-rockland.json`), where `<town>` is one of `rockland`, `thomaston`, `spruce-head`, or `camden`. `templates/restaurant-template.json` is the blank shape for a new entry, and the VS Code snippet `.vscode/blank_poi_json.code-snippets` (prefix `poi`) inserts the same shape.
+Each restaurant is a single JSON file in `restaurants/<town>/`, named `<slug>.json` (e.g. `restaurants/rockland/adas-kitchen.json`), where `<town>` is one of `rockland`, `thomaston`, `spruce-head`, or `camden`. The `id` field inside the file keeps the `<slug>-<town>` form (e.g. `"adas-kitchen-rockland"`) — `script.js` derives the town from that suffix, not from the file path. `templates/restaurant-template.json` is the blank shape for a new entry, and the VS Code snippet `.vscode/blank_poi_json.code-snippets` (prefix `poi`) inserts the same shape.
 
 Restaurant JSON shape:
 ```json
@@ -39,11 +39,11 @@ Restaurant JSON shape:
 - Each day's value is an array of time-range strings (e.g. `"4 pm - 9 pm"`); empty array means closed.
 - `tags` are free-form strings; `tags.json` maps known tag names to a display emoji (used for future UI, not yet wired into `script.js`).
 
-**`restaurants-combined.json` is generated, not hand-edited.** A GitHub Actions workflow (`.github/workflows/combine-poi-json.yml`) runs on every push to `main`, concatenates all files in `restaurants/*.json` into `restaurants-combined.json`, and commits/pushes the result back to `main` if it changed. When adding or editing a restaurant, only touch the individual file under `restaurants/` — CI will regenerate the combined file on push, but **also rebuild it locally in the same change** (mirroring the workflow's own concatenation logic) so `restaurants-combined.json` stays in sync with `restaurants/*.json` for local testing and so the diff is included in the commit:
+**`restaurants-combined.json` is generated, not hand-edited.** A GitHub Actions workflow (`.github/workflows/combine-poi-json.yml`) runs on every push to `main`, concatenates all files in `restaurants/*/*.json` into `restaurants-combined.json`, and commits/pushes the result back to `main` if it changed. When adding or editing a restaurant, only touch the individual file under `restaurants/<town>/` — CI will regenerate the combined file on push, but **also rebuild it locally in the same change** (mirroring the workflow's own concatenation logic) so `restaurants-combined.json` stays in sync with `restaurants/*/*.json` for local testing and so the diff is included in the commit:
 
 ```bash
 combined=()
-for file in restaurants/*.json; do
+for file in restaurants/*/*.json; do
   combined+=("$(cat "$file")")
 done
 combined=$(printf "%s," "${combined[@]}")

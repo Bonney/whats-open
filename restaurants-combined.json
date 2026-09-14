@@ -1,4 +1,361 @@
 [{
+    "id": "bagel-cafe-camden",
+    "name": "Bagel Cafe",
+    "description": "Breakfast-and-lunch spot known for daily-baked bagels, breakfast sandwiches, and deli sandwiches like the Reuben and turkey club.",
+    "address": "30 Main St, Camden ME 04843",
+    "phone": "207-236-2661",
+    "url": "https://www.bagelcafemaine.com/",
+    "tags": [
+        "bakery",
+        "breakfast",
+        "sandwiches",
+        "takeout"
+    ],
+    "hours": {
+        "mon": ["7 am - 2 pm"],
+        "tue": ["7 am - 2 pm"],
+        "wed": ["7 am - 2 pm"],
+        "thr": ["7 am - 2 pm"],
+        "fri": ["7 am - 2 pm"],
+        "sat": ["7 am - 2 pm"],
+        "sun": ["7:30 am - 2 pm"]
+    }
+},{
+    "id": "barrens-distillery-restaurant-camden",
+    "name": "Barren's Distillery + Restaurant",
+    "description": "Waterfront distillery and restaurant on the wharf overlooking Camden Harbor, pairing house-made spirits with a locally sourced menu. Seasonal, open May through October.",
+    "address": "2 Wayfarer Dr, Camden ME 04843",
+    "phone": "207-230-8422",
+    "url": "https://bluebarren.com/",
+    "tags": [
+        "Cocktails",
+        "Waterfront",
+        "Locally Sourced"
+    ],
+    "hours": {
+        "mon": [],
+        "tue": ["12 pm - 8 pm"],
+        "wed": ["12 pm - 8 pm"],
+        "thr": ["12 pm - 8 pm"],
+        "fri": ["12 pm - 8 pm"],
+        "sat": ["12 pm - 8 pm"],
+        "sun": ["12 pm - 8 pm"]
+    }
+},{
+    "id": "buttermilk-kitchen-at-marriners-camden",
+    "name": "Buttermilk Kitchen at Marriner's",
+    "description": "All-day breakfast and brunch restaurant on Main Street known for scratch biscuits and Southern-inflected morning fare, in the storefront that was formerly Marriner's Restaurant.",
+    "address": "35 Main St, Camden ME 04843",
+    "phone": "207-236-4949",
+    "url": "https://buttermilkcamden.com/",
+    "tags": [
+        "brunch",
+        "breakfast"
+    ],
+    "hours": {
+        "mon": ["7 am - 2 pm"],
+        "tue": [],
+        "wed": ["7 am - 2 pm"],
+        "thr": ["7 am - 2 pm"],
+        "fri": ["7 am - 2 pm"],
+        "sat": ["7 am - 2 pm"],
+        "sun": ["7 am - 2 pm"]
+    }
+},{
+    "id": "camden-cone-camden",
+    "name": "Camden Cone",
+    "description": "Seasonal ice cream stand scooping Round Top ice cream and frozen yogurt in more than 30 flavors, a few blocks from Camden's harbor.",
+    "address": "33 Bayview St, Camden ME 04843",
+    "phone": "207-236-6448",
+    "url": "https://www.facebook.com/CamdenConeME/",
+    "tags": [
+        "ice cream",
+        "desserts",
+        "takeout"
+    ],
+    "hours": {
+        "mon": ["12 pm - 9 pm"],
+        "tue": ["12 pm - 9 pm"],
+        "wed": ["12 pm - 8 pm"],
+        "thr": ["12 pm - 9 pm"],
+        "fri": ["12 pm - 9 pm"],
+        "sat": ["12 pm - 9 pm"],
+        "sun": ["12 pm - 9 pm"]
+    }
+},{
+    "id": "camden-deli-camden",
+    "name": "Camden Deli",
+    "description": "A Camden landmark since 1985 serving gourmet deli sandwiches, homemade soups, and scratch-baked desserts, with a rooftop deck overlooking Camden Harbor.",
+    "address": "37 Main St, Camden ME 04843",
+    "phone": "207-236-8343",
+    "url": "https://camdendeli.com",
+    "tags": [
+        "sandwiches",
+        "breakfast",
+        "takeout",
+        "waterfront"
+    ],
+    "hours": {
+        "mon": ["7 am - 6 pm"],
+        "tue": ["7 am - 6 pm"],
+        "wed": ["7 am - 6 pm"],
+        "thr": ["7 am - 6 pm"],
+        "fri": ["7 am - 6 pm"],
+        "sat": ["7 am - 6 pm"],
+        "sun": ["7 am - 6 pm"]
+    }
+},{
+    "id": "camden-house-of-pizza-camden",
+    "name": "Camden House of Pizza",
+    "description": "Pizzeria and Greek restaurant serving pizza, gyros, pasta, salads, and burgers, with beer and wine available for 21+.",
+    "address": "12 Mechanic St, Camden ME 04843",
+    "phone": "207-230-2464",
+    "url": "https://camdenmainepizza.com/",
+    "tags": [
+        "pizza",
+        "greek"
+    ],
+    "hours": {
+        "mon": ["11 am - 8 pm"],
+        "tue": ["11 am - 8 pm"],
+        "wed": ["11 am - 8 pm"],
+        "thr": ["11 am - 8 pm"],
+        "fri": ["11 am - 9 pm"],
+        "sat": ["11 am - 9 pm"],
+        "sun": ["11 am - 8 pm"]
+    }
+},{
+    "id": "frannys-bistro-camden",
+    "name": "Franny's Bistro",
+    "description": "Neighborhood bistro serving a New American menu of small plates and entrees, known for mussels, halibut specials, and calamari. Extensive wine and cocktail list; walk-ins accommodated depending on availability.",
+    "address": "55 Chestnut St, Camden ME 04843",
+    "phone": "207-230-8199",
+    "url": "https://www.frannysbistro.com/",
+    "tags": [
+        "Cocktails",
+        "Wine",
+        "Casual Dining"
+    ],
+    "hours": {
+        "mon": [],
+        "tue": [],
+        "wed": ["5 pm - 8 pm"],
+        "thr": ["5 pm - 8 pm"],
+        "fri": ["5 pm - 8 pm"],
+        "sat": ["5 pm - 8 pm"],
+        "sun": []
+    }
+},{
+    "id": "fresh-and-co-camden",
+    "name": "Fresh & Co",
+    "description": "Small, chef-owned dinner restaurant near the harbor serving an eclectic, globally-inspired menu built around locally sourced ingredients.",
+    "address": "1 Bay View Landing, Camden ME 04843",
+    "phone": "207-236-7005",
+    "url": "https://www.freshcamden.com/",
+    "tags": [
+        "farm to table",
+        "fine dining"
+    ],
+    "hours": {
+        "mon": [],
+        "tue": ["5 pm - 8:30 pm"],
+        "wed": ["5 pm - 8:30 pm"],
+        "thr": ["5 pm - 8:30 pm"],
+        "fri": ["5 pm - 8:30 pm"],
+        "sat": ["5 pm - 8:30 pm"],
+        "sun": ["5 pm - 8:30 pm"]
+    }
+},{
+    "id": "hartstone-inn-camden",
+    "name": "Hartstone Inn Restaurant & Lounge",
+    "description": "Restaurant and lounge at the Hartstone Inn serving coastal Maine seafood with locally sourced, seasonally rotating menus. Live music Thursday evenings.",
+    "address": "41 Elm St, Camden ME 04843",
+    "phone": "207-236-4259",
+    "url": "https://www.hartstoneinn.com/dining",
+    "tags": [
+        "fine dining",
+        "seafood",
+        "live music"
+    ],
+    "hours": {
+        "mon": [],
+        "tue": ["4 pm - 8:30 pm"],
+        "wed": ["4 pm - 8:30 pm"],
+        "thr": ["4 pm - 8:30 pm"],
+        "fri": ["4 pm - 8:30 pm"],
+        "sat": ["4 pm - 8:30 pm"],
+        "sun": []
+    }
+},{
+    "id": "long-grain-camden",
+    "name": "Long Grain",
+    "description": "Asian fusion restaurant drawing on Thai, Vietnamese, Singaporean, and Chinese cooking, with small-batch sauces made without preservatives. Dine-in and takeout.",
+    "address": "20 Washington St, Camden ME 04843",
+    "phone": "207-236-9001",
+    "url": "https://www.longgraincamden.com/",
+    "tags": [
+        "Asian",
+        "Thai",
+        "Fusion",
+        "Takeout"
+    ],
+    "hours": {
+        "mon": [],
+        "tue": ["11:30 am - 2:30 pm", "4:30 pm - 9 pm"],
+        "wed": ["11:30 am - 2:30 pm", "4:30 pm - 9 pm"],
+        "thr": ["11:30 am - 2:30 pm", "4:30 pm - 9 pm"],
+        "fri": ["11:30 am - 2:30 pm", "4:30 pm - 9 pm"],
+        "sat": ["11:30 am - 2:30 pm", "4:30 pm - 9 pm"],
+        "sun": []
+    }
+},{
+    "id": "natalies-camden",
+    "name": "Natalie's at Camden Harbour Inn",
+    "description": "Fine dining restaurant at the Camden Harbour Inn, serving a modern take on New England cuisine sourced from Maine fishing boats, farms, and gardens. Dining room and heated porches overlook Camden Harbor.",
+    "address": "83 Bayview St, Camden ME 04843",
+    "phone": "207-236-7008",
+    "url": "https://camdenharbourinn.com/natalies-restaurant/",
+    "tags": [
+        "fine dining",
+        "waterfront",
+        "farm to table"
+    ],
+    "hours": {
+        "mon": ["5 pm - 8:30 pm"],
+        "tue": ["5 pm - 8:30 pm"],
+        "wed": ["5 pm - 8:30 pm"],
+        "thr": ["5 pm - 8:30 pm"],
+        "fri": ["5 pm - 8:30 pm"],
+        "sat": ["5 pm - 8:30 pm"],
+        "sun": ["5 pm - 8:30 pm"]
+    }
+},{
+    "id": "peter-otts-on-the-water-camden",
+    "name": "Peter Ott's on the Water",
+    "description": "Seasonal seafood restaurant on Bayview Landing overlooking Camden's inner harbor, open spring through fall.",
+    "address": "16 Bayview Landing, Camden ME 04843",
+    "phone": "207-236-4032",
+    "url": "https://www.peterotts.com/",
+    "tags": [
+        "seafood",
+        "waterfront"
+    ],
+    "hours": {
+        "mon": ["11:30 am - 9 pm"],
+        "tue": ["11:30 am - 9 pm"],
+        "wed": ["11:30 am - 9 pm"],
+        "thr": ["11:30 am - 9 pm"],
+        "fri": ["11:30 am - 10 pm"],
+        "sat": ["11:30 am - 10 pm"],
+        "sun": ["11:30 am - 9 pm"]
+    }
+},{
+    "id": "salt-wharf-camden",
+    "name": "Salt Wharf",
+    "description": "Waterfront restaurant and rooftop bar serving coastal seafood. The rooftop and patio offer a casual menu including lobster rolls, while the dining room below serves a more chef-driven menu.",
+    "address": "3 Wayfarer Dr, Camden ME 04843",
+    "phone": "207-230-8025",
+    "url": "https://www.saltwharf.com/",
+    "tags": [
+        "seafood",
+        "waterfront",
+        "rooftop"
+    ],
+    "hours": {
+        "mon": ["12 pm - 8 pm"],
+        "tue": [],
+        "wed": [],
+        "thr": ["4 pm - 8 pm"],
+        "fri": ["12 pm - 8 pm"],
+        "sat": ["12 pm - 8 pm"],
+        "sun": ["12 pm - 8 pm"]
+    }
+},{
+    "id": "villager-cafe-camden",
+    "name": "Villager Cafe",
+    "description": "Community breakfast-and-lunch cafe that also houses the Midcoast Villager newsstand, serving pancakes, breakfast sandwiches, and tacos.",
+    "address": "25 Mechanic St, Camden ME 04843",
+    "phone": "207-706-4210",
+    "url": "https://www.villagercafe.com/",
+    "tags": [
+        "breakfast",
+        "café",
+        "takeout",
+        "wheelchair accessible"
+    ],
+    "hours": {
+        "mon": [],
+        "tue": ["8 am - 3 pm"],
+        "wed": ["8 am - 3 pm"],
+        "thr": ["8 am - 3 pm"],
+        "fri": ["8 am - 3 pm"],
+        "sat": ["8 am - 3 pm"],
+        "sun": ["8 am - 3 pm"]
+    }
+},{
+    "id": "vintage-room-camden",
+    "name": "Vintage Room",
+    "description": "Cocktail bar and small-plates restaurant on the ground floor of the 16 Bay View hotel, serving globally-influenced shareable dishes alongside craft cocktails and a curated wine list.",
+    "address": "16 Bay View St, Camden ME 04843",
+    "phone": "207-706-7990",
+    "url": "https://16bayview.com/vintage-room/",
+    "tags": [
+        "cocktails",
+        "tapas",
+        "late night"
+    ],
+    "hours": {
+        "mon": ["5 pm - 11 pm"],
+        "tue": ["5 pm - 11 pm"],
+        "wed": ["5 pm - 11 pm"],
+        "thr": ["5 pm - 11 pm"],
+        "fri": ["5 pm - 11 pm"],
+        "sat": ["5 pm - 11 pm"],
+        "sun": ["5 pm - 11 pm"]
+    }
+},{
+    "id": "winonas-camden",
+    "name": "Winona's",
+    "description": "Intimate 20-seat restaurant serving chef-driven small plates that change every two weeks, built around seasonal Maine coast ingredients. Open kitchen with curated wine pairings; reservations recommended.",
+    "address": "31 Elm St, Camden ME 04843",
+    "phone": "",
+    "url": "https://www.winonasmaine.com/",
+    "tags": [
+        "Fine Dining",
+        "Wine",
+        "Farm to Table"
+    ],
+    "hours": {
+        "mon": [],
+        "tue": [],
+        "wed": [],
+        "thr": ["5 pm - 8 pm"],
+        "fri": ["5 pm - 8 pm"],
+        "sat": ["5 pm - 8 pm"],
+        "sun": []
+    }
+},{
+    "id": "zoot-coffee-camden",
+    "name": "Zoot Coffee",
+    "description": "Cafe and on-site coffee roaster serving espresso drinks and a light breakfast and lunch menu near the harbor.",
+    "address": "5 Elm St, Camden ME 04843",
+    "phone": "207-236-9858",
+    "url": "https://zootcoffee.com/",
+    "tags": [
+        "coffee",
+        "café",
+        "breakfast"
+    ],
+    "hours": {
+        "mon": ["7 am - 4 pm"],
+        "tue": ["7 am - 4 pm"],
+        "wed": ["7 am - 4 pm"],
+        "thr": ["7 am - 4 pm"],
+        "fri": ["7 am - 4 pm"],
+        "sat": ["7 am - 4 pm"],
+        "sun": ["7 am - 4 pm"]
+    }
+},{
     "id": "13-oak-rockland",
     "name": "13 Oak",
     "description": "Wood-fired restaurant serving French-inflected comfort food with Maine seafood at the center. Located in a historic downtown space, features an approachable-yet-elevated menu with items ranging from wood-fired pasta to expertly prepared seafood.",
@@ -82,25 +439,6 @@
         "sun": ["11 am - 8 pm"]
     }
 },{
-    "id": "athens-pizza-thomaston",
-    "name": "Athens Pizzeria",
-    "description": "Family-owned pizzeria serving Greek specialties like gyros and spanakopita alongside pizza, pasta, and subs.",
-    "address": "179 Main St, Thomaston ME 04861",
-    "phone": "207-354-0040",
-    "url": "https://athenspizza.hrpos.heartland.us/menu",
-    "tags": [
-        "pizza", "delivery", "greek"
-    ],
-    "hours": {
-        "mon": ["11 am - 8 pm"],
-        "tue": ["11 am - 8 pm"],
-        "wed": ["11 am - 8 pm"],
-        "thr": ["11 am - 8 pm"],
-        "fri": ["11 am - 9 pm"],
-        "sat": ["11 am - 9 pm"],
-        "sun": []
-    }
-},{
     "id": "atlantic-baking-company-rockland",
     "name": "Atlantic Baking Company",
     "description": "European-style bakery and cafe featuring artisan breads and French pastries made fresh daily. Also serves breakfast, soups, and desserts.",
@@ -125,90 +463,6 @@
         "sun": []
     }
 },{
-    "id": "bagel-cafe-camden",
-    "name": "Bagel Cafe",
-    "description": "Breakfast-and-lunch spot known for daily-baked bagels, breakfast sandwiches, and deli sandwiches like the Reuben and turkey club.",
-    "address": "30 Main St, Camden ME 04843",
-    "phone": "207-236-2661",
-    "url": "https://www.bagelcafemaine.com/",
-    "tags": [
-        "bakery",
-        "breakfast",
-        "sandwiches",
-        "takeout"
-    ],
-    "hours": {
-        "mon": ["7 am - 2 pm"],
-        "tue": ["7 am - 2 pm"],
-        "wed": ["7 am - 2 pm"],
-        "thr": ["7 am - 2 pm"],
-        "fri": ["7 am - 2 pm"],
-        "sat": ["7 am - 2 pm"],
-        "sun": ["7:30 am - 2 pm"]
-    }
-},{
-    "id": "barrens-distillery-restaurant-camden",
-    "name": "Barren's Distillery + Restaurant",
-    "description": "Waterfront distillery and restaurant on the wharf overlooking Camden Harbor, pairing house-made spirits with a locally sourced menu. Seasonal, open May through October.",
-    "address": "2 Wayfarer Dr, Camden ME 04843",
-    "phone": "207-230-8422",
-    "url": "https://bluebarren.com/",
-    "tags": [
-        "Cocktails",
-        "Waterfront",
-        "Locally Sourced"
-    ],
-    "hours": {
-        "mon": [],
-        "tue": ["12 pm - 8 pm"],
-        "wed": ["12 pm - 8 pm"],
-        "thr": ["12 pm - 8 pm"],
-        "fri": ["12 pm - 8 pm"],
-        "sat": ["12 pm - 8 pm"],
-        "sun": ["12 pm - 8 pm"]
-    }
-},{
-    "id": "black-harpoon-spruce-head",
-    "name": "The Black Harpoon",
-    "description": "Family-friendly seafood restaurant and bar in Port Clyde featuring locally sourced fish, steaks, and seasonal specials. Casual dining with lively evening bar scene.",
-    "address": "202 Drift Inn Rd, Port Clyde ME 04855",
-    "phone": "207-372-2167",
-    "url": "http://www.theblackharpoon.com/",
-    "tags": [
-        "Seafood",
-        "Steakhouse",
-        "Pub"
-    ],
-    "hours": {
-        "mon": [],
-        "tue": ["4:30 pm - 8 pm"],
-        "wed": ["4:30 pm - 8 pm"],
-        "thr": ["4:30 pm - 8 pm"],
-        "fri": ["4:30 pm - 8 pm"],
-        "sat": [],
-        "sun": []
-    }
-},{
-    "id": "buttermilk-kitchen-at-marriners-camden",
-    "name": "Buttermilk Kitchen at Marriner's",
-    "description": "All-day breakfast and brunch restaurant on Main Street known for scratch biscuits and Southern-inflected morning fare, in the storefront that was formerly Marriner's Restaurant.",
-    "address": "35 Main St, Camden ME 04843",
-    "phone": "207-236-4949",
-    "url": "https://buttermilkcamden.com/",
-    "tags": [
-        "brunch",
-        "breakfast"
-    ],
-    "hours": {
-        "mon": ["7 am - 2 pm"],
-        "tue": [],
-        "wed": ["7 am - 2 pm"],
-        "thr": ["7 am - 2 pm"],
-        "fri": ["7 am - 2 pm"],
-        "sat": ["7 am - 2 pm"],
-        "sun": ["7 am - 2 pm"]
-    }
-},{
     "id": "cafe-grazie-rockland",
     "name": "Cafe Grazie",
     "description": "Daytime cafe and market in the former Wiggins' Meat Market. Offers breakfast sandwiches, burritos, frittata, porridge, pasta, focaccia, cardamom buns, and fresh pastries from Double Grazie bakery. Serves Tandem coffee and afternoon spritzes.",
@@ -230,90 +484,6 @@
         "fri": ["8 am - 2 pm"],
         "sat": ["8 am - 2 pm"],
         "sun": ["9 am - 1 pm"]
-    }
-},{
-    "id": "camden-cone-camden",
-    "name": "Camden Cone",
-    "description": "Seasonal ice cream stand scooping Round Top ice cream and frozen yogurt in more than 30 flavors, a few blocks from Camden's harbor.",
-    "address": "33 Bayview St, Camden ME 04843",
-    "phone": "207-236-6448",
-    "url": "https://www.facebook.com/CamdenConeME/",
-    "tags": [
-        "ice cream",
-        "desserts",
-        "takeout"
-    ],
-    "hours": {
-        "mon": ["12 pm - 9 pm"],
-        "tue": ["12 pm - 9 pm"],
-        "wed": ["12 pm - 8 pm"],
-        "thr": ["12 pm - 9 pm"],
-        "fri": ["12 pm - 9 pm"],
-        "sat": ["12 pm - 9 pm"],
-        "sun": ["12 pm - 9 pm"]
-    }
-},{
-    "id": "camden-deli-camden",
-    "name": "Camden Deli",
-    "description": "A Camden landmark since 1985 serving gourmet deli sandwiches, homemade soups, and scratch-baked desserts, with a rooftop deck overlooking Camden Harbor.",
-    "address": "37 Main St, Camden ME 04843",
-    "phone": "207-236-8343",
-    "url": "https://camdendeli.com",
-    "tags": [
-        "sandwiches",
-        "breakfast",
-        "takeout",
-        "waterfront"
-    ],
-    "hours": {
-        "mon": ["7 am - 6 pm"],
-        "tue": ["7 am - 6 pm"],
-        "wed": ["7 am - 6 pm"],
-        "thr": ["7 am - 6 pm"],
-        "fri": ["7 am - 6 pm"],
-        "sat": ["7 am - 6 pm"],
-        "sun": ["7 am - 6 pm"]
-    }
-},{
-    "id": "camden-house-of-pizza-camden",
-    "name": "Camden House of Pizza",
-    "description": "Pizzeria and Greek restaurant serving pizza, gyros, pasta, salads, and burgers, with beer and wine available for 21+.",
-    "address": "12 Mechanic St, Camden ME 04843",
-    "phone": "207-230-2464",
-    "url": "https://camdenmainepizza.com/",
-    "tags": [
-        "pizza",
-        "greek"
-    ],
-    "hours": {
-        "mon": ["11 am - 8 pm"],
-        "tue": ["11 am - 8 pm"],
-        "wed": ["11 am - 8 pm"],
-        "thr": ["11 am - 8 pm"],
-        "fri": ["11 am - 9 pm"],
-        "sat": ["11 am - 9 pm"],
-        "sun": ["11 am - 8 pm"]
-    }
-},{
-    "id": "causeway-spruce-head",
-    "name": "Causeway Restaurant",
-    "description": "Year-round dining room and deck with ocean views over the Spruce Head coastline, serving local seafood.",
-    "address": "5 3rd St, St George ME 04859",
-    "phone": "207-594-7644",
-    "url": "https://craignair.com/maine-inn-restaurant/",
-    "tags": [
-        "seafood",
-        "waterfront",
-        "brunch"
-    ],
-    "hours": {
-        "mon": ["5 pm - 8 pm"],
-        "tue": [],
-        "wed": [],
-        "thr": ["5 pm - 8 pm"],
-        "fri": ["5 pm - 8 pm"],
-        "sat": ["5 pm - 8 pm"],
-        "sun": ["10 am - 8 pm"]
     }
 },{
     "id": "clan-maclaren-rockland",
@@ -360,47 +530,6 @@
         "sun": ["11 am - 8 pm"]
     }
 },{
-    "id": "crooked-spoon-thomaston",
-    "name": "Crooked Spoon",
-    "description": "Intimate Italian restaurant featuring handmade fresh pasta, focaccia, and seasonal dishes paired with craft cocktails and carefully curated wines. Limited dinner hours.",
-    "address": "173 Main St, Thomaston ME 04861",
-    "phone": "908-415-2434",
-    "url": "https://www.crookedspoonmaine.com/",
-    "tags": [
-        "Italian",
-        "Cocktails",
-        "Wine"
-    ],
-    "hours": {
-        "mon": ["4:30 pm - 9 pm"],
-        "tue": [],
-        "wed": [],
-        "thr": ["4:30 pm - 9 pm"],
-        "fri": ["4:30 pm - 9 pm"],
-        "sat": [],
-        "sun": []
-    }
-},{
-    "id": "doormans-thomaston",
-    "name": "Dorman's Dairy Dream",
-    "description": "Beloved seasonal ice cream stand making its own ice cream in-house, with flavors from Maine blueberry to grapenut.",
-    "address": "189 New County Rd, Thomaston ME 04861",
-    "phone": "207-390-0121",
-    "url": "https://www.facebook.com/dormansdairydream/",
-    "tags": [
-        "ice cream",
-        "takeout"
-    ],
-    "hours": {
-        "mon": [],
-        "tue": [],
-        "wed": [],
-        "thr": ["12 pm - 7 pm"],
-        "fri": ["12 pm - 7 pm"],
-        "sat": ["12 pm - 7 pm"],
-        "sun": ["12 pm - 7 pm"]
-    }
-},{
     "id": "dry-dock-rockland",
     "name": "Dry Dock Restaurant",
     "description": "Waterfront pub on Rockland Harbor serving American fare and seafood, including lobster rolls, with indoor and outdoor harborside seating. Formerly Eclipse of the Pearl.",
@@ -421,103 +550,6 @@
         "fri": ["11 am - 7:30 pm"],
         "sat": ["11 am - 7:30 pm"],
         "sun": ["11 am - 7 pm"]
-    }
-},{
-    "id": "flipside-coffee-thomaston",
-    "name": "FlipSide Coffee",
-    "description": "Beloved downtown Thomaston gathering spot with thoughtfully sourced coffee, espresso drinks, and a menu of breakfast and lunch items. Wheelchair accessible with covered patio and local art on display.",
-    "address": "189 Main St, Thomaston ME 04861",
-    "phone": "207-354-5221",
-    "url": "https://www.facebook.com/flipsidecoffeemaine/",
-    "tags": [
-        "Coffee",
-        "Café",
-        "Breakfast"
-    ],
-    "hours": {
-        "mon": [
-            "7 am - 3 pm"
-        ],
-        "tue": [
-            "7 am - 3 pm"
-        ],
-        "wed": [
-            "7 am - 3 pm"
-        ],
-        "thr": [
-            "7 am - 3 pm"
-        ],
-        "fri": [
-            "7 am - 3 pm"
-        ],
-        "sat": [
-            "7 am - 3 pm"
-        ],
-        "sun": [
-            "7 am - 3 pm"
-        ]
-    }
-},{
-    "id": "frannys-bistro-camden",
-    "name": "Franny's Bistro",
-    "description": "Neighborhood bistro serving a New American menu of small plates and entrees, known for mussels, halibut specials, and calamari. Extensive wine and cocktail list; walk-ins accommodated depending on availability.",
-    "address": "55 Chestnut St, Camden ME 04843",
-    "phone": "207-230-8199",
-    "url": "https://www.frannysbistro.com/",
-    "tags": [
-        "Cocktails",
-        "Wine",
-        "Casual Dining"
-    ],
-    "hours": {
-        "mon": [],
-        "tue": [],
-        "wed": ["5 pm - 8 pm"],
-        "thr": ["5 pm - 8 pm"],
-        "fri": ["5 pm - 8 pm"],
-        "sat": ["5 pm - 8 pm"],
-        "sun": []
-    }
-},{
-    "id": "fresh-and-co-camden",
-    "name": "Fresh & Co",
-    "description": "Small, chef-owned dinner restaurant near the harbor serving an eclectic, globally-inspired menu built around locally sourced ingredients.",
-    "address": "1 Bay View Landing, Camden ME 04843",
-    "phone": "207-236-7005",
-    "url": "https://www.freshcamden.com/",
-    "tags": [
-        "farm to table",
-        "fine dining"
-    ],
-    "hours": {
-        "mon": [],
-        "tue": ["5 pm - 8:30 pm"],
-        "wed": ["5 pm - 8:30 pm"],
-        "thr": ["5 pm - 8:30 pm"],
-        "fri": ["5 pm - 8:30 pm"],
-        "sat": ["5 pm - 8:30 pm"],
-        "sun": ["5 pm - 8:30 pm"]
-    }
-},{
-    "id": "hartstone-inn-camden",
-    "name": "Hartstone Inn Restaurant & Lounge",
-    "description": "Restaurant and lounge at the Hartstone Inn serving coastal Maine seafood with locally sourced, seasonally rotating menus. Live music Thursday evenings.",
-    "address": "41 Elm St, Camden ME 04843",
-    "phone": "207-236-4259",
-    "url": "https://www.hartstoneinn.com/dining",
-    "tags": [
-        "fine dining",
-        "seafood",
-        "live music"
-    ],
-    "hours": {
-        "mon": [],
-        "tue": ["4 pm - 8:30 pm"],
-        "wed": ["4 pm - 8:30 pm"],
-        "thr": ["4 pm - 8:30 pm"],
-        "fri": ["4 pm - 8:30 pm"],
-        "sat": ["4 pm - 8:30 pm"],
-        "sun": []
     }
 },{
     "id": "high-tide-rockland",
@@ -581,47 +613,6 @@
         "sun": ["8 am - 2 pm"]
     }
 },{
-    "id": "honeys-fried-chicken-palace-thomaston",
-    "name": "Honey's Fried Chicken Palace",
-    "description": "Casual fried chicken spot specializing in hand-trimmed chicken thighs seasoned in a custom blend of 12 herbs and spices, served with 17+ housemade sauces on brioche buns. Opened April 2025.",
-    "address": "153 New County Rd, Thomaston ME 04861",
-    "phone": "207-593-8090",
-    "url": "https://www.gethoneys.com/",
-    "tags": [
-        "Fried Chicken",
-        "Takeout",
-        "Fast Food"
-    ],
-    "hours": {
-        "mon": ["11 am - 7 pm"],
-        "tue": ["11 am - 7 pm"],
-        "wed": ["11 am - 7 pm"],
-        "thr": ["11 am - 7 pm"],
-        "fri": ["11 am - 7 pm"],
-        "sat": ["11 am - 7 pm"],
-        "sun": ["11 am - 7 pm"]
-    }
-},{
-    "id": "hot-hill-tavern-thomaston",
-    "name": "Hot Hill Tavern",
-    "description": "Neighborhood tavern serving pub fare with Puerto Rican-influenced specialties, plus live music and pool tables.",
-    "address": "1 Starr St, Thomaston, ME 04861",
-    "phone": "207-354-5144",
-    "url": "https://hothilltavernme.com/",
-    "tags": [
-        "pub",
-        "live music"
-    ],
-    "hours": {
-        "mon": [],
-        "tue": ["11 am - 10 pm"],
-        "wed": ["11 am - 10 pm"],
-        "thr": ["11 am - 10 pm"],
-        "fri": ["11 am - 12 am"],
-        "sat": ["9 am - 12 am"],
-        "sun": ["9 am - 10 pm"]
-    }
-},{
     "id": "in-good-company-rockland",
     "name": "In Good Company",
     "description": "Wine bar in a renovated former bank serving tapas-style small plates and full entrees alongside an extensive wine list.",
@@ -641,73 +632,6 @@
         "fri": ["4:30 pm - 8:30 pm"],
         "sat": ["4:30 pm - 8:30 pm"],
         "sun": []
-    }
-},{
-    "id": "ka-chai-thai-street-food-thomaston",
-    "name": "Ka Chai Thai Street Food",
-    "description": "Authentic Bangkok-style Thai street food using traditional recipes and fresh ingredients. Offers takeout and delivery, with vegetarian options available.",
-    "address": "444 Main St, Thomaston ME 04861",
-    "phone": "207-354-5152",
-    "url": "https://kachaithaistreetfood.com/",
-    "tags": [
-        "Thai",
-        "Takeout",
-        "Delivery"
-    ],
-    "hours": {
-        "mon": [],
-        "tue": [
-            "11:30 am - 2 pm",
-            "4:30 pm - 7:30 pm"
-        ],
-        "wed": [
-            "11:30 am - 2 pm",
-            "4:30 pm - 7:30 pm"
-        ],
-        "thr": [
-            "11:30 am - 2 pm",
-            "4:30 pm - 7:30 pm"
-        ],
-        "fri": [
-            "11:30 am - 2 pm",
-            "4:30 pm - 8 pm"
-        ],
-        "sat": [
-            "11:30 am - 2 pm",
-            "4:30 pm - 8 pm"
-        ],
-        "sun": [
-            "4:30 pm - 7 pm"
-        ]
-    }
-},{
-    "id": "laurels-dolce-vita-thomaston",
-    "name": "Laurel's Dolce Vita",
-    "description": "Italian bakery and café in a historic 1870s firehouse featuring small-batch pastries baked fresh daily. Specializes in authentic Italian pastries, fresh pasta, and artisan breads using locally sourced ingredients.",
-    "address": "350 Main St, Thomaston ME 04861",
-    "phone": "207-354-5242",
-    "url": "https://www.facebook.com/laurelsdolcevita/",
-    "tags": [
-        "Bakery",
-        "Italian",
-        "Café"
-    ],
-    "hours": {
-        "mon": [],
-        "tue": [],
-        "wed": [],
-        "thr": [
-            "9 am - 2 pm"
-        ],
-        "fri": [
-            "9 am - 2 pm"
-        ],
-        "sat": [
-            "9 am - 2 pm"
-        ],
-        "sun": [
-            "9 am - 1 pm"
-        ]
     }
 },{
     "id": "lemon-bar-rockland",
@@ -735,28 +659,6 @@
         "sat": [
             "5 pm - 10 pm"
         ],
-        "sun": []
-    }
-},{
-    "id": "long-grain-camden",
-    "name": "Long Grain",
-    "description": "Asian fusion restaurant drawing on Thai, Vietnamese, Singaporean, and Chinese cooking, with small-batch sauces made without preservatives. Dine-in and takeout.",
-    "address": "20 Washington St, Camden ME 04843",
-    "phone": "207-236-9001",
-    "url": "https://www.longgraincamden.com/",
-    "tags": [
-        "Asian",
-        "Thai",
-        "Fusion",
-        "Takeout"
-    ],
-    "hours": {
-        "mon": [],
-        "tue": ["11:30 am - 2:30 pm", "4:30 pm - 9 pm"],
-        "wed": ["11:30 am - 2:30 pm", "4:30 pm - 9 pm"],
-        "thr": ["11:30 am - 2:30 pm", "4:30 pm - 9 pm"],
-        "fri": ["11:30 am - 2:30 pm", "4:30 pm - 9 pm"],
-        "sat": ["11:30 am - 2:30 pm", "4:30 pm - 9 pm"],
         "sun": []
     }
 },{
@@ -805,27 +707,6 @@
         "sun": []
     }
 },{
-    "id": "mcloons-lobster-shack-spruce-head",
-    "name": "McLoons Lobster Shack",
-    "description": "Waterfront lobster shack across from a working lobster wharf, with harbor and sunset views from the dining deck.",
-    "address": "315 Island Rd, Spruce Head ME 04858",
-    "phone": "207-593-1382",
-    "url": "https://www.mcloonslobster.com/",
-    "tags": [
-        "seafood",
-        "waterfront",
-        "outdoor seating"
-    ],
-    "hours": {
-        "mon": ["11:30 am - 7 pm"],
-        "tue": ["11:30 am - 7 pm"],
-        "wed": [],
-        "thr": [],
-        "fri": ["11:30 am - 7 pm"],
-        "sat": ["11:30 am - 7 pm"],
-        "sun": ["11:30 am - 7 pm"]
-    }
-},{
     "id": "mulligans-pub-rockland",
     "name": "Mulligan's Pub",
     "description": "Drinks and dining with a view of the beautiful Rockland golf course.",
@@ -846,27 +727,6 @@
         "fri": ["10 am - 6 pm"],
         "sat": ["10 am - 6 pm"],
         "sun": ["10 am - 6 pm"]
-    }
-},{
-    "id": "natalies-camden",
-    "name": "Natalie's at Camden Harbour Inn",
-    "description": "Fine dining restaurant at the Camden Harbour Inn, serving a modern take on New England cuisine sourced from Maine fishing boats, farms, and gardens. Dining room and heated porches overlook Camden Harbor.",
-    "address": "83 Bayview St, Camden ME 04843",
-    "phone": "207-236-7008",
-    "url": "https://camdenharbourinn.com/natalies-restaurant/",
-    "tags": [
-        "fine dining",
-        "waterfront",
-        "farm to table"
-    ],
-    "hours": {
-        "mon": ["5 pm - 8:30 pm"],
-        "tue": ["5 pm - 8:30 pm"],
-        "wed": ["5 pm - 8:30 pm"],
-        "thr": ["5 pm - 8:30 pm"],
-        "fri": ["5 pm - 8:30 pm"],
-        "sat": ["5 pm - 8:30 pm"],
-        "sun": ["5 pm - 8:30 pm"]
     }
 },{
     "id": "newtys-ice-cream-rockland",
@@ -952,26 +812,6 @@
         "fri": ["11:30 am - 8 pm"],
         "sat": ["11:30 am - 8 pm"],
         "sun": []
-    }
-},{
-    "id": "peter-otts-on-the-water-camden",
-    "name": "Peter Ott's on the Water",
-    "description": "Seasonal seafood restaurant on Bayview Landing overlooking Camden's inner harbor, open spring through fall.",
-    "address": "16 Bayview Landing, Camden ME 04843",
-    "phone": "207-236-4032",
-    "url": "https://www.peterotts.com/",
-    "tags": [
-        "seafood",
-        "waterfront"
-    ],
-    "hours": {
-        "mon": ["11:30 am - 9 pm"],
-        "tue": ["11:30 am - 9 pm"],
-        "wed": ["11:30 am - 9 pm"],
-        "thr": ["11:30 am - 9 pm"],
-        "fri": ["11:30 am - 10 pm"],
-        "sat": ["11:30 am - 10 pm"],
-        "sun": ["11:30 am - 9 pm"]
     }
 },{
     "id": "primo-rockland",
@@ -1122,27 +962,6 @@
         "sun": []
     }
 },{
-    "id": "salt-wharf-camden",
-    "name": "Salt Wharf",
-    "description": "Waterfront restaurant and rooftop bar serving coastal seafood. The rooftop and patio offer a casual menu including lobster rolls, while the dining room below serves a more chef-driven menu.",
-    "address": "3 Wayfarer Dr, Camden ME 04843",
-    "phone": "207-230-8025",
-    "url": "https://www.saltwharf.com/",
-    "tags": [
-        "seafood",
-        "waterfront",
-        "rooftop"
-    ],
-    "hours": {
-        "mon": ["12 pm - 8 pm"],
-        "tue": [],
-        "wed": [],
-        "thr": ["4 pm - 8 pm"],
-        "fri": ["12 pm - 8 pm"],
-        "sat": ["12 pm - 8 pm"],
-        "sun": ["12 pm - 8 pm"]
-    }
-},{
     "id": "sammys-deluxe-rockland",
     "name": "Sammy's Deluxe",
     "description": "Fresh, straightforward American comfort food using seasonal ingredients and locally sourced items. Simple, high-value cooking featuring innovative dishes in the style of elevated homestyle fare.",
@@ -1164,47 +983,6 @@
         "sun": []
     }
 },{
-    "id": "squid-ink-coffee-spruce-head",
-    "name": "Squid Ink Coffee",
-    "description": "Dock-side coffee café in Port Clyde with espresso drinks and pastries, featuring outdoor seating with harbor views and views of passing lobster boats.",
-    "address": "6 Cold Storage Rd, Port Clyde ME 04855",
-    "phone": "207-372-2088",
-    "url": "https://www.instagram.com/_squidinkcoffee/",
-    "tags": [
-        "Coffee",
-        "Outdoor Seating",
-        "Café"
-    ],
-    "hours": {
-        "mon": [],
-        "tue": [],
-        "wed": ["7 am - 2:30 pm"],
-        "thr": ["7 am - 2:30 pm"],
-        "fri": ["7 am - 2:30 pm"],
-        "sat": ["7 am - 2:30 pm"],
-        "sun": ["7 am - 2:30 pm"]
-    }
-},{
-    "id": "station-188-bbq-thomaston",
-    "name": "Station 118 BBQ",
-    "description": "Smoked pulled pork, brisket, and ribs with homemade sides and a full bar in a casual dining room.",
-    "address": "118 Main St, Thomaston ME 04861",
-    "phone": "207-593-8208",
-    "url": "https://www.station118.com/",
-    "tags": [
-        "bbq",
-        "takeout"
-    ],
-    "hours": {
-        "mon": ["4pm - 8pm"],
-        "tue": [],
-        "wed": [],
-        "thr": ["11:30 am - 8 pm"],
-        "fri": ["11:30 am - 8 pm"],
-        "sat": ["11:30 am - 8 pm"],
-        "sun": ["11:30 am - 3 pm"]
-    }
-},{
     "id": "suzukis-sushi-rockland",
     "name": "Suzuki's Sushi Bar",
     "description": "Sushi and sashimi bar prizing seasonal, local seafood, with no fried or grilled dishes on the menu.",
@@ -1222,72 +1000,6 @@
         "thr": ["5 pm - 9 pm"],
         "fri": ["5 pm - 9 pm"],
         "sat": ["5 pm - 9 pm"],
-        "sun": []
-    }
-},{
-    "id": "tenants-harbor-general-store-spruce-head",
-    "name": "Tenants Harbor General Store",
-    "description": "Full-service general store with deli counter serving breakfast, lunch, and dinner sandwiches, wraps, and salads. Also offers Maine-roasted coffee, meat and seafood counter, and wine selection.",
-    "address": "16 Main St, Tenants Harbor ME 04860",
-    "phone": "207-372-6311",
-    "url": "https://www.facebook.com/TenantsHarborGeneralStore/",
-    "tags": [
-        "Sandwiches",
-        "Coffee",
-        "Takeout"
-    ],
-    "hours": {
-        "mon": ["5 am - 8 pm"],
-        "tue": ["5 am - 8 pm"],
-        "wed": ["5 am - 8 pm"],
-        "thr": ["5 am - 8 pm"],
-        "fri": ["5 am - 8 pm"],
-        "sat": ["5 am - 8 pm"],
-        "sun": ["5 am - 8 pm"]
-    }
-},{
-    "id": "the-uproot-pie-co-and-the-carriage-house-thomaston",
-    "name": "The Uproot Pie Co & The Carriage House",
-    "description": "Wood-fired pizza restaurant in a 19th-century carriage house. Offers seasonal pizza menus, salads, small bites, and a rotating beer and wine selection. Hosts pizza-making classes and special events.",
-    "address": "9 Green St, Thomaston ME 04861",
-    "phone": "207-370-1568",
-    "url": "https://www.theuprootpieco.com/carriage-house",
-    "tags": [
-        "Pizza",
-        "Café"
-    ],
-    "hours": {
-        "mon": [],
-        "tue": [],
-        "wed": [],
-        "thr": [
-            "4 pm - 8 pm"
-        ],
-        "fri": [
-            "4 pm - 8 pm"
-        ],
-        "sat": [
-            "9 am - 1 pm"
-        ],
-        "sun": []
-    }
-},{
-    "id": "thomaston-cafe-thomaston",
-    "name": "Thomaston Cafe",
-    "description": "Casual lunch-and-dinner cafe known for weekly specials like Prime Rib Wednesday and Thursday burger night.",
-    "address": "154 Main St, Thomaston ME 04861",
-    "phone": "207-354-8589",
-    "url": "https://thomastoncafeme.wixsite.com/mysite",
-    "tags": [
-        "takeout"
-    ],
-    "hours": {
-        "mon": [],
-        "tue": ["11 am - 2 pm", "5 pm - 8 pm"],
-        "wed": ["11 am - 2 pm", "5 pm - 8 pm"],
-        "thr": ["11 am - 2 pm", "5 pm - 8 pm"],
-        "fri": ["11 am - 2 pm", "5 pm - 8 pm"],
-        "sat": ["11 am - 2 pm", "5 pm - 8 pm"],
         "sun": []
     }
 },{
@@ -1339,49 +1051,6 @@
         ]
     }
 },{
-    "id": "villager-cafe-camden",
-    "name": "Villager Cafe",
-    "description": "Community breakfast-and-lunch cafe that also houses the Midcoast Villager newsstand, serving pancakes, breakfast sandwiches, and tacos.",
-    "address": "25 Mechanic St, Camden ME 04843",
-    "phone": "207-706-4210",
-    "url": "https://www.villagercafe.com/",
-    "tags": [
-        "breakfast",
-        "café",
-        "takeout",
-        "wheelchair accessible"
-    ],
-    "hours": {
-        "mon": [],
-        "tue": ["8 am - 3 pm"],
-        "wed": ["8 am - 3 pm"],
-        "thr": ["8 am - 3 pm"],
-        "fri": ["8 am - 3 pm"],
-        "sat": ["8 am - 3 pm"],
-        "sun": ["8 am - 3 pm"]
-    }
-},{
-    "id": "vintage-room-camden",
-    "name": "Vintage Room",
-    "description": "Cocktail bar and small-plates restaurant on the ground floor of the 16 Bay View hotel, serving globally-influenced shareable dishes alongside craft cocktails and a curated wine list.",
-    "address": "16 Bay View St, Camden ME 04843",
-    "phone": "207-706-7990",
-    "url": "https://16bayview.com/vintage-room/",
-    "tags": [
-        "cocktails",
-        "tapas",
-        "late night"
-    ],
-    "hours": {
-        "mon": ["5 pm - 11 pm"],
-        "tue": ["5 pm - 11 pm"],
-        "wed": ["5 pm - 11 pm"],
-        "thr": ["5 pm - 11 pm"],
-        "fri": ["5 pm - 11 pm"],
-        "sat": ["5 pm - 11 pm"],
-        "sun": ["5 pm - 11 pm"]
-    }
-},{
     "id": "wasses-rockland",
     "name": "Wasses Hot Dogs",
     "description": "Take-out stand offering grilled hot dogs and burgers. Uses peanut oil. Cash only.",
@@ -1399,25 +1068,6 @@
         "fri": ["10:30 am - 4 pm"],
         "sat": ["10:30 am - 4 pm"],
         "sun": ["10:30 am - 4 pm"]
-    }
-},{
-    "id": "wasses-thomaston",
-    "name": "Wasses Hot Dogs",
-    "description": "Take-out stand offering grilled hot dogs and burgers. Uses peanut oil. Cash only.",
-    "address": "179 New County Rd, Thomaston ME 04861",
-    "phone": "207-594-4347",
-    "url": "https://www.facebook.com/p/Wasses-100063547511258/",
-    "tags": [
-        "hot dogs", "burgers", "takeout"
-    ],
-    "hours": {
-        "mon": [],
-        "tue": ["11 am - 3 pm"],
-        "wed": ["11 am - 3 pm"],
-        "thr": ["11 am - 3 pm"],
-        "fri": ["11 am - 3 pm"],
-        "sat": ["11 am - 3 pm"],
-        "sun": []
     }
 },{
     "id": "waterworks-rockland",
@@ -1439,24 +1089,395 @@
         "sun": []
     }
 },{
-    "id": "winonas-camden",
-    "name": "Winona's",
-    "description": "Intimate 20-seat restaurant serving chef-driven small plates that change every two weeks, built around seasonal Maine coast ingredients. Open kitchen with curated wine pairings; reservations recommended.",
-    "address": "31 Elm St, Camden ME 04843",
-    "phone": "",
-    "url": "https://www.winonasmaine.com/",
+    "id": "black-harpoon-spruce-head",
+    "name": "The Black Harpoon",
+    "description": "Family-friendly seafood restaurant and bar in Port Clyde featuring locally sourced fish, steaks, and seasonal specials. Casual dining with lively evening bar scene.",
+    "address": "202 Drift Inn Rd, Port Clyde ME 04855",
+    "phone": "207-372-2167",
+    "url": "http://www.theblackharpoon.com/",
     "tags": [
-        "Fine Dining",
-        "Wine",
-        "Farm to Table"
+        "Seafood",
+        "Steakhouse",
+        "Pub"
     ],
     "hours": {
         "mon": [],
+        "tue": ["4:30 pm - 8 pm"],
+        "wed": ["4:30 pm - 8 pm"],
+        "thr": ["4:30 pm - 8 pm"],
+        "fri": ["4:30 pm - 8 pm"],
+        "sat": [],
+        "sun": []
+    }
+},{
+    "id": "causeway-spruce-head",
+    "name": "Causeway Restaurant",
+    "description": "Year-round dining room and deck with ocean views over the Spruce Head coastline, serving local seafood.",
+    "address": "5 3rd St, St George ME 04859",
+    "phone": "207-594-7644",
+    "url": "https://craignair.com/maine-inn-restaurant/",
+    "tags": [
+        "seafood",
+        "waterfront",
+        "brunch"
+    ],
+    "hours": {
+        "mon": ["5 pm - 8 pm"],
         "tue": [],
         "wed": [],
         "thr": ["5 pm - 8 pm"],
         "fri": ["5 pm - 8 pm"],
         "sat": ["5 pm - 8 pm"],
+        "sun": ["10 am - 8 pm"]
+    }
+},{
+    "id": "mcloons-lobster-shack-spruce-head",
+    "name": "McLoons Lobster Shack",
+    "description": "Waterfront lobster shack across from a working lobster wharf, with harbor and sunset views from the dining deck.",
+    "address": "315 Island Rd, Spruce Head ME 04858",
+    "phone": "207-593-1382",
+    "url": "https://www.mcloonslobster.com/",
+    "tags": [
+        "seafood",
+        "waterfront",
+        "outdoor seating"
+    ],
+    "hours": {
+        "mon": ["11:30 am - 7 pm"],
+        "tue": ["11:30 am - 7 pm"],
+        "wed": [],
+        "thr": [],
+        "fri": ["11:30 am - 7 pm"],
+        "sat": ["11:30 am - 7 pm"],
+        "sun": ["11:30 am - 7 pm"]
+    }
+},{
+    "id": "squid-ink-coffee-spruce-head",
+    "name": "Squid Ink Coffee",
+    "description": "Dock-side coffee café in Port Clyde with espresso drinks and pastries, featuring outdoor seating with harbor views and views of passing lobster boats.",
+    "address": "6 Cold Storage Rd, Port Clyde ME 04855",
+    "phone": "207-372-2088",
+    "url": "https://www.instagram.com/_squidinkcoffee/",
+    "tags": [
+        "Coffee",
+        "Outdoor Seating",
+        "Café"
+    ],
+    "hours": {
+        "mon": [],
+        "tue": [],
+        "wed": ["7 am - 2:30 pm"],
+        "thr": ["7 am - 2:30 pm"],
+        "fri": ["7 am - 2:30 pm"],
+        "sat": ["7 am - 2:30 pm"],
+        "sun": ["7 am - 2:30 pm"]
+    }
+},{
+    "id": "tenants-harbor-general-store-spruce-head",
+    "name": "Tenants Harbor General Store",
+    "description": "Full-service general store with deli counter serving breakfast, lunch, and dinner sandwiches, wraps, and salads. Also offers Maine-roasted coffee, meat and seafood counter, and wine selection.",
+    "address": "16 Main St, Tenants Harbor ME 04860",
+    "phone": "207-372-6311",
+    "url": "https://www.facebook.com/TenantsHarborGeneralStore/",
+    "tags": [
+        "Sandwiches",
+        "Coffee",
+        "Takeout"
+    ],
+    "hours": {
+        "mon": ["5 am - 8 pm"],
+        "tue": ["5 am - 8 pm"],
+        "wed": ["5 am - 8 pm"],
+        "thr": ["5 am - 8 pm"],
+        "fri": ["5 am - 8 pm"],
+        "sat": ["5 am - 8 pm"],
+        "sun": ["5 am - 8 pm"]
+    }
+},{
+    "id": "athens-pizza-thomaston",
+    "name": "Athens Pizzeria",
+    "description": "Family-owned pizzeria serving Greek specialties like gyros and spanakopita alongside pizza, pasta, and subs.",
+    "address": "179 Main St, Thomaston ME 04861",
+    "phone": "207-354-0040",
+    "url": "https://athenspizza.hrpos.heartland.us/menu",
+    "tags": [
+        "pizza", "delivery", "greek"
+    ],
+    "hours": {
+        "mon": ["11 am - 8 pm"],
+        "tue": ["11 am - 8 pm"],
+        "wed": ["11 am - 8 pm"],
+        "thr": ["11 am - 8 pm"],
+        "fri": ["11 am - 9 pm"],
+        "sat": ["11 am - 9 pm"],
+        "sun": []
+    }
+},{
+    "id": "crooked-spoon-thomaston",
+    "name": "Crooked Spoon",
+    "description": "Intimate Italian restaurant featuring handmade fresh pasta, focaccia, and seasonal dishes paired with craft cocktails and carefully curated wines. Limited dinner hours.",
+    "address": "173 Main St, Thomaston ME 04861",
+    "phone": "908-415-2434",
+    "url": "https://www.crookedspoonmaine.com/",
+    "tags": [
+        "Italian",
+        "Cocktails",
+        "Wine"
+    ],
+    "hours": {
+        "mon": ["4:30 pm - 9 pm"],
+        "tue": [],
+        "wed": [],
+        "thr": ["4:30 pm - 9 pm"],
+        "fri": ["4:30 pm - 9 pm"],
+        "sat": [],
+        "sun": []
+    }
+},{
+    "id": "doormans-thomaston",
+    "name": "Dorman's Dairy Dream",
+    "description": "Beloved seasonal ice cream stand making its own ice cream in-house, with flavors from Maine blueberry to grapenut.",
+    "address": "189 New County Rd, Thomaston ME 04861",
+    "phone": "207-390-0121",
+    "url": "https://www.facebook.com/dormansdairydream/",
+    "tags": [
+        "ice cream",
+        "takeout"
+    ],
+    "hours": {
+        "mon": [],
+        "tue": [],
+        "wed": [],
+        "thr": ["12 pm - 7 pm"],
+        "fri": ["12 pm - 7 pm"],
+        "sat": ["12 pm - 7 pm"],
+        "sun": ["12 pm - 7 pm"]
+    }
+},{
+    "id": "flipside-coffee-thomaston",
+    "name": "FlipSide Coffee",
+    "description": "Beloved downtown Thomaston gathering spot with thoughtfully sourced coffee, espresso drinks, and a menu of breakfast and lunch items. Wheelchair accessible with covered patio and local art on display.",
+    "address": "189 Main St, Thomaston ME 04861",
+    "phone": "207-354-5221",
+    "url": "https://www.facebook.com/flipsidecoffeemaine/",
+    "tags": [
+        "Coffee",
+        "Café",
+        "Breakfast"
+    ],
+    "hours": {
+        "mon": [
+            "7 am - 3 pm"
+        ],
+        "tue": [
+            "7 am - 3 pm"
+        ],
+        "wed": [
+            "7 am - 3 pm"
+        ],
+        "thr": [
+            "7 am - 3 pm"
+        ],
+        "fri": [
+            "7 am - 3 pm"
+        ],
+        "sat": [
+            "7 am - 3 pm"
+        ],
+        "sun": [
+            "7 am - 3 pm"
+        ]
+    }
+},{
+    "id": "honeys-fried-chicken-palace-thomaston",
+    "name": "Honey's Fried Chicken Palace",
+    "description": "Casual fried chicken spot specializing in hand-trimmed chicken thighs seasoned in a custom blend of 12 herbs and spices, served with 17+ housemade sauces on brioche buns. Opened April 2025.",
+    "address": "153 New County Rd, Thomaston ME 04861",
+    "phone": "207-593-8090",
+    "url": "https://www.gethoneys.com/",
+    "tags": [
+        "Fried Chicken",
+        "Takeout",
+        "Fast Food"
+    ],
+    "hours": {
+        "mon": ["11 am - 7 pm"],
+        "tue": ["11 am - 7 pm"],
+        "wed": ["11 am - 7 pm"],
+        "thr": ["11 am - 7 pm"],
+        "fri": ["11 am - 7 pm"],
+        "sat": ["11 am - 7 pm"],
+        "sun": ["11 am - 7 pm"]
+    }
+},{
+    "id": "hot-hill-tavern-thomaston",
+    "name": "Hot Hill Tavern",
+    "description": "Neighborhood tavern serving pub fare with Puerto Rican-influenced specialties, plus live music and pool tables.",
+    "address": "1 Starr St, Thomaston, ME 04861",
+    "phone": "207-354-5144",
+    "url": "https://hothilltavernme.com/",
+    "tags": [
+        "pub",
+        "live music"
+    ],
+    "hours": {
+        "mon": [],
+        "tue": ["11 am - 10 pm"],
+        "wed": ["11 am - 10 pm"],
+        "thr": ["11 am - 10 pm"],
+        "fri": ["11 am - 12 am"],
+        "sat": ["9 am - 12 am"],
+        "sun": ["9 am - 10 pm"]
+    }
+},{
+    "id": "ka-chai-thai-street-food-thomaston",
+    "name": "Ka Chai Thai Street Food",
+    "description": "Authentic Bangkok-style Thai street food using traditional recipes and fresh ingredients. Offers takeout and delivery, with vegetarian options available.",
+    "address": "444 Main St, Thomaston ME 04861",
+    "phone": "207-354-5152",
+    "url": "https://kachaithaistreetfood.com/",
+    "tags": [
+        "Thai",
+        "Takeout",
+        "Delivery"
+    ],
+    "hours": {
+        "mon": [],
+        "tue": [
+            "11:30 am - 2 pm",
+            "4:30 pm - 7:30 pm"
+        ],
+        "wed": [
+            "11:30 am - 2 pm",
+            "4:30 pm - 7:30 pm"
+        ],
+        "thr": [
+            "11:30 am - 2 pm",
+            "4:30 pm - 7:30 pm"
+        ],
+        "fri": [
+            "11:30 am - 2 pm",
+            "4:30 pm - 8 pm"
+        ],
+        "sat": [
+            "11:30 am - 2 pm",
+            "4:30 pm - 8 pm"
+        ],
+        "sun": [
+            "4:30 pm - 7 pm"
+        ]
+    }
+},{
+    "id": "laurels-dolce-vita-thomaston",
+    "name": "Laurel's Dolce Vita",
+    "description": "Italian bakery and café in a historic 1870s firehouse featuring small-batch pastries baked fresh daily. Specializes in authentic Italian pastries, fresh pasta, and artisan breads using locally sourced ingredients.",
+    "address": "350 Main St, Thomaston ME 04861",
+    "phone": "207-354-5242",
+    "url": "https://www.facebook.com/laurelsdolcevita/",
+    "tags": [
+        "Bakery",
+        "Italian",
+        "Café"
+    ],
+    "hours": {
+        "mon": [],
+        "tue": [],
+        "wed": [],
+        "thr": [
+            "9 am - 2 pm"
+        ],
+        "fri": [
+            "9 am - 2 pm"
+        ],
+        "sat": [
+            "9 am - 2 pm"
+        ],
+        "sun": [
+            "9 am - 1 pm"
+        ]
+    }
+},{
+    "id": "station-188-bbq-thomaston",
+    "name": "Station 118 BBQ",
+    "description": "Smoked pulled pork, brisket, and ribs with homemade sides and a full bar in a casual dining room.",
+    "address": "118 Main St, Thomaston ME 04861",
+    "phone": "207-593-8208",
+    "url": "https://www.station118.com/",
+    "tags": [
+        "bbq",
+        "takeout"
+    ],
+    "hours": {
+        "mon": ["4pm - 8pm"],
+        "tue": [],
+        "wed": [],
+        "thr": ["11:30 am - 8 pm"],
+        "fri": ["11:30 am - 8 pm"],
+        "sat": ["11:30 am - 8 pm"],
+        "sun": ["11:30 am - 3 pm"]
+    }
+},{
+    "id": "the-uproot-pie-co-and-the-carriage-house-thomaston",
+    "name": "The Uproot Pie Co & The Carriage House",
+    "description": "Wood-fired pizza restaurant in a 19th-century carriage house. Offers seasonal pizza menus, salads, small bites, and a rotating beer and wine selection. Hosts pizza-making classes and special events.",
+    "address": "9 Green St, Thomaston ME 04861",
+    "phone": "207-370-1568",
+    "url": "https://www.theuprootpieco.com/carriage-house",
+    "tags": [
+        "Pizza",
+        "Café"
+    ],
+    "hours": {
+        "mon": [],
+        "tue": [],
+        "wed": [],
+        "thr": [
+            "4 pm - 8 pm"
+        ],
+        "fri": [
+            "4 pm - 8 pm"
+        ],
+        "sat": [
+            "9 am - 1 pm"
+        ],
+        "sun": []
+    }
+},{
+    "id": "thomaston-cafe-thomaston",
+    "name": "Thomaston Cafe",
+    "description": "Casual lunch-and-dinner cafe known for weekly specials like Prime Rib Wednesday and Thursday burger night.",
+    "address": "154 Main St, Thomaston ME 04861",
+    "phone": "207-354-8589",
+    "url": "https://thomastoncafeme.wixsite.com/mysite",
+    "tags": [
+        "takeout"
+    ],
+    "hours": {
+        "mon": [],
+        "tue": ["11 am - 2 pm", "5 pm - 8 pm"],
+        "wed": ["11 am - 2 pm", "5 pm - 8 pm"],
+        "thr": ["11 am - 2 pm", "5 pm - 8 pm"],
+        "fri": ["11 am - 2 pm", "5 pm - 8 pm"],
+        "sat": ["11 am - 2 pm", "5 pm - 8 pm"],
+        "sun": []
+    }
+},{
+    "id": "wasses-thomaston",
+    "name": "Wasses Hot Dogs",
+    "description": "Take-out stand offering grilled hot dogs and burgers. Uses peanut oil. Cash only.",
+    "address": "179 New County Rd, Thomaston ME 04861",
+    "phone": "207-594-4347",
+    "url": "https://www.facebook.com/p/Wasses-100063547511258/",
+    "tags": [
+        "hot dogs", "burgers", "takeout"
+    ],
+    "hours": {
+        "mon": [],
+        "tue": ["11 am - 3 pm"],
+        "wed": ["11 am - 3 pm"],
+        "thr": ["11 am - 3 pm"],
+        "fri": ["11 am - 3 pm"],
+        "sat": ["11 am - 3 pm"],
         "sun": []
     }
 },{
@@ -1477,26 +1498,5 @@
         "fri": ["11 am - 6 pm"],
         "sat": ["11 am - 6 pm"],
         "sun": []
-    }
-},{
-    "id": "zoot-coffee-camden",
-    "name": "Zoot Coffee",
-    "description": "Cafe and on-site coffee roaster serving espresso drinks and a light breakfast and lunch menu near the harbor.",
-    "address": "5 Elm St, Camden ME 04843",
-    "phone": "207-236-9858",
-    "url": "https://zootcoffee.com/",
-    "tags": [
-        "coffee",
-        "café",
-        "breakfast"
-    ],
-    "hours": {
-        "mon": ["7 am - 4 pm"],
-        "tue": ["7 am - 4 pm"],
-        "wed": ["7 am - 4 pm"],
-        "thr": ["7 am - 4 pm"],
-        "fri": ["7 am - 4 pm"],
-        "sat": ["7 am - 4 pm"],
-        "sun": ["7 am - 4 pm"]
     }
 }]
