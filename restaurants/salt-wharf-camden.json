@@ -1,0 +1,22 @@
+{
+    "id": "salt-wharf-camden",
+    "name": "Salt Wharf",
+    "description": "Waterfront restaurant and rooftop bar serving coastal seafood. The rooftop and patio offer a casual menu including lobster rolls, while the dining room below serves a more chef-driven menu.",
+    "address": "3 Wayfarer Dr, Camden ME 04843",
+    "phone": "207-230-8025",
+    "url": "https://www.saltwharf.com/",
+    "tags": [
+        "seafood",
+        "waterfront",
+        "rooftop"
+    ],
+    "hours": {
+        "mon": ["12 pm - 8 pm"],
+        "tue": [],
+        "wed": [],
+        "thr": ["4 pm - 8 pm"],
+        "fri": ["12 pm - 8 pm"],
+        "sat": ["12 pm - 8 pm"],
+        "sun": ["12 pm - 8 pm"]
+    }
+}

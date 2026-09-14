@@ -1,0 +1,22 @@
+{
+    "id": "winonas-camden",
+    "name": "Winona's",
+    "description": "Intimate 20-seat restaurant serving chef-driven small plates that change every two weeks, built around seasonal Maine coast ingredients. Open kitchen with curated wine pairings; reservations recommended.",
+    "address": "31 Elm St, Camden ME 04843",
+    "phone": "",
+    "url": "https://www.winonasmaine.com/",
+    "tags": [
+        "Fine Dining",
+        "Wine",
+        "Farm to Table"
+    ],
+    "hours": {
+        "mon": [],
+        "tue": [],
+        "wed": [],
+        "thr": ["5 pm - 8 pm"],
+        "fri": ["5 pm - 8 pm"],
+        "sat": ["5 pm - 8 pm"],
+        "sun": []
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "id": "vintage-room-camden",
+    "name": "Vintage Room",
+    "description": "Cocktail bar and small-plates restaurant on the ground floor of the 16 Bay View hotel, serving globally-influenced shareable dishes alongside craft cocktails and a curated wine list.",
+    "address": "16 Bay View St, Camden ME 04843",
+    "phone": "207-706-7990",
+    "url": "https://16bayview.com/vintage-room/",
+    "tags": [
+        "cocktails",
+        "tapas",
+        "late night"
+    ],
+    "hours": {
+        "mon": ["5 pm - 11 pm"],
+        "tue": ["5 pm - 11 pm"],
+        "wed": ["5 pm - 11 pm"],
+        "thr": ["5 pm - 11 pm"],
+        "fri": ["5 pm - 11 pm"],
+        "sat": ["5 pm - 11 pm"],
+        "sun": ["5 pm - 11 pm"]
+    }
+}

@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What this is
 
-A static, no-build website listing restaurants in the Rockland/Thomaston/Spruce Head, Maine area — who's open and when. Plain HTML/CSS/JS, no framework, no package manager, no build step, no tests.
+A static, no-build website listing restaurants in the Rockland/Thomaston/Camden/Spruce Head, Maine area — who's open and when. Plain HTML/CSS/JS, no framework, no package manager, no build step, no tests.
 
 ## Running locally
 
@@ -18,7 +18,7 @@ Then open `index.html` (it `fetch()`es `restaurants-combined.json`, so it must b
 
 ## Data architecture
 
-Each restaurant is a single JSON file in `restaurants/`, named `<slug>-<town>.json` (e.g. `restaurants/adas-kitchen-rockland.json`). `templates/restaurant-template.json` is the blank shape for a new entry, and the VS Code snippet `.vscode/blank_poi_json.code-snippets` (prefix `poi`) inserts the same shape.
+Each restaurant is a single JSON file in `restaurants/`, named `<slug>-<town>.json` (e.g. `restaurants/adas-kitchen-rockland.json`), where `<town>` is one of `rockland`, `thomaston`, `spruce-head`, or `camden`. `templates/restaurant-template.json` is the blank shape for a new entry, and the VS Code snippet `.vscode/blank_poi_json.code-snippets` (prefix `poi`) inserts the same shape.
 
 Restaurant JSON shape:
 ```json

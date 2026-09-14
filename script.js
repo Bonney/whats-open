@@ -25,6 +25,7 @@ const TOWNS = [
   { key: "rockland", name: "Rockland" },
   { key: "thomaston", name: "Thomaston" },
   { key: "spruce-head", name: "Spruce Head" },
+  { key: "camden", name: "Camden" },
 ];
 
 const ACRONYMS = { bbq: "BBQ" };
@@ -558,7 +559,7 @@ function writeColophon(shown) {
   const total = PLACES.length;
   el.textContent =
     (shown === total ? `${total} listings` : `${shown} of ${total} listings`) +
-    " · Rockland, Thomaston & Spruce Head, Maine";
+    " · Rockland, Thomaston, Camden & Spruce Head, Maine";
 }
 
 /* --- URL state ---------------------------------------------------------- */

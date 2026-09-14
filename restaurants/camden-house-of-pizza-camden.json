@@ -1,0 +1,21 @@
+{
+    "id": "camden-house-of-pizza-camden",
+    "name": "Camden House of Pizza",
+    "description": "Pizzeria and Greek restaurant serving pizza, gyros, pasta, salads, and burgers, with beer and wine available for 21+.",
+    "address": "12 Mechanic St, Camden ME 04843",
+    "phone": "207-230-2464",
+    "url": "https://camdenmainepizza.com/",
+    "tags": [
+        "pizza",
+        "greek"
+    ],
+    "hours": {
+        "mon": ["11 am - 8 pm"],
+        "tue": ["11 am - 8 pm"],
+        "wed": ["11 am - 8 pm"],
+        "thr": ["11 am - 8 pm"],
+        "fri": ["11 am - 9 pm"],
+        "sat": ["11 am - 9 pm"],
+        "sun": ["11 am - 8 pm"]
+    }
+}
