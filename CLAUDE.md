@@ -47,21 +47,22 @@ The site is styled as a print-style travel guide. There is no big masthead —
 a slim sticky top bar carries the wordmark plus a permanent tag nav-bar. The
 listing is one flat, alphabetised set of entries (not grouped by town): a
 sortable table on wide screens (≥ 78rem, where the guide widens to
-`--measure: 100rem`) whose last seven columns are a Mon–Sun timetable
-(compact hours per day, today's column tinted), a card list below that, and
-flowed guidebook entries on paper. A container query on each card switches
-its weekly hours between a stacked ledger and a seven-day timetable strip
-(≥ 30rem) — the same strip the table's day columns reuse.
+`--measure: 100rem`), a card list below that, and flowed guidebook entries on
+paper. A container query on each card switches its weekly hours between a
+stacked ledger and a seven-day timetable strip (≥ 30rem) — the same strip
+the table's day columns reuse.
 
-There is no Town column in the table body: the `Town` `<th>` is kept purely
-as a sort control, and each row's name `<th>` uses `colspan="2"` to sit
-under both `Name` and `Town`, with the full address on a `.board__addr`
-line beneath the name.
+The table has no Town or Cuisine columns. Each row is just a name `<th>`
+(`.board__name`) followed by the seven Mon–Sun day columns. The name cell
+recreates a condensed version of the card — name + open/closed status, tags,
+description, and address/phone — reusing the same `.place__tags` /
+`.place__desc` / `.place__contact` classes the card template uses, built by
+`boardNameCell()` in `script.js`.
 
 - `index.html` is a static shell: a `<header class="topbar">` (wordmark +
   `<nav class="tagnav">` with an empty `#tagnav-scroll`), a `<main
-  class="guide">` holding `#board` (a `<table>` whose `<thead>` has three
-  sortable `th[data-sort]` headers — Name, Town, Cuisine — then seven
+  class="guide">` holding `#board` (a `<table>` whose `<thead>` has one
+  sortable `th[data-sort="name"]` header then seven
   `th.board__day[data-day]` weekday headers, an empty `#board-body`, and an
   empty `#cards` div),
   a `<footer class="colophon">`, and a `<template id="tpl-card">` for one
@@ -81,11 +82,12 @@ line beneath the name.
   from the `id` suffix, an open-now/opens-later/closed status from the `hours`
   strings), builds the tag nav-bar (open-now toggle + every cuisine tag in
   use), and re-renders the table `<tbody>` and the card list on every filter
-  or sort change. Sorting is by name / town / cuisine via the first three
-  table headers (`aria-sort` reflects state) — sorting by town still works
-  though no town column is rendered; the seven weekday columns show each
-  day's compact hours ("–" when closed) with today's column flagged
-  `.is-today` by `markTodayColumn()`. Filter + sort state is mirrored
-  to the URL query string (`?open=1&tag=…&sort=key.dir`). Cards clone
-  `#tpl-card`, highlight the current day, and link the address to a Google
-  Maps search and the phone to `tel:`.
+  or sort change. Sorting is by name only, via the one table header
+  (`aria-sort` reflects state) — `compareBy()`/`SORT_KEYS` still support
+  `town`/`cuisine` for the `?sort=` URL param, there's just no header to
+  trigger them from; the seven weekday columns show each day's compact hours
+  ("–" when closed) with today's column flagged `.is-today` by
+  `markTodayColumn()`. Filter + sort state is mirrored to the URL query
+  string (`?open=1&tag=…&sort=key.dir`). Cards clone `#tpl-card`, highlight
+  the current day, and link the address to a Google Maps search and the
+  phone to `tel:`.

@@ -306,23 +306,7 @@ function renderTable(list) {
     const tr = document.createElement("tr");
     tr.dataset.state = p.status.state;
 
-    // Name spans the (headers-only) Town column; the address sits beneath it.
-    const name = document.createElement("th");
-    name.scope = "row";
-    name.className = "board__name";
-    name.colSpan = 2;
-    name.append(nameNode(p));
-    if (p.address) {
-      const addr = document.createElement("div");
-      addr.className = "board__addr";
-      addr.textContent = shortAddress(p.address);
-      name.append(addr);
-    }
-    tr.append(name);
-
-    tr.append(
-      cell(p.tagList.map((t) => titleCase(t)).join(", "), "board__cuisine")
-    );
+    tr.append(boardNameCell(p));
 
     for (const [key] of WEEK) {
       const td = document.createElement("td");
@@ -348,6 +332,71 @@ function renderTable(list) {
 
     body.append(tr);
   }
+}
+
+// The table's name cell — a condensed rendering of the same info as a card
+// (name, status, tags, description, contact), minus the weekly hours, which
+// the table already shows as its own seven day columns.
+function boardNameCell(place) {
+  const cell = document.createElement("th");
+  cell.scope = "row";
+  cell.className = "board__name";
+
+  const head = document.createElement("div");
+  head.className = "board__name-head";
+  head.append(nameNode(place));
+  const status = document.createElement("span");
+  status.className = "place__status";
+  status.dataset.state = place.status.state;
+  status.textContent = place.status.text;
+  head.append(status);
+  cell.append(head);
+
+  if (place.tagList.length) {
+    const tags = document.createElement("p");
+    tags.className = "place__tags";
+    for (const tag of place.tagList) {
+      const span = document.createElement("span");
+      span.className = "tag";
+      const emoji = TAG_EMOJI[tag];
+      span.textContent = (emoji ? emoji + " " : "") + titleCase(tag);
+      tags.append(span);
+    }
+    cell.append(tags);
+  }
+
+  if (place.description) {
+    const desc = document.createElement("p");
+    desc.className = "place__desc";
+    desc.textContent = place.description;
+    cell.append(desc);
+  }
+
+  if (place.address || place.phone) {
+    const contact = document.createElement("p");
+    contact.className = "place__contact";
+    if (place.address) {
+      const addr = document.createElement("a");
+      addr.className = "place__addr";
+      addr.textContent = shortAddress(place.address);
+      addr.href =
+        "https://www.google.com/maps/search/?api=1&query=" +
+        encodeURIComponent(place.address);
+      addr.target = "_blank";
+      addr.rel = "noopener";
+      contact.append(addr);
+    }
+    if (place.phone) {
+      const phone = document.createElement("a");
+      phone.className = "place__phone";
+      phone.textContent = place.phone;
+      phone.href = "tel:" + place.phone.replace(/[^\d+]/g, "");
+      contact.append(phone);
+    }
+    cell.append(contact);
+  }
+
+  return cell;
 }
 
 function renderCards(list) {
@@ -473,13 +522,6 @@ function nameNode(place) {
     el.target = "_blank";
     el.rel = "noopener";
   }
-  return el;
-}
-
-function cell(text, cls) {
-  const el = document.createElement("td");
-  if (cls) el.className = cls;
-  el.textContent = text;
   return el;
 }
 
