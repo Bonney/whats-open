@@ -450,7 +450,7 @@ button:focus-visible {
     max-width: none;
     height: 100%;
     margin-inline: 0;
-    padding: 1.25rem var(--gutter);
+    padding: 1.25rem 1.1rem;
     flex-direction: column;
     align-items: stretch;
     flex-wrap: nowrap;
