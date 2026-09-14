@@ -49,16 +49,14 @@ body {
   letter-spacing: -0.02em;
 }
 
-.place__name {
-  font-size: var(--step-1);
-  font-weight: 500;
-  letter-spacing: -0.012em;
-  line-height: 1.15;
-}
-
+/* The place name — same size and weight wherever a place renders (card or
+   the table's condensed name cell). */
+.place__name,
 .board__name {
   font-size: var(--step-0);
   font-weight: 500;
+  letter-spacing: -0.012em;
+  line-height: 1.15;
 }
 
 /* Editorial supporting text ---------------------------------------------------- */
@@ -91,6 +89,7 @@ body {
 }
 
 .place__status {
+  font-family: var(--font-text);
   font-size: 0.72rem;
   font-weight: 500;
   letter-spacing: 0.09em;
@@ -116,11 +115,6 @@ body {
   font-weight: 600;
   letter-spacing: 0.09em;
   text-transform: uppercase;
-}
-
-.board__status,
-.board__today {
-  font-variant-numeric: tabular-nums;
 }
 
 .hours {

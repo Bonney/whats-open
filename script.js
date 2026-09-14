@@ -467,7 +467,7 @@ function buildCard(place) {
   // Contact
   const addrEl = el.querySelector("[data-addr]");
   if (place.address) {
-    addrEl.textContent = place.address;
+    addrEl.textContent = shortAddress(place.address);
     addrEl.href =
       "https://www.google.com/maps/search/?api=1&query=" +
       encodeURIComponent(place.address);
