@@ -401,7 +401,7 @@ button:focus-visible {
    takes over, the cards step aside, and the guide widens to hold the extra
    columns. The switch waits until 78rem — eight columns need the room. */
 @media (min-width: 78rem) {
-  :root { --measure: 100rem; --sidebar-w: 18rem; }
+  :root { --measure: 100rem; --sidebar-w: 15rem; }
   .board__table { display: table; }
   .cards { display: none; }
 
@@ -430,11 +430,16 @@ button:focus-visible {
     background: var(--paper-sunk);
   }
 
+  /* No horizontal padding here: .tagnav is the scrolling element below, and
+     its scrollbar needs to reach this container's true edge (flush with the
+     sidebar's background/border) rather than floating inset inside a
+     padded box. The inset is applied per-child instead. */
   .topbar__inner {
     max-width: none;
     height: 100%;
     margin-inline: 0;
-    padding: 1.25rem 1.1rem;
+    padding-block: 1.25rem;
+    padding-inline: 0;
     flex-direction: column;
     align-items: stretch;
     flex-wrap: nowrap;
@@ -444,7 +449,7 @@ button:focus-visible {
   .searchbar {
     flex: 0 0 auto;
     max-width: none;
-    margin-inline: 0;
+    margin-inline: 1rem;
   }
 
   .tagnav {
@@ -459,7 +464,7 @@ button:focus-visible {
     flex-direction: column;
     align-items: stretch;
     overflow-x: visible;
-    padding-inline-end: 0;
+    padding-inline: 1rem 0.5rem;
   }
   /* Unselected tags read as a plain list here, not a stack of bordered
      chips — the pill/"cell" treatment is reserved for the active filters. */
