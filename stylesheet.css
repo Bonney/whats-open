@@ -427,6 +427,7 @@ button:focus-visible {
     overflow-y: auto;
     border-bottom: 0;
     border-right: 1px solid var(--rule-strong);
+    background: var(--paper-sunk);
   }
 
   .topbar__inner {
@@ -460,7 +461,23 @@ button:focus-visible {
     overflow-x: visible;
     padding-inline-end: 0;
   }
-  .tagnav .chip { width: 100%; text-align: left; }
+  /* Unselected tags read as a plain list here, not a stack of bordered
+     chips — the pill/"cell" treatment is reserved for the active filters. */
+  .tagnav .chip {
+    width: 100%;
+    text-align: left;
+    border-color: transparent;
+    background: transparent;
+  }
+  .tagnav .chip:hover { border-color: transparent; background: var(--paper); }
+  .tagnav .chip[aria-pressed="true"] {
+    border-color: var(--ink);
+    background: var(--ink);
+  }
+  .tagnav .chip--open[aria-pressed="true"] {
+    border-color: var(--open);
+    background: var(--open);
+  }
 
   .guide { grid-column: 2; grid-row: 1; }
   .colophon { grid-column: 2; grid-row: 2; }
