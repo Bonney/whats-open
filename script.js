@@ -390,7 +390,7 @@ function boardNameCell(place) {
     cell.append(desc);
   }
 
-  if (place.address || place.phone) {
+  if (hasContact(place)) {
     const contact = document.createElement("p");
     contact.className = "place__contact";
     if (place.address) {
@@ -411,10 +411,46 @@ function boardNameCell(place) {
       phone.href = "tel:" + place.phone.replace(/[^\d+]/g, "");
       contact.append(phone);
     }
+    for (const link of contactLinks(place)) contact.append(link);
     cell.append(contact);
   }
 
   return cell;
+}
+
+// Whether a place has anything to show in its .place__contact line.
+function hasContact(place) {
+  return Boolean(
+    place.address ||
+      place.phone ||
+      place.url ||
+      place.facebook ||
+      place.instagram ||
+      place.order
+  );
+}
+
+// The web / Facebook / Instagram / online-order links, in that order —
+// shared between the card and the table's condensed name cell.
+function contactLinks(place) {
+  const specs = [
+    ["place__web", "url", "Web"],
+    ["place__facebook", "facebook", "Facebook"],
+    ["place__instagram", "instagram", "Instagram"],
+    ["place__order", "order", "Order online"],
+  ];
+  const links = [];
+  for (const [cls, field, label] of specs) {
+    if (!place[field]) continue;
+    const a = document.createElement("a");
+    a.className = cls;
+    a.textContent = label;
+    a.href = place[field];
+    a.target = "_blank";
+    a.rel = "noopener";
+    links.push(a);
+  }
+  return links;
 }
 
 function renderCards(list) {
@@ -480,7 +516,19 @@ function buildCard(place) {
     phoneEl.href = "tel:" + place.phone.replace(/[^\d+]/g, "");
     phoneEl.hidden = false;
   }
-  if (!place.address && !place.phone) {
+  const linkFields = [
+    ["[data-web]", place.url],
+    ["[data-facebook]", place.facebook],
+    ["[data-instagram]", place.instagram],
+    ["[data-order]", place.order],
+  ];
+  for (const [selector, href] of linkFields) {
+    if (!href) continue;
+    const a = el.querySelector(selector);
+    a.href = href;
+    a.hidden = false;
+  }
+  if (!hasContact(place)) {
     el.querySelector(".place__contact").remove();
   }
 

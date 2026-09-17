@@ -29,6 +29,9 @@ Restaurant JSON shape:
   "address": "",
   "phone": "",
   "url": "",
+  "facebook": "",
+  "instagram": "",
+  "order": "",
   "tags": [],
   "hours": {
     "mon": [], "tue": [], "wed": [], "thr": [], "fri": [], "sat": [], "sun": []
@@ -37,6 +40,7 @@ Restaurant JSON shape:
 ```
 - `hours` days are keyed `mon/tue/wed/thr/fri/sat/sun` (note: Thursday is `thr`, not `thu`).
 - Each day's value is an array of time-range strings (e.g. `"4 pm - 9 pm"`); empty array means closed.
+- `url` is the restaurant's own website (also used as the entry name's hyperlink); `facebook`, `instagram`, and `order` are optional links to a Facebook page, an Instagram profile, and an online-ordering page, respectively. All four are omitted or left `""` when unknown, and only render (as "Web"/"Facebook"/"Instagram"/"Order online" links next to the address and phone) when present.
 - `tags` are free-form strings; `tags.json` maps known tag names to a display emoji (used for future UI, not yet wired into `script.js`).
 
 **`restaurants-combined.json` is generated, not hand-edited.** A GitHub Actions workflow (`.github/workflows/combine-poi-json.yml`) runs on every push to `main`, concatenates all files in `restaurants/*/*.json` into `restaurants-combined.json`, and commits/pushes the result back to `main` if it changed. When adding or editing a restaurant, only touch the individual file under `restaurants/<town>/` — CI will regenerate the combined file on push, but **also rebuild it locally in the same change** (mirroring the workflow's own concatenation logic) so `restaurants-combined.json` stays in sync with `restaurants/*/*.json` for local testing and so the diff is included in the commit:
