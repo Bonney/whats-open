@@ -5,8 +5,11 @@
     "address": "7 Lindsey St, Rockland ME 04841",
     "phone": "207-596-2753",
     "url": "http://waterworksrockland.com/",
+    "facebook": "https://www.facebook.com/waterworksrestaurant/",
     "tags": [
-        "pub", "seafood", "outdoor seating"
+        "pub",
+        "seafood",
+        "outdoor seating"
     ],
     "hours": {
         "mon": [],

@@ -5,6 +5,8 @@
     "address": "350 Main St, Thomaston ME 04861",
     "phone": "207-354-5242",
     "url": "https://www.facebook.com/laurelsdolcevita/",
+    "facebook": "https://www.facebook.com/laurelsdolcevita/",
+    "instagram": "https://www.instagram.com/laurelsdolcevita/",
     "tags": [
         "Bakery",
         "Italian",
@@ -14,17 +16,9 @@
         "mon": [],
         "tue": [],
         "wed": [],
-        "thr": [
-            "9 am - 2 pm"
-        ],
-        "fri": [
-            "9 am - 2 pm"
-        ],
-        "sat": [
-            "9 am - 2 pm"
-        ],
-        "sun": [
-            "9 am - 1 pm"
-        ]
+        "thr": ["9 am - 2 pm"],
+        "fri": ["9 am - 2 pm"],
+        "sat": ["9 am - 2 pm"],
+        "sun": ["9 am - 1 pm"]
     }
 }

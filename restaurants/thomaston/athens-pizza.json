@@ -5,8 +5,13 @@
     "address": "179 Main St, Thomaston ME 04861",
     "phone": "207-354-0040",
     "url": "https://athenspizza.hrpos.heartland.us/menu",
+    "facebook": "https://www.facebook.com/theathenspizza/",
+    "instagram": "https://www.instagram.com/athenspizzeria/",
+    "order": "https://athenspizza.hrpos.heartland.us/menu",
     "tags": [
-        "pizza", "delivery", "greek"
+        "pizza",
+        "delivery",
+        "greek"
     ],
     "hours": {
         "mon": ["11 am - 8 pm"],

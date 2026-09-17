@@ -5,32 +5,20 @@
     "address": "189 Main St, Thomaston ME 04861",
     "phone": "207-354-5221",
     "url": "https://www.facebook.com/flipsidecoffeemaine/",
+    "instagram": "https://www.instagram.com/flipsidecoffeemaine/",
+    "order": "https://flipside-coffee.res-menu.net/",
     "tags": [
         "Coffee",
         "Café",
         "Breakfast"
     ],
     "hours": {
-        "mon": [
-            "7 am - 3 pm"
-        ],
-        "tue": [
-            "7 am - 3 pm"
-        ],
-        "wed": [
-            "7 am - 3 pm"
-        ],
-        "thr": [
-            "7 am - 3 pm"
-        ],
-        "fri": [
-            "7 am - 3 pm"
-        ],
-        "sat": [
-            "7 am - 3 pm"
-        ],
-        "sun": [
-            "7 am - 3 pm"
-        ]
+        "mon": ["7 am - 3 pm"],
+        "tue": ["7 am - 3 pm"],
+        "wed": ["7 am - 3 pm"],
+        "thr": ["7 am - 3 pm"],
+        "fri": ["7 am - 3 pm"],
+        "sat": ["7 am - 3 pm"],
+        "sun": ["7 am - 3 pm"]
     }
 }

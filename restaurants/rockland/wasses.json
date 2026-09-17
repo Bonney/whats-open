@@ -5,8 +5,11 @@
     "address": "2 N Main St, Rockland ME 04841",
     "phone": "207-594-7472",
     "url": "https://www.facebook.com/people/Wasses/100063547511258/",
+    "facebook": "https://www.facebook.com/people/Wasses/100063547511258/",
     "tags": [
-        "hot dogs", "burgers", "takeout"
+        "hot dogs",
+        "burgers",
+        "takeout"
     ],
     "hours": {
         "mon": ["10:30 am - 4 pm"],

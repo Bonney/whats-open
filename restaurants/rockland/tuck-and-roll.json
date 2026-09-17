@@ -5,6 +5,7 @@
     "address": "3 Park Dr, Rockland ME 04841",
     "phone": "207-390-5880",
     "url": "https://www.facebook.com/TuckAndRollFoodTruck/",
+    "facebook": "https://www.facebook.com/TuckAndRollFoodTruck/",
     "tags": [
         "Food Truck",
         "Breakfast",
@@ -14,17 +15,9 @@
         "mon": [],
         "tue": [],
         "wed": [],
-        "thr": [
-            "8 am - 2 pm"
-        ],
-        "fri": [
-            "8 am - 2 pm"
-        ],
-        "sat": [
-            "8 am - 2 pm"
-        ],
-        "sun": [
-            "8 am - 1 pm"
-        ]
+        "thr": ["8 am - 2 pm"],
+        "fri": ["8 am - 2 pm"],
+        "sat": ["8 am - 2 pm"],
+        "sun": ["8 am - 1 pm"]
     }
 }
