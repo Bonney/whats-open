@@ -546,6 +546,7 @@ button:focus-visible {
 }
 .place__status[data-state="open"] { color: var(--open); }
 .place__status[data-state="soon"] { color: var(--lobster); }
+.place__status[data-state="open"][data-closing-soon] { color: var(--lobster); }
 
 .place__town {
   color: var(--ink-45);

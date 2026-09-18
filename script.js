@@ -366,6 +366,7 @@ function boardNameCell(place) {
   const status = document.createElement("span");
   status.className = "place__status";
   status.dataset.state = place.status.state;
+  if (place.status.closingSoon) status.dataset.closingSoon = "";
   status.textContent = place.status.text;
   head.append(status);
   cell.append(head);
@@ -470,6 +471,7 @@ function buildCard(place) {
   const statusEl = el.querySelector("[data-status]");
   statusEl.textContent = place.status.text;
   statusEl.dataset.state = place.status.state;
+  if (place.status.closingSoon) statusEl.dataset.closingSoon = "";
   statusEl.hidden = false;
   el.dataset.open = String(place.status.state === "open");
 
@@ -697,6 +699,19 @@ function labelled(cls, text) {
   return span;
 }
 
+// Under this many minutes from closing, status reads "Closing soon" instead
+// of "Open" (state stays "open" — it still counts for the "Open now" filter).
+const CLOSING_SOON_MINUTES = 30;
+
+function openStatus(endMin, mins) {
+  const closingSoon = endMin - mins <= CLOSING_SOON_MINUTES;
+  return {
+    state: "open",
+    closingSoon,
+    text: `${closingSoon ? "Closing soon" : "Open"} · until ${formatClock(endMin)}`,
+  };
+}
+
 function statusFor(hours, now) {
   const dow = now.getDay();
   const todayKey = DAY_KEYS[dow];
@@ -707,7 +722,7 @@ function statusFor(hours, now) {
   for (const raw of hours[yesterdayKey] || []) {
     const r = parseRange(raw);
     if (r && r.end > 1440 && mins < r.end - 1440) {
-      return { state: "open", text: `Open · until ${formatClock(r.end - 1440)}` };
+      return openStatus(r.end - 1440, mins);
     }
   }
 
@@ -715,7 +730,7 @@ function statusFor(hours, now) {
   let nextOpen = null;
   for (const r of today) {
     if (mins >= r.start && mins < r.end) {
-      return { state: "open", text: `Open · until ${formatClock(r.end)}` };
+      return openStatus(r.end, mins);
     }
     if (mins < r.start && (nextOpen == null || r.start < nextOpen)) {
       nextOpen = r.start;
