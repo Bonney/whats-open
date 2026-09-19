@@ -1083,6 +1083,30 @@
         "sun": []
     }
 },{
+    "id": "the-idle-hour-rockland",
+    "name": "The Idle Hour",
+    "description": "Bar and restaurant on Main Street opened by longtime Ada's Kitchen staff, serving seafood-forward pub fare including oysters, chowder, and fish and chips alongside cocktails.",
+    "address": "273 Main St, Rockland ME 04841",
+    "phone": "207-466-9211",
+    "url": "https://www.facebook.com/p/The-Idle-Hour-61590194527736/",
+    "facebook": "https://www.facebook.com/p/The-Idle-Hour-61590194527736/",
+    "instagram": "https://www.instagram.com/theidlehourmaine/",
+    "order": "",
+    "tags": [
+        "pub",
+        "seafood",
+        "cocktails"
+    ],
+    "hours": {
+        "mon": [],
+        "tue": [],
+        "wed": [],
+        "thr": [],
+        "fri": [],
+        "sat": [],
+        "sun": []
+    }
+},{
     "id": "trackside-station-rockland",
     "name": "Trackside Station",
     "description": "Full-service bar and grill in Rockland's historic former train station, hosting everything from casual meals to weddings.",
