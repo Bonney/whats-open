@@ -1098,13 +1098,13 @@
         "cocktails"
     ],
     "hours": {
-        "mon": [],
-        "tue": [],
+        "mon": ["11 am - 8 pm"],
+        "tue": ["11 am - 8 pm"],
         "wed": [],
         "thr": [],
-        "fri": [],
-        "sat": [],
-        "sun": []
+        "fri": ["11 am - 8 pm"],
+        "sat": ["11 am - 8 pm"],
+        "sun": ["11 am - 8 pm"]
     }
 },{
     "id": "trackside-station-rockland",
