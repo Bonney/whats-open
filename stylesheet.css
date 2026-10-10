@@ -195,6 +195,7 @@ button:focus-visible {
 .searchbar__input {
   width: 100%;
   padding: 0.45rem 0.8rem;
+  font-size: 0.875rem;
   border: 1px solid var(--rule-strong);
   border-radius: 999px;
   background: var(--paper-raised);
