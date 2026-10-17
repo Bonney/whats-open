@@ -4,8 +4,10 @@
    Progressive enhancement: the page ships as a slim top bar (the tag
    nav-bar) and an empty <main>. This script assembles the listings as a
    sortable table on wide screens and a card list on narrow ones, works out
-   who's open right now, and wires up the tag filters. No framework, no
-   build step.
+   who's open right now, and wires up the tag filters. A second "Map" view
+   plots the same filtered list on an OpenStreetMap (Leaflet, loaded only
+   when the map is first opened), coloured by open / opens later / closed.
+   No framework, no build step.
    ========================================================================== */
 
 // getDay() order, Sunday first. Note the data keys Thursday as "thr".
@@ -32,6 +34,17 @@ const ACRONYMS = { bbq: "BBQ" };
 
 const SORT_KEYS = ["name", "town", "cuisine"];
 
+// Leaflet comes from a CDN, and only once someone opens the map.
+const LEAFLET = {
+  css: "https://unpkg.com/leaflet@1.9.4/dist/leaflet.css",
+  cssIntegrity: "sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=",
+  js: "https://unpkg.com/leaflet@1.9.4/dist/leaflet.js",
+  jsIntegrity: "sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=",
+};
+
+// Zoomed in at least this far, open places get a permanent name label.
+const MAP_LABEL_ZOOM = 15;
+
 let TAG_EMOJI = {};
 let PLACES = [];
 const NOW = new Date();
@@ -43,6 +56,7 @@ const state = {
   query: "",
   sortKey: "name",
   sortDir: "asc",
+  view: "list",
 };
 
 init();
@@ -107,6 +121,7 @@ function enrich(place) {
     searchText,
     status: statusFor(place.hours || {}, NOW),
     sortName: sortName(place.name),
+    coords: coordsOf(place),
   };
 }
 
@@ -118,6 +133,7 @@ function setup() {
   readURL();
 
   buildTagNav();
+  wireViewSwitch();
   wireSearch();
   wireSorting();
   markTodayColumn();
@@ -125,6 +141,19 @@ function setup() {
 
   board.hidden = false;
   applyAndRender();
+}
+
+/* --- List / Map view switch ---------------------------------------------- */
+
+function wireViewSwitch() {
+  const group = document.querySelector(".viewswitch");
+  if (!group) return;
+  group.addEventListener("click", (e) => {
+    const btn = e.target.closest("button[data-view]");
+    if (!btn || btn.dataset.view === state.view) return;
+    state.view = btn.dataset.view;
+    applyAndRender();
+  });
 }
 
 /* --- The search bar ------------------------------------------------------ */
@@ -279,9 +308,18 @@ function compareBy(a, b, key) {
 function applyAndRender() {
   const list = currentList();
 
+  const onMap = state.view === "map";
+  document.getElementById("board").hidden = onMap;
+  document.getElementById("mapview").hidden = !onMap;
+  document.querySelector(".guide").dataset.view = state.view;
+  for (const btn of document.querySelectorAll(".viewswitch button")) {
+    btn.setAttribute("aria-pressed", String(btn.dataset.view === state.view));
+  }
+
   renderTable(list);
   renderCards(list);
   document.getElementById("empty").hidden = list.length > 0;
+  if (onMap) renderMap(list);
 
   const filtering =
     state.open ||
@@ -612,6 +650,237 @@ function writeColophon(shown) {
     " · Rockland, Thomaston, Camden & Spruce Head, Maine";
 }
 
+/* --- The map ------------------------------------------------------------- */
+
+let MAP = null;          // the Leaflet map, once built
+let MAP_LAYER = null;    // the current set of pins
+let MAP_FITTED = "";     // ids the view was last fitted to
+let leafletLoading = null;
+
+function loadLeaflet() {
+  if (window.L) return Promise.resolve();
+  leafletLoading ||= new Promise((resolve, reject) => {
+    const css = document.createElement("link");
+    css.rel = "stylesheet";
+    css.href = LEAFLET.css;
+    css.integrity = LEAFLET.cssIntegrity;
+    css.crossOrigin = "";
+    document.head.append(css);
+
+    const js = document.createElement("script");
+    js.src = LEAFLET.js;
+    js.integrity = LEAFLET.jsIntegrity;
+    js.crossOrigin = "";
+    js.onload = resolve;
+    js.onerror = () => {
+      leafletLoading = null;
+      reject(new Error("Leaflet failed to load"));
+    };
+    document.head.append(js);
+  });
+  return leafletLoading;
+}
+
+async function renderMap(list) {
+  const legend = document.getElementById("map-legend");
+  try {
+    await loadLeaflet();
+  } catch (err) {
+    console.error(err);
+    legend.textContent = "The map could not be loaded just now.";
+    return;
+  }
+  // The view may have changed while Leaflet was loading.
+  if (state.view !== "map") return;
+
+  if (!MAP) {
+    MAP = L.map("map", { scrollWheelZoom: true });
+    L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+      maxZoom: 19,
+      attribution:
+        '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+    }).addTo(MAP);
+    MAP.setView([44.08, -69.12], 11);
+    MAP.on("zoomend", syncMapLabels);
+  }
+  MAP.invalidateSize();
+
+  const mapped = list.filter((p) => p.coords);
+  MAP_LAYER?.remove();
+  MAP_LAYER = L.featureGroup();
+
+  // Draw closed first so open pins sit on top where they overlap.
+  const rank = { closed: 0, soon: 1, open: 2 };
+  const ordered = [...mapped].sort(
+    (a, b) => rank[a.status.state] - rank[b.status.state]
+  );
+  const spots = spreadDuplicates(ordered);
+  for (const p of ordered) {
+    const marker = L.circleMarker(spots.get(p), {
+      radius: p.status.state === "open" ? 9 : 7,
+      weight: 2,
+      fillOpacity: 1,
+      className: "pin pin--" + p.status.state,
+    });
+    marker.place = p;
+    marker.bindPopup(() => mapPopup(p), { maxWidth: 280 });
+    MAP_LAYER.addLayer(marker);
+  }
+  MAP_LAYER.addTo(MAP);
+  syncMapLabels();
+
+  // Re-fit only when the set of pins changes, so a re-render that doesn't
+  // change what's shown doesn't throw away the reader's pan and zoom.
+  const key = mapped.map((p) => p.id).join("|");
+  if (key !== MAP_FITTED && mapped.length) {
+    // Extra room at the bottom so no pin hides under the legend.
+    MAP.fitBounds(MAP_LAYER.getBounds(), {
+      paddingTopLeft: [40, 40],
+      paddingBottomRight: [40, 110],
+      maxZoom: 16,
+    });
+  }
+  MAP_FITTED = key;
+
+  writeMapLegend(list, mapped);
+}
+
+// Permanent name labels on the open pins, but only once zoomed in far enough
+// for them not to pile up on top of each other.
+function syncMapLabels() {
+  const zoomedIn = MAP.getZoom() >= MAP_LABEL_ZOOM;
+  MAP_LAYER?.eachLayer((marker) => {
+    const permanent = zoomedIn && marker.place.status.state === "open";
+    if (marker.getTooltip()?.options.permanent === permanent) return;
+    marker.unbindTooltip();
+    marker.bindTooltip(marker.place.name || "Unnamed listing", {
+      direction: "top",
+      offset: [0, -8],
+      className: "pin__label",
+      permanent,
+    });
+  });
+}
+
+// Places that share an address (or a building) would hide one another, so
+// nudge each repeat a few metres around a small circle.
+function spreadDuplicates(places) {
+  const seen = new Map();
+  const spots = new Map();
+  for (const p of places) {
+    const key = p.coords.join(",");
+    const n = seen.get(key) || 0;
+    seen.set(key, n + 1);
+    const angle = (n * Math.PI * 2) / 6;
+    const r = n ? 0.00012 : 0;
+    spots.set(p, [
+      p.coords[0] + r * Math.sin(angle),
+      p.coords[1] + r * Math.cos(angle) * 1.4,
+    ]);
+  }
+  return spots;
+}
+
+function mapPopup(place) {
+  const el = document.createElement("div");
+  el.className = "pin__popup";
+
+  const head = document.createElement("div");
+  head.className = "place__head";
+  head.append(nameNode(place));
+  el.append(head);
+
+  const status = document.createElement("p");
+  status.className = "place__status";
+  status.dataset.state = place.status.state;
+  if (place.status.closingSoon) status.dataset.closingSoon = "";
+  status.textContent = place.status.text;
+  el.append(status);
+
+  const todayKey = DAY_KEYS[NOW.getDay()];
+  const ranges = (place.hours && place.hours[todayKey]) || [];
+  const today = document.createElement("p");
+  today.className = "pin__today";
+  today.textContent =
+    "Today: " +
+    (ranges.length
+      ? ranges
+          .map((raw) => {
+            const r = parseRange(raw);
+            return r ? formatRange(r) : raw;
+          })
+          .join(", ")
+      : "closed");
+  el.append(today);
+
+  if (place.tagList.length) {
+    const tags = document.createElement("p");
+    tags.className = "place__tags";
+    for (const tag of place.tagList) {
+      const span = document.createElement("span");
+      span.className = "tag";
+      const emoji = TAG_EMOJI[tag];
+      span.textContent = (emoji ? emoji + " " : "") + titleCase(tag);
+      tags.append(span);
+    }
+    el.append(tags);
+  }
+
+  const contact = document.createElement("p");
+  contact.className = "place__contact";
+  if (place.address) {
+    const addr = document.createElement("a");
+    addr.className = "place__addr";
+    addr.textContent = "Directions";
+    addr.href =
+      "https://www.google.com/maps/dir/?api=1&destination=" +
+      encodeURIComponent(place.address);
+    addr.target = "_blank";
+    addr.rel = "noopener";
+    contact.append(addr);
+  }
+  if (place.phone) {
+    const phone = document.createElement("a");
+    phone.className = "place__phone";
+    phone.textContent = place.phone;
+    phone.href = "tel:" + place.phone.replace(/[^\d+]/g, "");
+    contact.append(phone);
+  }
+  for (const link of contactLinks(place)) contact.append(link);
+  if (contact.childElementCount) el.append(contact);
+
+  return el;
+}
+
+function writeMapLegend(list, mapped) {
+  const legend = document.getElementById("map-legend");
+  const count = { open: 0, soon: 0, closed: 0 };
+  for (const p of mapped) count[p.status.state]++;
+  legend.replaceChildren();
+  for (const [stateKey, label] of [
+    ["open", "open now"],
+    ["soon", "opens later today"],
+    ["closed", "closed"],
+  ]) {
+    const item = document.createElement("span");
+    item.className = "mapview__key";
+    item.dataset.state = stateKey;
+    item.textContent = `${count[stateKey]} ${label}`;
+    legend.append(item);
+  }
+  const missing = list.length - mapped.length;
+  if (missing) {
+    const note = document.createElement("span");
+    note.className = "mapview__missing";
+    note.textContent = `${missing} not yet on the map`;
+    note.title = list
+      .filter((p) => !p.coords)
+      .map((p) => p.name)
+      .join(", ");
+    legend.append(note);
+  }
+}
+
 /* --- URL state ---------------------------------------------------------- */
 
 function readURL() {
@@ -621,6 +890,7 @@ function readURL() {
   for (const t of q.getAll("tag")) state.tags.add(t.toLowerCase());
   const query = q.get("q");
   if (query) state.query = query;
+  if (q.get("view") === "map") state.view = "map";
   const sort = q.get("sort");
   if (sort) {
     const [key, dir] = sort.split(".");
@@ -640,6 +910,7 @@ function writeURL() {
   if (state.sortKey !== "name" || state.sortDir !== "asc") {
     q.set("sort", `${state.sortKey}.${state.sortDir}`);
   }
+  if (state.view === "map") q.set("view", "map");
   const qs = q.toString();
   history.replaceState(null, "", qs ? "?" + qs : location.pathname);
 }
@@ -746,6 +1017,15 @@ function statusFor(hours, now) {
 }
 
 /* --- Small helpers ----------------------------------------------------- */
+
+// [lat, lng] from a record's "lat"/"lng" fields, or null when it has none.
+function coordsOf(place) {
+  const lat = Number(place.lat);
+  const lng = Number(place.lng);
+  if (place.lat == null || place.lng == null) return null;
+  if (!Number.isFinite(lat) || !Number.isFinite(lng)) return null;
+  return [lat, lng];
+}
 
 function sortName(name) {
   return String(name || "").replace(/^the\s+/i, "").toLowerCase();

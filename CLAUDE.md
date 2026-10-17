@@ -27,6 +27,8 @@ Restaurant JSON shape:
   "name": "",
   "description": "",
   "address": "",
+  "lat": 44.1037,
+  "lng": -69.1089,
   "phone": "",
   "url": "",
   "facebook": "",
@@ -41,9 +43,10 @@ Restaurant JSON shape:
 - `hours` days are keyed `mon/tue/wed/thr/fri/sat/sun` (note: Thursday is `thr`, not `thu`).
 - Each day's value is an array of time-range strings (e.g. `"4 pm - 9 pm"`); empty array means closed.
 - `url` is the restaurant's own website (also used as the entry name's hyperlink); `facebook`, `instagram`, and `order` are optional links to a Facebook page, an Instagram profile, and an online-ordering page, respectively. All four are omitted or left `""` when unknown, and only render (as "Web"/"Facebook"/"Instagram"/"Order online" links next to the address and phone) when present.
+- `lat` / `lng` are the coordinates used by the map view. They're filled in by `scripts/geocode.py` (free, keyless geocoders: the US Census Bureau's, falling back to OpenStreetMap Nominatim), which only touches files that have an `address` but no coordinates (`--force` redoes all) and inserts the two lines after `address` without reformatting the file. The combine workflow runs it before concatenating, so a new listing gets coordinates on push to `main`. A listing without coordinates simply isn't plotted (the map legend counts it as "not yet on the map"); if a geocoder can't place an address, add the coordinates by hand. If an address changes, delete its `lat`/`lng` so it gets re-geocoded.
 - `tags` are free-form strings; `tags.json` maps known tag names to a display emoji (used for future UI, not yet wired into `script.js`).
 
-**`restaurants-combined.json` is generated, not hand-edited.** A GitHub Actions workflow (`.github/workflows/combine-poi-json.yml`) runs on every push to `main`, concatenates all files in `restaurants/*/*.json` into `restaurants-combined.json`, and commits/pushes the result back to `main` if it changed. When adding or editing a restaurant, only touch the individual file under `restaurants/<town>/` — CI will regenerate the combined file on push, but **also rebuild it locally in the same change** (mirroring the workflow's own concatenation logic) so `restaurants-combined.json` stays in sync with `restaurants/*/*.json` for local testing and so the diff is included in the commit:
+**`restaurants-combined.json` is generated, not hand-edited.** A GitHub Actions workflow (`.github/workflows/combine-poi-json.yml`) runs on every push to `main` (or by hand, via `workflow_dispatch`), geocodes any listing missing coordinates, concatenates all files in `restaurants/*/*.json` into `restaurants-combined.json`, and commits/pushes the result (plus any newly geocoded restaurant files) back to `main` if it changed. When adding or editing a restaurant, only touch the individual file under `restaurants/<town>/` — CI will regenerate the combined file on push, but **also rebuild it locally in the same change** (mirroring the workflow's own concatenation logic) so `restaurants-combined.json` stays in sync with `restaurants/*/*.json` for local testing and so the diff is included in the commit:
 
 ```bash
 combined=()
@@ -56,6 +59,8 @@ echo "[$combined]" > restaurants-combined.json
 ```
 
 ## Frontend
+
+A List / Map switch (`.viewswitch` in the topbar, mirrored to `?view=map`) flips between the board below and a full-height map (`#mapview`). The map is Leaflet 1.9.4 from unpkg (with SRI hashes), injected by `loadLeaflet()` only the first time the map is opened, over free OpenStreetMap tiles (attribution required; fine for a small site under OSM's tile usage policy — switch the tile URL in `renderMap()` to a keyed free tier like Stadia or MapTiler if traffic grows). `renderMap()` plots the same filtered list the board shows as `L.circleMarker` pins styled by CSS class (`.pin--open` / `--soon` / `--closed`, so they follow the colour tokens and dark mode), with open pins drawn on top, larger, and permanently labelled once zoomed to `MAP_LABEL_ZOOM`. Clicking a pin opens a popup with status, today's hours, tags, directions, and links. Pins sharing an address are nudged apart by `spreadDuplicates()`. The map re-fits its bounds only when the set of pins changes. On wide screens (≥ 78rem) the topbar becomes a left sidebar (body is a two-column grid), and the map fills the viewport height beside it.
 
 The site is styled as a print-style travel guide. There is no big masthead —
 a slim sticky top bar carries the wordmark plus a permanent tag nav-bar. The

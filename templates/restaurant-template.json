@@ -3,6 +3,8 @@
     "name": "",
     "description": "",
     "address": "",
+    "lat": null,
+    "lng": null,
     "phone": "",
     "url": "",
     "facebook": "",
