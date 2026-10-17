@@ -3,6 +3,8 @@
     "name": "Camden Deli",
     "description": "A Camden landmark since 1985 serving gourmet deli sandwiches, homemade soups, and scratch-baked desserts, with a rooftop deck overlooking Camden Harbor.",
     "address": "37 Main St, Camden ME 04843",
+    "lat": 44.210443,
+    "lng": -69.064774,
     "phone": "207-236-8343",
     "url": "https://camdendeli.com",
     "facebook": "https://www.facebook.com/camdendelime/",

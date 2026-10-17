@@ -3,6 +3,8 @@
     "name": "Squid Ink Coffee",
     "description": "Dock-side coffee café in Port Clyde with espresso drinks and pastries, featuring outdoor seating with harbor views and views of passing lobster boats.",
     "address": "6 Cold Storage Rd, Port Clyde ME 04855",
+    "lat": 43.926697,
+    "lng": -69.259487,
     "phone": "207-372-2088",
     "url": "https://www.instagram.com/_squidinkcoffee/",
     "facebook": "https://www.facebook.com/SquidInkCoffeeOnTheDock/",

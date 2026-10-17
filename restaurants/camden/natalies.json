@@ -3,6 +3,8 @@
     "name": "Natalie's at Camden Harbour Inn",
     "description": "Fine dining restaurant at the Camden Harbour Inn, serving a modern take on New England cuisine sourced from Maine fishing boats, farms, and gardens. Dining room and heated porches overlook Camden Harbor.",
     "address": "83 Bayview St, Camden ME 04843",
+    "lat": 44.205994,
+    "lng": -69.061349,
     "phone": "207-236-7008",
     "url": "https://camdenharbourinn.com/natalies-restaurant/",
     "tags": [

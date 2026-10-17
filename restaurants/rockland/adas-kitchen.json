@@ -3,6 +3,8 @@
     "name": "Ada's Kitchen",
     "description": "Casual Italian restaurant serving handmade pasta and pizza alongside craft cocktails.",
     "address": "449 Main St, Rockland ME 04841",
+    "lat": 44.105277,
+    "lng": -69.109194,
     "phone": "207-593-7735",
     "url": "https://www.adaskitchen.com/",
     "facebook": "https://www.facebook.com/AdasKitchenBar/",

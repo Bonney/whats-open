@@ -3,6 +3,8 @@
     "name": "Primo",
     "description": "Farm-to-table fine dining with a daily-changing seasonal menu sourced from the restaurant's own on-site farm.",
     "address": "2 Main St, Rockland ME 04841",
+    "lat": 44.090046,
+    "lng": -69.110023,
     "phone": "207-596-0770",
     "url": "https://www.primorestaurant.com/daily-menu",
     "facebook": "https://www.facebook.com/PrimoRestaurant/",

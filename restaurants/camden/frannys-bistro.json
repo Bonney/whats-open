@@ -3,6 +3,8 @@
     "name": "Franny's Bistro",
     "description": "Neighborhood bistro serving a New American menu of small plates and entrees, known for mussels, halibut specials, and calamari. Extensive wine and cocktail list; walk-ins accommodated depending on availability.",
     "address": "55 Chestnut St, Camden ME 04843",
+    "lat": 44.207731,
+    "lng": -69.063784,
     "phone": "207-230-8199",
     "url": "https://www.frannysbistro.com/",
     "facebook": "https://www.facebook.com/frannysbistro/",

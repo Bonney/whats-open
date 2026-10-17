@@ -3,6 +3,8 @@
     "name": "In Good Company",
     "description": "Wine bar in a renovated former bank serving tapas-style small plates and full entrees alongside an extensive wine list.",
     "address": "415 Main St, Rockland ME 04841",
+    "lat": 44.104584,
+    "lng": -69.109098,
     "phone": "207-593-9110",
     "url": "https://ingoodcompanymaine.com/",
     "facebook": "https://www.facebook.com/InGoodCompanyMaine/",

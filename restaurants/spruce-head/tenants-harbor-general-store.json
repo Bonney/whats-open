@@ -3,6 +3,8 @@
     "name": "Tenants Harbor General Store",
     "description": "Full-service general store with deli counter serving breakfast, lunch, and dinner sandwiches, wraps, and salads. Also offers Maine-roasted coffee, meat and seafood counter, and wine selection.",
     "address": "16 Main St, Tenants Harbor ME 04860",
+    "lat": 43.966546,
+    "lng": -69.208976,
     "phone": "207-372-6311",
     "url": "https://www.facebook.com/TenantsHarborGeneralStore/",
     "instagram": "https://www.instagram.com/tenantsharborgeneralstore/",

@@ -3,6 +3,8 @@
     "name": "The Uproot Pie Co & The Carriage House",
     "description": "Wood-fired pizza restaurant in a 19th-century carriage house. Offers seasonal pizza menus, salads, small bites, and a rotating beer and wine selection. Hosts pizza-making classes and special events.",
     "address": "9 Green St, Thomaston ME 04861",
+    "lat": 44.077955,
+    "lng": -69.184375,
     "phone": "207-370-1568",
     "url": "https://www.theuprootpieco.com/carriage-house",
     "tags": [

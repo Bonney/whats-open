@@ -3,6 +3,8 @@
     "name": "Clan MacLaren",
     "description": "Sandwich shop serving cold sandwiches, lobster rolls in season, panini, salads, and seafood chowder. Bread sourced from Borealis Breads in Waldoboro. Vegan and gluten-free options available.",
     "address": "397 Main St, Rockland ME 04841",
+    "lat": 44.104113,
+    "lng": -69.109074,
     "phone": "207-593-7778",
     "url": "http://www.clanmaclaren.net/home",
     "facebook": "https://www.facebook.com/Clan-MacLaren-116251628406898/",

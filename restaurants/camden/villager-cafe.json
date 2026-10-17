@@ -3,6 +3,8 @@
     "name": "Villager Cafe",
     "description": "Community breakfast-and-lunch cafe that also houses the Midcoast Villager newsstand, serving pancakes, breakfast sandwiches, and tacos.",
     "address": "25 Mechanic St, Camden ME 04843",
+    "lat": 44.210241,
+    "lng": -69.065929,
     "phone": "207-706-4210",
     "url": "https://www.villagercafe.com/",
     "facebook": "https://www.facebook.com/midcoastvillagercafe/",

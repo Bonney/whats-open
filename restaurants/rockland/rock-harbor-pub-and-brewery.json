@@ -3,6 +3,8 @@
     "name": "Rock Harbor Pub and Brewery",
     "description": "Pub and in-house brewery pouring house-made beers alongside seafood, burgers, and other pub fare.",
     "address": "416 Main St, Rockland ME 04841",
+    "lat": 44.104609,
+    "lng": -69.10926,
     "phone": "207-593-7488",
     "url": "https://rockharborbrewing.com/",
     "order": "https://www.ubereats.com/store/rock-harbor-pub-&-brewery/fqILZT8LUpqfpb4b75Oy9A",

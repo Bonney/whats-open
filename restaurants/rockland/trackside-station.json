@@ -3,6 +3,8 @@
     "name": "Trackside Station",
     "description": "Full-service bar and grill in Rockland's historic former train station, hosting everything from casual meals to weddings.",
     "address": "4 Union St, Rockland ME 04841",
+    "lat": 44.102543,
+    "lng": -69.11081,
     "phone": "207-594-7500",
     "url": "https://tracksideme.com/",
     "facebook": "https://www.facebook.com/TracksideStation/",

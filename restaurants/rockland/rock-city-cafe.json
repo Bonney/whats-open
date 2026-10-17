@@ -3,6 +3,8 @@
     "name": "Rock City Cafe",
     "description": "Worker-owned cafe and espresso bar serving specialty coffee, house-baked pastries, and quick breakfast and lunch.",
     "address": "316 Main St, Rockland ME 04841",
+    "lat": 44.102686,
+    "lng": -69.109169,
     "phone": "207-594-4123",
     "url": "https://rockcitycoffee.com/",
     "instagram": "https://www.instagram.com/rockcitycoffee/",

@@ -3,6 +3,8 @@
     "name": "Lulu's Ice Cream & Gelato",
     "description": "Over 25 years of serving homemade ice cream and authentic Italian gelato with rotating seasonal flavors. Cozy alley location behind Fog Bar with shaded outdoor seating. About eight ice cream flavors and around 15 gelato options available.",
     "address": "23-31 Oak St, Rockland ME 04841",
+    "lat": 44.102818,
+    "lng": -69.109644,
     "phone": "646-226-1105",
     "url": "https://www.facebook.com/Lulusicecreamandgelato/",
     "tags": [

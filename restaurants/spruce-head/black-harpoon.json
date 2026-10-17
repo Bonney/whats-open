@@ -3,6 +3,8 @@
     "name": "The Black Harpoon",
     "description": "Family-friendly seafood restaurant and bar in Port Clyde featuring locally sourced fish, steaks, and seasonal specials. Casual dining with lively evening bar scene.",
     "address": "202 Drift Inn Rd, Port Clyde ME 04855",
+    "lat": 43.927656,
+    "lng": -69.253372,
     "phone": "207-372-2167",
     "url": "http://www.theblackharpoon.com/",
     "facebook": "https://www.facebook.com/TheBlackHarpoon/",

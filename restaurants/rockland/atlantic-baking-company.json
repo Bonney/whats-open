@@ -3,6 +3,8 @@
     "name": "Atlantic Baking Company",
     "description": "European-style bakery and cafe featuring artisan breads and French pastries made fresh daily. Also serves breakfast, soups, and desserts.",
     "address": "351 Main St, Rockland ME 04841",
+    "lat": 44.103149,
+    "lng": -69.109042,
     "phone": "207-596-0505",
     "url": "https://atlanticbakingco.com/",
     "facebook": "https://www.facebook.com/AtlanticBakingCo/",

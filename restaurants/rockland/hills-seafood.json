@@ -3,6 +3,8 @@
     "name": "Hill's Seafood Co.",
     "description": "Family-owned sit-down restaurant serving fresh seafood in a casual, no-reservations atmosphere.",
     "address": "266 Main St, Rockland ME 04841",
+    "lat": 44.101153,
+    "lng": -69.109149,
     "phone": "207-593-8400",
     "url": "https://www.hillsseafoodco.com/",
     "facebook": "https://www.facebook.com/p/Hills-Seafood-Co-100063100546719/",

@@ -3,6 +3,8 @@
     "name": "Tuck & Roll",
     "description": "Breakfast and lunch food truck specializing in waffles. Offers creative waffle dishes, gluten-free options with separate preparation equipment, and fresh-roasted coffee.",
     "address": "3 Park Dr, Rockland ME 04841",
+    "lat": 44.102365,
+    "lng": -69.107505,
     "phone": "207-390-5880",
     "url": "https://www.facebook.com/TuckAndRollFoodTruck/",
     "facebook": "https://www.facebook.com/TuckAndRollFoodTruck/",
