@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch:
 
 jobs:
   combine-json:
@@ -20,6 +21,9 @@ jobs:
 
     - name: Checkout repository
       uses: actions/checkout@v2
+
+    - name: Geocode new addresses
+      run: python3 scripts/geocode.py
 
     - name: Combine JSON files
       run: |
@@ -57,6 +61,6 @@ jobs:
       run: |
         git config user.name "bonney"
         git config user.email "bonneym@gmail.com"
-        git add  ${{ github.workspace }}/restaurants-combined.json
+        git add  ${{ github.workspace }}/restaurants-combined.json ${{ github.workspace }}/restaurants
         git commit -m "Combine JSON files"
         git push

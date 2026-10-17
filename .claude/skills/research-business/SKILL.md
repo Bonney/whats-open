@@ -99,6 +99,9 @@ at least two independent sources) and get confirmation before renaming the
   grilled hot dogs and burgers. Uses peanut oil. Cash only."
 - `address`: street address, town, state, zip — `<street>, <Town> ME
   <zip>`, matching the format in existing files.
+- `lat` / `lng`: leave `null` for a new listing (and remove them if the
+  address changes) — `scripts/geocode.py` fills them in, in CI on push to
+  `main`, so the listing shows up on the map view. Never guess coordinates.
 - `phone`: `207-xxx-xxxx` format matching existing entries.
 - `url`: pick **one** prominent link — prefer, in order: official website
   → Facebook page → Instagram → online ordering platform → Google Maps
