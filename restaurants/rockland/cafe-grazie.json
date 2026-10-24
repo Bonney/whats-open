@@ -18,7 +18,7 @@
         "tue": [],
         "wed": ["8 am - 2 pm"],
         "thr": ["8 am - 2 pm"],
-        "fri": ["8 am - 2 pm"],
+        "fri": ["8 am - 2 pm", "5 pm - 8 pm"],
         "sat": ["8 am - 2 pm"],
         "sun": ["9 am - 1 pm"]
     }
