@@ -12,12 +12,12 @@
         "outdoor seating"
     ],
     "hours": {
-        "mon": ["8 am - 2:30 pm"],
+        "mon": [],
         "tue": [],
-        "wed": ["8 am - 2:30 pm"],
-        "thr": ["8 am - 2:30 pm"],
-        "fri": ["8 am - 2:30 pm"],
-        "sat": ["8 am - 2:30 pm"],
+        "wed": ["8 am - 2 pm"],
+        "thr": ["8 am - 2 pm"],
+        "fri": ["8 am - 2 pm"],
+        "sat": ["8 am - 2 pm"],
         "sun": ["8 am - 2 pm"]
     }
 }
