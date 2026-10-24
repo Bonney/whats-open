@@ -13,12 +13,12 @@
         "rooftop"
     ],
     "hours": {
-        "mon": ["12 pm - 8 pm"],
+        "mon": ["4 pm - 8 pm"],
         "tue": [],
         "wed": [],
         "thr": ["4 pm - 8 pm"],
-        "fri": ["12 pm - 8 pm"],
-        "sat": ["12 pm - 8 pm"],
-        "sun": ["12 pm - 8 pm"]
+        "fri": ["4 pm - 8 pm"],
+        "sat": ["4 pm - 8 pm"],
+        "sun": ["4 pm - 8 pm"]
     }
 }

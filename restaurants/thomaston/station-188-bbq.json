@@ -12,12 +12,12 @@
         "takeout"
     ],
     "hours": {
-        "mon": ["4pm - 8pm"],
+        "mon": ["4 pm - 8 pm"],
         "tue": [],
         "wed": [],
         "thr": ["11:30 am - 8 pm"],
         "fri": ["11:30 am - 8 pm"],
         "sat": ["11:30 am - 8 pm"],
-        "sun": ["11:30 am - 3 pm"]
+        "sun": ["11 am - 3 pm"]
     }
 }

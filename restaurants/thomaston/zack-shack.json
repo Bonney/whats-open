@@ -13,9 +13,9 @@
         "takeout"
     ],
     "hours": {
-        "mon": ["11 am - 4 pm"],
-        "tue": ["11 am - 4 pm"],
-        "wed": ["11 am - 4 pm"],
+        "mon": ["11 am - 6 pm"],
+        "tue": ["11 am - 6 pm"],
+        "wed": ["11 am - 6 pm"],
         "thr": ["11 am - 6 pm"],
         "fri": ["11 am - 6 pm"],
         "sat": ["11 am - 6 pm"],
