@@ -2,7 +2,7 @@
     "id": "mcloons-lobster-shack-spruce-head",
     "name": "McLoons Lobster Shack",
     "description": "Waterfront lobster shack across from a working lobster wharf, with harbor and sunset views from the dining deck.",
-    "address": "315 Island Rd, Spruce Head ME 04858",
+    "address": "315 Island Rd, South Thomaston ME 04858",
     "phone": "207-593-1382",
     "url": "https://www.mcloonslobster.com/",
     "facebook": "https://www.facebook.com/McLoonsLobsterShack/",
@@ -16,8 +16,8 @@
     "hours": {
         "mon": ["11:30 am - 7 pm"],
         "tue": ["11:30 am - 7 pm"],
-        "wed": [],
-        "thr": [],
+        "wed": ["11:30 am - 7 pm"],
+        "thr": ["11:30 am - 7 pm"],
         "fri": ["11:30 am - 7 pm"],
         "sat": ["11:30 am - 7 pm"],
         "sun": ["11:30 am - 7 pm"]

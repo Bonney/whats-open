@@ -13,10 +13,10 @@
     "hours": {
         "mon": [],
         "tue": [],
-        "wed": [],
-        "thr": ["12 pm - 7 pm"],
-        "fri": ["12 pm - 7 pm"],
-        "sat": ["12 pm - 7 pm"],
-        "sun": ["12 pm - 7 pm"]
+        "wed": ["12 pm - 6 pm"],
+        "thr": ["12 pm - 6 pm"],
+        "fri": ["12 pm - 6 pm"],
+        "sat": ["12 pm - 6 pm"],
+        "sun": ["12 pm - 6 pm"]
     }
 }
