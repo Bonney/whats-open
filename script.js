@@ -141,6 +141,7 @@ function setup() {
 
   board.hidden = false;
   applyAndRender();
+  WIDE.addEventListener("change", applyAndRender);
 }
 
 /* --- List / Map view switch ---------------------------------------------- */
@@ -305,11 +306,14 @@ function compareBy(a, b, key) {
   }
 }
 
+// Wide screens keep the table under the map; narrower ones show one or the other.
+const WIDE = window.matchMedia("(min-width: 78rem)");
+
 function applyAndRender() {
   const list = currentList();
 
   const onMap = state.view === "map";
-  document.getElementById("board").hidden = onMap;
+  document.getElementById("board").hidden = onMap && !WIDE.matches;
   document.getElementById("mapview").hidden = !onMap;
   document.querySelector(".guide").dataset.view = state.view;
   for (const btn of document.querySelectorAll(".viewswitch button")) {

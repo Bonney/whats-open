@@ -776,9 +776,17 @@ button:focus-visible {
 /* Wide screens: the filters live in the left sidebar, so the map gets the
    full viewport height beside it. */
 @media (min-width: 78rem) {
-  .mapview__map { height: 100dvh; }
+  .mapview__map,
+  .mapview__map.leaflet-container { height: 75dvh; }
   .viewswitch { margin-inline: 1rem; }
   .viewswitch .chip { flex: 1 1 0; }
+
+  /* The table sits under the map, padded and measured as in the list view. */
+  .guide[data-view="map"] .board {
+    max-width: var(--measure);
+    margin-inline: auto;
+    padding: clamp(1.25rem, 4vw, 2.5rem) var(--gutter) 4rem;
+  }
 }
 
 /* --------------------------------------------------------------------------
