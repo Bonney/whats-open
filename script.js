@@ -306,16 +306,18 @@ function compareBy(a, b, key) {
   }
 }
 
-// Wide screens keep the table under the map; narrower ones show one or the other.
+// Wide screens have one view — the map with the table under it — and no
+// switch; narrower ones show one or the other.
 const WIDE = window.matchMedia("(min-width: 78rem)");
+const showsMap = () => WIDE.matches || state.view === "map";
 
 function applyAndRender() {
   const list = currentList();
 
-  const onMap = state.view === "map";
+  const onMap = showsMap();
   document.getElementById("board").hidden = onMap && !WIDE.matches;
   document.getElementById("mapview").hidden = !onMap;
-  document.querySelector(".guide").dataset.view = state.view;
+  document.querySelector(".guide").dataset.view = WIDE.matches ? "both" : state.view;
   for (const btn of document.querySelectorAll(".viewswitch button")) {
     btn.setAttribute("aria-pressed", String(btn.dataset.view === state.view));
   }
@@ -695,7 +697,7 @@ async function renderMap(list) {
     return;
   }
   // The view may have changed while Leaflet was loading.
-  if (state.view !== "map") return;
+  if (!showsMap()) return;
 
   if (!MAP) {
     MAP = L.map("map", { scrollWheelZoom: true });
